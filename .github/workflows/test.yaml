@@ -1,0 +1,48 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    name: Lint, build and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: CYPRESS_INSTALL_BINARY=0 yarn install
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Build
+        run: yarn build
+
+      - name: Test
+        run: yarn test
+        env:
+          CI: true
+
+  inclusive-naming-check:
+    name: Inclusive naming check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Check inclusive naming
+        uses: canonical/inclusive-naming@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          reporter: github-pr-check
+          fail-on-error: true
