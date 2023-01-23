@@ -1194,6 +1194,22 @@
   resolved "https://registry.yarnpkg.com/@canonical/latest-news/-/latest-news-1.4.1.tgz#dcdd445ac2268a54cf60f2f8c725b6bdeb285d71"
   integrity sha512-lwrikCj0Y11X8Ln8D+elp6Ri3mYjMjsAOJtadNEFzhBrgmg8TVGYJjOdwy8TvRaxy7fHnvVajIKAYWX44Tfj6w==
 
+"@canonical/react-components@0.37.9":
+  version "0.37.9"
+  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-0.37.9.tgz#8e51e0958f2cd972889368b171014d94e0dd3852"
+  integrity sha512-fG6AtNpUrsYnc9Zon+A+sYo3VRwEg9hAyh/41XfNWDEl60LrU0iiSPU3EU2R1a7UvRzPy/+l2c+i+9IUZHX17w==
+  dependencies:
+    "@types/jest" "27.5.2"
+    "@types/node" "16.11.47"
+    "@types/react" "17.0.48"
+    "@types/react-dom" "17.0.17"
+    "@types/react-table" "7.7.12"
+    classnames "2.3.1"
+    nanoid "3.3.4"
+    prop-types "15.8.1"
+    react-table "7.8.0"
+    react-useportal "1.0.17"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"

@@ -1,0 +1,465 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import CardList from "./CardList";
+import { Row, Col } from "@canonical/react-components";
+
+<Meta title="CardList" component={CardList} />
+
+export const Template = (args) => <CardList {...args} />;
+
+### CardList
+
+This is a [React](https://reactjs.org/) component for the a store cards list.
+
+### Props
+
+<ArgsTable of={CardList} />
+
+### Default
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      itemsPerPage: 6,
+      packages: [
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "GNU Image Manipulation Program",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2017/07/gimp.png",
+            name: "gimp",
+            platforms: ["kubernetes"],
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: "verified",
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "OBS Studio",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/obs-studio.png",
+            name: "obs-studio",
+            platforms: ["vm"],
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: "star",
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "fkill",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/logo.svg.png",
+            name: "fkill",
+            platforms: null,
+            type: "charm",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: null,
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "Sublime Text",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2018/03/sublime-text.png",
+            name: "sublime-text",
+            platforms: ["vm"],
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: "star",
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "The Climate Trail",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2019/09/icon_zWsf712.png",
+            name: "climate-trail",
+            platforms: null,
+            type: "bundle",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: "verified",
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "S4A - Scratch for Arduino",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2020/02/s4a.png",
+            name: "s4a",
+            platforms: ["kubernetes"],
+            type: "charm",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: null,
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "wethr",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2019/08/sun-behind-cloud_26c5.png",
+            name: "wethr",
+            platforms: null,
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: null,
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "alacritty",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2019/12/icon.svg_WTg5Oeb.png",
+            name: "alacritty",
+            platforms: null,
+            type: "bundle",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: null,
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "Mutt",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2018/07/mutt256.png",
+            name: "mutt",
+            platforms: null,
+            type: "charm",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: "verified",
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "Minetest",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2018/01/minetest.png",
+            name: "minetest",
+            platforms: null,
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: null,
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "FFmpeg",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2018/07/ffmpeg_LvkKa6R.png",
+            name: "ffmpeg",
+            platforms: null,
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: null,
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "Wire",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2017/10/wire-desktop.png",
+            name: "wire",
+            platforms: null,
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: null,
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "pogo",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2021/09/pogo-192.png",
+            name: "pogo",
+            platforms: null,
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: null,
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "IRCCloud",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2017/08/icon_dLGuhFb.png",
+            name: "irccloud-desktop",
+            platforms: null,
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: null,
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
