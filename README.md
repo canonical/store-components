@@ -1,6 +1,6 @@
 # Store components for store UIs
 
-This is a collection of components designed to be used in store UIs when using React.
+This is a collection of components designed to be used in store UIs when using React. This is currently a work in progress and therefore not recommended to use in projects at this time.
 
 ## How to use the components
 
