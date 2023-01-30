@@ -1,0 +1,59 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import PackageCard from "./PackageCard";
+import { Row, Col } from "@canonical/react-components";
+
+<Meta title="PackageCard" component={PackageCard} />
+
+export const Template = (args) => <PackageCard {...args} />;
+
+### PackageCard
+
+This is a [React](https://reactjs.org/) component for the a package card.
+
+### Props
+
+<ArgsTable of={PackageCard} />
+
+### Default
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      item: {
+        package: {
+          description:
+            "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+          display_name: "GNU Image Manipulation Program",
+          icon_url:
+            "https://dashboard.snapcraft.io/site_media/appmedia/2017/07/gimp.png",
+          name: "gimp",
+          platforms: ["kubernetes"],
+          type: "snap",
+        },
+        publisher: {
+          display_name: "John Doe",
+          name: "johndoe",
+          validation: "verified",
+        },
+        categories: [
+          {
+            display_name: "Big data",
+            name: "bigdata",
+          },
+          {
+            display_name: "Containers",
+            name: "containers",
+          },
+          {
+            display_name: "Networking",
+            name: "networking",
+          },
+        ],
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
