@@ -10,17 +10,8 @@ export type Props = {
 };
 
 function CardList({ packages, itemsPerPage }: Props) {
-  // This won't be necessary once
-  // https://github.com/canonical/react-components/pull/880
-  // is merged and released
-  const style = `.p-pagination--centered .p-pagination { 
-    text-align: center; 
-    justify-content: center;
-  }`;
-
   return (
     <>
-      <style>{style}</style>
       <Row className="u-equal-height">
         {packages &&
           packages.map((item) => (
@@ -40,10 +31,7 @@ function CardList({ packages, itemsPerPage }: Props) {
           paginate={() => {}}
           currentPage={2}
           scrollToTop
-          // This won't be necessary once
-          // https://github.com/canonical/react-components/pull/880
-          // is merged and released
-          className="p-pagination--centered"
+          centered
         />
       </div>
     </>
