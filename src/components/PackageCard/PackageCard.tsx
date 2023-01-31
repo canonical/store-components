@@ -5,17 +5,28 @@ import type { Package as PackageProps } from "../../types/package";
 
 type PackageCardProps = {
   item: PackageProps;
+  highlighted?: boolean;
 };
 
-export type Props = {
-  item: PackageCardProps;
-};
+export type Props = PackageCardProps;
 
-function PackageCard({ item }: PackageCardProps) {
+function PackageCard({ item, highlighted }: PackageCardProps) {
   const hasIcon = item?.package?.icon_url;
+  const isBundle = item?.package?.type === "bundle";
+  const style = {
+    height: "100%",
+  };
+
+  if (highlighted) {
+    style["borderTop"] = "3px solid #f2a031";
+  }
+
+  if (isBundle) {
+    style["borderTop"] = "3px solid #0f95a1";
+  }
 
   return (
-    <Card style={{ height: "100%" }}>
+    <Card style={style}>
       <div className={hasIcon ? "p-media-object" : ""}>
         {hasIcon && (
           <img
