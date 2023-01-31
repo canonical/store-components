@@ -98,3 +98,86 @@ This is a [React](https://reactjs.org/) component for the a package card.
     {Template.bind({})}
   </Story>
 </Canvas>
+
+## Highlighted
+
+<Canvas>
+  <Story
+    name="Highlighted"
+    args={{
+      highlighted: true,
+      item: {
+        package: {
+          description:
+            "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+          display_name: "GNU Image Manipulation Program",
+          name: "gimp",
+          platforms: ["kubernetes"],
+          type: "snap",
+        },
+        publisher: {
+          display_name: "John Doe",
+          name: "johndoe",
+          validation: "verified",
+        },
+        categories: [
+          {
+            display_name: "Big data",
+            name: "bigdata",
+          },
+          {
+            display_name: "Containers",
+            name: "containers",
+          },
+          {
+            display_name: "Networking",
+            name: "networking",
+          },
+        ],
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Bundle
+
+<Canvas>
+  <Story
+    name="Bundle"
+    args={{
+      item: {
+        package: {
+          description:
+            "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+          display_name: "GNU Image Manipulation Program",
+          name: "gimp",
+          platforms: ["kubernetes"],
+          type: "bundle",
+        },
+        publisher: {
+          display_name: "John Doe",
+          name: "johndoe",
+          validation: "verified",
+        },
+        categories: [
+          {
+            display_name: "Big data",
+            name: "bigdata",
+          },
+          {
+            display_name: "Containers",
+            name: "containers",
+          },
+          {
+            display_name: "Networking",
+            name: "networking",
+          },
+        ],
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
