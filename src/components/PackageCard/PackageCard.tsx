@@ -59,6 +59,11 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
           })}
           style={{ width: "100%" }}
         >
+          {isBundle && (
+            <div className="sc-package-card__header">
+              <h3 className="p-muted-heading">Bundle</h3>
+            </div>
+          )}
           <div className="sc-package-card__body">
             <h2 className="p-heading--4 u-no-margin--bottom">
               <a href={`/${item?.package?.name}`}>
