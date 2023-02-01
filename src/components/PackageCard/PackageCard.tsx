@@ -21,12 +21,16 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
     height: "100%",
   };
 
+  let featuredCharms = [];
+
   if (highlighted) {
     outerCardStyle["borderTop"] = "3px solid #f2a031";
   }
 
   if (isBundle) {
     outerCardStyle["borderTop"] = "3px solid #0f95a1";
+
+    featuredCharms = item?.package?.charms.slice(0, 7);
   }
 
   return (
@@ -85,6 +89,23 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
               )}
             </p>
             <p>{item?.package?.description}</p>
+
+            {isBundle && (
+              <>
+                {featuredCharms.map((charm) => (
+                  <span
+                    className="sc-charm-bundle-icon"
+                    key={charm?.name}
+                    title={charm?.display_name}
+                  >
+                    {charm?.display_name.slice(0, 2)}
+                  </span>
+                ))}
+                <span className="sc-charm-bundle-count u-text--muted">
+                  +{item?.package?.charms.length - featuredCharms.length}
+                </span>
+              </>
+            )}
           </div>
           {isInterface && (
             <div className="sc-package-card__footer">
