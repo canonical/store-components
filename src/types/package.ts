@@ -5,7 +5,7 @@ export type Package = {
     icon_url?: string;
     name?: string;
     platforms?: Array<string> | null;
-    type?: "snap" | "charm" | "bundle";
+    type?: "snap" | "charm" | "bundle" | "interface";
   };
   publisher: {
     display_name?: string;

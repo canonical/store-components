@@ -1,0 +1,19 @@
+.p-card__content {
+  height: 100%;
+}
+
+.sc-package-card {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.sc-package-card__body {
+  flex-grow: 1;
+}
+
+.sc-package-card__header,
+.sc-package-card__footer {
+  flex-shrink: 0;
+}
