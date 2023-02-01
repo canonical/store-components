@@ -6,6 +6,10 @@ export type Package = {
     name?: string;
     platforms?: Array<string> | null;
     type?: "snap" | "charm" | "bundle" | "interface";
+    charms?: Array<{
+      name?: string;
+      display_name?: string;
+    }> | null;
   };
   publisher: {
     display_name?: string;
