@@ -30,7 +30,9 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
   if (isBundle) {
     outerCardStyle["borderTop"] = "3px solid #0f95a1";
 
-    featuredCharms = item?.package?.charms.slice(0, 7);
+    if (item?.package?.charms) {
+      featuredCharms = item?.package?.charms.slice(0, 7);
+    }
   }
 
   return (
@@ -102,7 +104,7 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
                   </span>
                 ))}
                 <span className="sc-charm-bundle-count u-text--muted">
-                  +{item?.package?.charms.length - featuredCharms.length}
+                  +{item?.package?.charms?.length - featuredCharms.length}
                 </span>
               </>
             )}
