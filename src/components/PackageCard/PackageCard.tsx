@@ -42,6 +42,7 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
           "p-media-object": hasIcon,
         })}
         style={{ height: "100%" }}
+        data-testid="package-card-container"
       >
         {hasIcon && (
           <img
@@ -50,6 +51,7 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
             height={48}
             alt=""
             className="p-media-object__image"
+            data-testid="package-card-icon"
           />
         )}
 
@@ -81,6 +83,7 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
                       height={14}
                       alt="Verified account"
                       title="Verified account"
+                      data-testid="verified-account-icon"
                     />
                   )}
                   {item?.publisher?.validation === "star" && (
@@ -90,6 +93,7 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
                       height={14}
                       alt="Star developer"
                       title="Star developer"
+                      data-testid="star-developer-icon"
                     />
                   )}
                 </>
@@ -98,7 +102,7 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
             <p>{item?.package?.description}</p>
 
             {isBundle && (
-              <>
+              <div data-testid="bundled-charms">
                 {featuredCharms.map((charm) => (
                   <span
                     className="sc-charm-bundle-icon"
@@ -111,18 +115,24 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
                 <span className="sc-charm-bundle-count u-text--muted">
                   +{item?.package?.charms?.length - featuredCharms.length}
                 </span>
-              </>
+              </div>
             )}
           </div>
           {isInterface && (
-            <div className="sc-package-card__footer">
+            <div
+              className="sc-package-card__footer"
+              data-testid="interface-libraries"
+            >
               <hr />
               <a href={`/${item?.package?.name}/libraries`}>Libraries</a>
             </div>
           )}
 
           {item?.package?.platforms && item?.package?.platforms.length && (
-            <div className="sc-package-card__footer">
+            <div
+              className="sc-package-card__footer"
+              data-testid="package-platforms"
+            >
               <hr />
               <div className="u-align--right">
                 {item?.package?.platforms.includes("vm") && (
