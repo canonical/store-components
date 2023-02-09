@@ -8,7 +8,7 @@ export type Package = {
     icon_url?: string;
     name: string;
     platforms?: Array<string> | null;
-    type: typeof PackageType[number];
+    type: (typeof PackageType)[number];
     charms?: Array<{
       name: string;
       display_name: string;
@@ -17,7 +17,7 @@ export type Package = {
   publisher?: {
     display_name?: string;
     name?: string;
-    validation?: typeof ValidationType[number];
+    validation?: (typeof ValidationType)[number];
   };
   categories?: Array<{
     display_name: string;

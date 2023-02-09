@@ -1,0 +1,18 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Footer from "./Footer";
+import { Row, Col, Strip } from "@canonical/react-components";
+
+<Meta title="Footer" component={Footer} />
+
+export const Template = (args) => <Footer {...args} />;
+
+### Footer
+
+This is a [React](https://reactjs.org/) component for a store footer.
+
+### Default
+
+<Canvas>
+  <Story name="Default">{Template.bind({})}</Story>
+</Canvas>
