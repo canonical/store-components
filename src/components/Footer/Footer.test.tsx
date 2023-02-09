@@ -4,13 +4,8 @@ import React from "react";
 import Footer from "./Footer";
 
 describe("Footer", () => {
-  const props = {
-    copyrightYear: 2023,
-    companyName: "Canonical Ltd.",
-  };
-
   it("renders", () => {
-    render(<Footer {...props} />);
+    render(<Footer />);
     expect(true).toBe(true);
   });
 });

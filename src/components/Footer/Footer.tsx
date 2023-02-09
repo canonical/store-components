@@ -1,16 +1,12 @@
 import React from "react";
 import { Row, Col, Strip } from "@canonical/react-components";
 
-export type Props = {
-  copyrightYear: number;
-};
-
-function Footer({ copyrightYear }) {
+function Footer() {
   return (
     <Strip type="dark">
       <Row className="u-equal-height">
         <Col size={3}>
-          <p>© {copyrightYear} Canonical Ltd.</p>
+          <p>© {new Date().getFullYear()} Canonical Ltd.</p>
         </Col>
       </Row>
     </Strip>
