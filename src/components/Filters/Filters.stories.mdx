@@ -1,0 +1,173 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import Filters from "./Filters";
+import { Row, Col } from "@canonical/react-components";
+
+<Meta title="Filters" component={Filters} />
+
+export const Template = (args) => <Filters {...args} />;
+
+### Filters
+
+This is a [React](https://reactjs.org/) component for filters.
+
+### Props
+
+<ArgsTable of={Filters} />
+
+### Default
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      categories: [
+        {
+          display_name: "AI/ML",
+          name: "ai-ml",
+        },
+        {
+          display_name: "Big Data",
+          name: "big-data",
+        },
+        {
+          display_name: "Cloud",
+          name: "cloud",
+        },
+        {
+          display_name: "Containers",
+          name: "containers",
+        },
+        {
+          display_name: "Databases",
+          name: "databases",
+        },
+        {
+          display_name: "Logging and Tracing",
+          name: "logging-and-tracing",
+        },
+        {
+          display_name: "Monitoring",
+          name: "monitoring",
+        },
+        {
+          display_name: "Networking",
+          name: "networking",
+        },
+        {
+          display_name: "Security",
+          name: "security",
+        },
+        {
+          display_name: "Storage",
+          name: "storage",
+        },
+      ],
+      types: [
+        {
+          label: "Platform",
+          values: [
+            { display_name: "All", name: "" },
+            { display_name: "VM", name: "vm" },
+            { display_name: "Kubernetes", name: "kubernetes" },
+          ],
+        },
+        {
+          label: "Filter by",
+          values: [
+            { display_name: "All", name: "" },
+            { display_name: "Charms", name: "charm" },
+            { display_name: "Bundles", name: "bundle" },
+          ],
+        },
+      ],
+      packages: [
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "GNU Image Manipulation Program",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2017/07/gimp.png",
+            name: "gimp",
+            platforms: ["kubernetes"],
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: "verified",
+          },
+          categories: [
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "OBS Studio",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2018/02/obs-studio.png",
+            name: "obs-studio",
+            platforms: ["vm"],
+            type: "snap",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: "star",
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Networking",
+              name: "networking",
+            },
+          ],
+        },
+        {
+          package: {
+            description:
+              "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            display_name: "fkill",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2017/12/logo.svg.png",
+            name: "fkill",
+            platforms: null,
+            type: "charm",
+          },
+          publisher: {
+            display_name: "John Doe",
+            name: "johndoe",
+            validation: null,
+          },
+          categories: [
+            {
+              display_name: "Big data",
+              name: "bigdata",
+            },
+            {
+              display_name: "Containers",
+              name: "containers",
+            },
+          ],
+        },
+      ],
+      setFilteredPackages: () => false,
+      platforms: [{ label: "VM", value: "vm" }],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
