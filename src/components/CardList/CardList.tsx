@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Pagination, Row, Col } from "@canonical/react-components";
 
 import PackageCard from "components/PackageCard";
@@ -10,11 +10,16 @@ export type Props = {
 };
 
 function CardList({ packages, itemsPerPage }: Props) {
+  const [currentPageNumber, setCurrentPageNumber] = useState(1);
+  const [packagesToShow, setPackagesToShow] = useState(
+    packages.slice(0, itemsPerPage)
+  );
+
   return (
     <>
       <Row className="u-equal-height">
-        {packages &&
-          packages.map((item) => (
+        {packagesToShow &&
+          packagesToShow.map((item) => (
             <Col
               size={3}
               key={item?.package?.name}
@@ -28,8 +33,17 @@ function CardList({ packages, itemsPerPage }: Props) {
         <Pagination
           itemsPerPage={itemsPerPage}
           totalItems={packages.length}
-          paginate={() => {}}
-          currentPage={2}
+          paginate={(pageNumber) => {
+            const index = pageNumber - 1;
+            setCurrentPageNumber(pageNumber);
+            setPackagesToShow(
+              packages.slice(
+                itemsPerPage * index,
+                itemsPerPage * index + itemsPerPage
+              )
+            );
+          }}
+          currentPage={currentPageNumber}
           scrollToTop
           centered
         />
