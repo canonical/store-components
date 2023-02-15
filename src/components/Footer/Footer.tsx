@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Strip } from "@canonical/react-components";
+import { Row, Col, Strip, Link } from "@canonical/react-components";
 
 import "./Footer.scss";
 
@@ -19,6 +19,10 @@ function Footer({ socialLinks }: Props) {
     <Strip type="light">
       <Row className="u-equal-height">
         <Col size={4}>
+          <a className="p-link--soft" href="#">
+            Back to top
+            <i className="p-icon--chevron-up"></i>
+          </a>
           <p>© {new Date().getFullYear()} Canonical Ltd.</p>
           <ul className="p-inline-list">
             {socialLinks &&
