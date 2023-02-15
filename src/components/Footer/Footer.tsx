@@ -18,7 +18,7 @@ function Footer({ socialLinks }: Props) {
   return (
     <Strip type="light">
       <Row className="u-equal-height">
-        <Col size={4}>
+        <Col size={3}>
           <a className="p-link--soft" href="#">
             Back to top
             <i className="p-icon--chevron-up"></i>
@@ -38,6 +38,47 @@ function Footer({ socialLinks }: Props) {
                   </a>
                 </li>
               ))}
+          </ul>
+        </Col>
+        <Col size={6}>
+          <ul className="p-list">
+            <li className="p-list__item">
+              <Link
+                className="p-link"
+                href="https://ubuntu.com/legal/terms-and-policies"
+              >
+                Terms of service
+              </Link>
+            </li>
+            <li className="p-list__item">
+              <Link
+                className="p-link"
+                href="https://ubuntu.com/legal/data-privacy?_ga=2.40064295.449174614.1676317399-1455078266.1676317399"
+              >
+                Data privacy
+              </Link>
+            </li>
+            <li className="p-list__item">
+              <Link className="p-link" href="https://charmhub.io/">
+                Manage your tracker settings
+              </Link>
+            </li>
+            <li className="p-list__item">
+              <Link
+                className="p-link"
+                href="https://discourse.charmhub.io/t/status-values/1168"
+              >
+                Service status
+              </Link>
+            </li>
+            <li className="p-list__item">
+              <Link
+                className="p-link"
+                href="https://juju.is/docs/sdk/set-up-a-charm-project"
+              >
+                Other functions
+              </Link>
+            </li>
           </ul>
         </Col>
       </Row>
