@@ -10,15 +10,25 @@ type SocialLink = {
   altText: string;
 };
 
-export type Props = {
-  socialLinks: SocialLink[];
+type AdditionalLink = {
+  name: string;
+  href: string;
 };
 
-function Footer({ socialLinks }: Props) {
+export type Props = {
+  socialLinks: SocialLink[];
+  additionalLinks: AdditionalLink[];
+};
+
+function Footer({ socialLinks, additionalLinks }: Props) {
   return (
     <Strip type="light">
       <Row className="u-equal-height">
-        <Col size={4}>
+        <Col size={3}>
+          <a className="p-link--soft" href="#">
+            Back to top
+            <i className="p-icon--chevron-up"></i>
+          </a>
           <p>© {new Date().getFullYear()} Canonical Ltd.</p>
           <ul className="p-inline-list">
             {socialLinks &&
@@ -32,6 +42,16 @@ function Footer({ socialLinks }: Props) {
                       alt={socialLink?.altText}
                     />
                   </a>
+                </li>
+              ))}
+          </ul>
+        </Col>
+        <Col size={6}>
+          <ul className="p-list">
+            {additionalLinks &&
+              additionalLinks.map((additionalLink) => (
+                <li className="p-list__item" key={additionalLink?.name}>
+                  <a href={additionalLink?.href}>{additionalLink?.name}</a>
                 </li>
               ))}
           </ul>
