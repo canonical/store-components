@@ -19,6 +19,12 @@ describe("Footer", () => {
         altText: "Link 2",
       },
     ],
+    additionalLinks: [
+      {
+        name: "Terms of service",
+        href: "https://example.com/link3",
+      },
+    ],
   };
 
   it("renders", () => {

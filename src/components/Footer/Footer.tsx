@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Strip, Link } from "@canonical/react-components";
+import { Row, Col, Strip } from "@canonical/react-components";
 
 import "./Footer.scss";
 
@@ -10,11 +10,17 @@ type SocialLink = {
   altText: string;
 };
 
-export type Props = {
-  socialLinks: SocialLink[];
+type AdditionalLink = {
+  name: string;
+  href: string;
 };
 
-function Footer({ socialLinks }: Props) {
+export type Props = {
+  socialLinks: SocialLink[];
+  additionalLinks: AdditionalLink[];
+};
+
+function Footer({ socialLinks, additionalLinks }: Props) {
   return (
     <Strip type="light">
       <Row className="u-equal-height">
@@ -42,43 +48,12 @@ function Footer({ socialLinks }: Props) {
         </Col>
         <Col size={6}>
           <ul className="p-list">
-            <li className="p-list__item">
-              <Link
-                className="p-link"
-                href="https://ubuntu.com/legal/terms-and-policies"
-              >
-                Terms of service
-              </Link>
-            </li>
-            <li className="p-list__item">
-              <Link
-                className="p-link"
-                href="https://ubuntu.com/legal/data-privacy?_ga=2.40064295.449174614.1676317399-1455078266.1676317399"
-              >
-                Data privacy
-              </Link>
-            </li>
-            <li className="p-list__item">
-              <Link className="p-link" href="https://charmhub.io/">
-                Manage your tracker settings
-              </Link>
-            </li>
-            <li className="p-list__item">
-              <Link
-                className="p-link"
-                href="https://discourse.charmhub.io/t/status-values/1168"
-              >
-                Service status
-              </Link>
-            </li>
-            <li className="p-list__item">
-              <Link
-                className="p-link"
-                href="https://juju.is/docs/sdk/set-up-a-charm-project"
-              >
-                Other functions
-              </Link>
-            </li>
+            {additionalLinks &&
+              additionalLinks.map((additionalLink) => (
+                <li className="p-list__item" key={additionalLink?.name}>
+                  <a href={additionalLink?.href}>{additionalLink?.name}</a>
+                </li>
+              ))}
           </ul>
         </Col>
       </Row>
