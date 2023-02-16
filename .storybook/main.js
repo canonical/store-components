@@ -2,11 +2,11 @@ const path = require("path");
 
 module.exports = {
   core: {
-    builder: 'webpack5',
+    builder: "webpack5",
   },
   stories: ["../src/**/*.stories.@(js|ts|jsx|tsx|mdx)"],
   addons: [
-    "@storybook/addon-docs/preset",
+    "@storybook/addon-docs",
     "@storybook/addon-controls",
     "@storybook/addon-a11y",
   ],
