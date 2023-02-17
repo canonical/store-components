@@ -15,12 +15,18 @@ type AdditionalLink = {
   href: string;
 };
 
+type OptionalLink = {
+  name: string;
+  href: string;
+};
+
 export type Props = {
   socialLinks: SocialLink[];
   additionalLinks: AdditionalLink[];
+  optionalLinks: OptionalLink[];
 };
 
-function Footer({ socialLinks, additionalLinks }: Props) {
+function Footer({ socialLinks, additionalLinks, optionalLinks }: Props) {
   return (
     <Strip type="light">
       <Row className="u-equal-height">
@@ -46,8 +52,8 @@ function Footer({ socialLinks, additionalLinks }: Props) {
               ))}
           </ul>
         </Col>
-        <Col size={6}>
-          <ul className="p-list">
+        <Col size={3}>
+          <ul className="p-list u-align-center">
             {additionalLinks &&
               additionalLinks.map((additionalLink) => (
                 <li className="p-list__item" key={additionalLink?.name}>
@@ -55,6 +61,24 @@ function Footer({ socialLinks, additionalLinks }: Props) {
                 </li>
               ))}
           </ul>
+        </Col>
+        <Col size={6}>
+          <p className="u-align--left">
+            Ubuntu and Canonical are registered trademarks of Canonical Ltd.
+            <br></br>
+            Powered by{" "}
+            <a href="https://www.ubuntu.com/kubernetes">Charmed Kubernetes</a>
+          </p>
+          <hr></hr>
+          {optionalLinks &&
+            optionalLinks.map((optionalLink) => (
+              <li className="p-inline-list__item" key={optionalLink?.name}>
+                <a href={optionalLink?.href}>
+                  {optionalLink?.name}
+                  <i className="p-icon--external-link"></i>
+                </a>
+              </li>
+            ))}
         </Col>
       </Row>
     </Strip>
