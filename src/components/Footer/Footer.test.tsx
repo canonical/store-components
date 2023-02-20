@@ -25,6 +25,12 @@ describe("Footer", () => {
         href: "https://example.com/link3",
       },
     ],
+    optionalLinks: [
+      {
+        name: "Join the Forum",
+        href: "https://example.com/link4",
+      },
+    ],
   };
 
   it("renders", () => {
