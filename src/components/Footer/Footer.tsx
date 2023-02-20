@@ -65,18 +65,12 @@ function Footer({ socialLinks, additionalLinks, optionalLinks }: Props) {
         <Col size={6}>
           <p className="u-align--left">
             Ubuntu and Canonical are registered trademarks of Canonical Ltd.
-            <br></br>
-            Powered by{" "}
-            <a href="https://www.ubuntu.com/kubernetes">Charmed Kubernetes</a>
           </p>
-          <hr></hr>
+          {optionalLinks && optionalLinks.length > 0 && <hr />}
           {optionalLinks &&
             optionalLinks.map((optionalLink) => (
               <li className="p-inline-list__item" key={optionalLink?.name}>
-                <a href={optionalLink?.href}>
-                  {optionalLink?.name}
-                  <i className="p-icon--external-link"></i>
-                </a>
+                <a href={optionalLink?.href}>{optionalLink?.name}</a>
               </li>
             ))}
         </Col>
