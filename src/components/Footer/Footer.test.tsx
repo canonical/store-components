@@ -31,6 +31,36 @@ describe("Footer", () => {
         href: "https://example.com/link4",
       },
     ],
+    childrenLinks: [
+      {
+        charmedOperatorFramework: {
+          heading: "Charmed Operator Framework",
+          name: "What is Juju?",
+          href: "https://example.com/link5",
+        },
+      },
+      {
+        charmedOperator: {
+          heading: "Charmed Operator",
+          name: "Data",
+          href: "https://example.com/link6",
+        },
+      },
+      {
+        compare: {
+          heading: "Compare",
+          name: "Operators & Charmed Operators",
+          href: "https://example.com/link7",
+        },
+      },
+      {
+        blog: {
+          heading: "Blog",
+          name: "Best Practices for Creating Charms",
+          href: "https://example.com/link8",
+        },
+      },
+    ],
   };
 
   it("renders", () => {

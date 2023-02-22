@@ -20,16 +20,159 @@ type OptionalLink = {
   href: string;
 };
 
+type CharmedOperatorFramework = {
+  heading: string;
+  name: string;
+  href: string;
+  bold_name: string;
+};
+
+type CharmedOperator = {
+  heading: string;
+  name: string;
+  href: string;
+  bold_name: string;
+};
+
+type Compare = {
+  heading: string;
+  name: string;
+  href: string;
+  bold_name: string;
+};
+
+type Blog = {
+  heading: string;
+  name: string;
+  href: string;
+  bold_name: string;
+};
+
 export type Props = {
   socialLinks: SocialLink[];
   additionalLinks: AdditionalLink[];
   optionalLinks: OptionalLink[];
+  charmedOperatorFrameworkLinks: CharmedOperatorFramework[];
+  charmedOperatorLinks: CharmedOperator[];
+  compareLinks: Compare[];
+  blogLinks: Blog[];
 };
 
-function Footer({ socialLinks, additionalLinks, optionalLinks }: Props) {
+function Footer({
+  socialLinks,
+  additionalLinks,
+  optionalLinks,
+  charmedOperatorFrameworkLinks,
+  charmedOperatorLinks,
+  compareLinks,
+  blogLinks,
+}: Props) {
   return (
     <Strip type="light">
-      <Row className="u-equal-height">
+      {charmedOperatorFrameworkLinks &&
+        charmedOperatorFrameworkLinks.length > 0 && (
+          <Row className="children-footer u-equal-height">
+            <Col size={3}>
+              <ul className="p-list">
+                {charmedOperatorFrameworkLinks && (
+                  <h2 className="p-heading--5">
+                    {charmedOperatorFrameworkLinks[0].heading}
+                  </h2>
+                )}
+                {charmedOperatorFrameworkLinks &&
+                  charmedOperatorFrameworkLinks.map((childrenLink) => {
+                    return (
+                      <li className="p-list__item" key={childrenLink?.name}>
+                        <a className="p-link--soft" href={childrenLink?.href}>
+                          <small>{childrenLink?.name}</small>
+                        </a>
+                        <a
+                          className="p-heading--5 -link--soft"
+                          href={childrenLink?.href}
+                        >
+                          <small>{childrenLink?.bold_name}</small>
+                        </a>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </Col>
+            <Col size={3}>
+              <ul className="p-list">
+                {charmedOperatorLinks && (
+                  <h2 className="p-heading--5">
+                    {charmedOperatorLinks[0].heading}
+                  </h2>
+                )}
+                {charmedOperatorLinks &&
+                  charmedOperatorLinks.map((childrenLink) => {
+                    return (
+                      <li className="p-list__item" key={childrenLink?.name}>
+                        <a className="p-link--soft" href={childrenLink?.href}>
+                          <small>{childrenLink?.name}</small>
+                        </a>
+                        <a
+                          className="p-heading--5 -link--soft"
+                          href={childrenLink?.href}
+                        >
+                          <small>{childrenLink?.bold_name}</small>
+                        </a>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </Col>
+            <Col size={3}>
+              <ul className="p-list">
+                {compareLinks && (
+                  <h2 className="p-heading--5">{compareLinks[0].heading}</h2>
+                )}
+                {compareLinks &&
+                  compareLinks.map((childrenLink) => {
+                    return (
+                      <li className="p-list__item" key={childrenLink?.name}>
+                        <a className="p-link--soft" href={childrenLink?.href}>
+                          <small>{childrenLink?.name}</small>
+                        </a>
+                        <a
+                          className="p-heading--5 -link--soft"
+                          href={childrenLink?.href}
+                        >
+                          <small>{childrenLink?.bold_name}</small>
+                        </a>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </Col>
+            <Col size={3}>
+              <ul className="p-list">
+                {blogLinks && (
+                  <h2 className="p-heading--5">{blogLinks[0].heading}</h2>
+                )}
+                {blogLinks &&
+                  blogLinks.map((childrenLink) => {
+                    return (
+                      <li className="p-list__item" key={childrenLink?.name}>
+                        <a className="p-link--soft" href={childrenLink?.href}>
+                          <small>{childrenLink?.name}</small>
+                        </a>
+                        <a
+                          className="p-heading--5 -link--soft"
+                          href={childrenLink?.href}
+                        >
+                          <small>{childrenLink?.bold_name}</small>
+                        </a>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </Col>
+          </Row>
+        )}
+      {charmedOperatorFrameworkLinks &&
+        charmedOperatorFrameworkLinks.length > 0 && <hr />}
+      <Row className="main-footer u-equal-height">
         <Col size={3}>
           <a className="p-link--soft" href="#">
             Back to top
