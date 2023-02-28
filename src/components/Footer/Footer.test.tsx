@@ -31,38 +31,6 @@ describe("Footer", () => {
         href: "https://example.com/link4",
       },
     ],
-    charmedOperatorFrameworkLinks: [
-      {
-        heading: "Charmed Operator Framework",
-        name: "What is Juju?",
-        bold_name: "What is Juju?",
-        href: "https://example.com/link5",
-      },
-    ],
-    charmedOperatorLinks: [
-      {
-        heading: "Charmed Operator",
-        name: "Data",
-        bold_name: "Data",
-        href: "https://example.com/link6",
-      },
-    ],
-    compareLinks: [
-      {
-        heading: "Compare",
-        name: "Operators & Charmed Operators",
-        bold_name: "Operators & Charmed Operators",
-        href: "https://example.com/link7",
-      },
-    ],
-    blogLinks: [
-      {
-        heading: "Blog",
-        name: "Best Practices for Creating Charms",
-        bold_name: "Best Practices for Creating Charms",
-        href: "https://example.com/link8",
-      },
-    ],
   };
 
   it("renders", () => {
