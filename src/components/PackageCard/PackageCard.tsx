@@ -20,6 +20,8 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
   const outerCardStyle = {
     height: "100%",
   };
+  const hasRating = item?.ratings?.value;
+  const stars = [];
 
   let featuredCharms = [];
 
@@ -32,6 +34,18 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
 
     if (item?.package?.charms) {
       featuredCharms = item?.package?.charms.slice(0, 7);
+    }
+  }
+
+  if (hasRating) {
+    for (let i = 1; i <= 5; i++) {
+      let className = "p-icon--star-empty";
+      if (i <= hasRating) {
+        className = "p-icon--star-filled";
+      } else if (i - hasRating === 0.5) {
+        className = "p-icon--star-half-filled";
+      }
+      stars.push(<i className={className} key={i}></i>);
     }
   }
 
@@ -99,6 +113,11 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
                 </>
               )}
             </p>
+            {hasRating && (
+              <div className="star-rating" data-testid="ratings">
+                {stars}
+              </div>
+            )}
             <p>{item?.package?.description}</p>
 
             {isBundle && (
