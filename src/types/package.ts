@@ -23,4 +23,7 @@ export type Package = {
     display_name: string;
     name: string;
   }>;
+  ratings?: {
+    value: number | null;
+  };
 };
