@@ -1243,17 +1243,17 @@
   resolved "https://registry.yarnpkg.com/@canonical/latest-news/-/latest-news-1.4.1.tgz#dcdd445ac2268a54cf60f2f8c725b6bdeb285d71"
   integrity sha512-lwrikCj0Y11X8Ln8D+elp6Ri3mYjMjsAOJtadNEFzhBrgmg8TVGYJjOdwy8TvRaxy7fHnvVajIKAYWX44Tfj6w==
 
-"@canonical/react-components@0.38.0":
-  version "0.38.0"
-  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-0.38.0.tgz#180eb0412d62e29002a724386d08d5bea959b58b"
-  integrity sha512-0t20yrHamxCPCxlJu7ZjXMFexrfZXUSTZvVL+dSoTF8ZHTTi/NUnvgLMak8NWzVht9nOkVb6ltAA8pPSmMr8rg==
+"@canonical/react-components@0.40.0":
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-0.40.0.tgz#ece42d3b5a3dc6dcb46755c7521080a55549b520"
+  integrity sha512-4HWwEhcak6hZl/KhnfpmMDRu1Hswk4xiULcKaZ39xAQn5RvZx8VRTp34QpnnqIm+IvnoQNpCq4FwCygu5CmlZg==
   dependencies:
     "@types/jest" "27.5.2"
-    "@types/node" "16.11.47"
-    "@types/react" "17.0.48"
-    "@types/react-dom" "17.0.17"
-    "@types/react-table" "7.7.12"
-    classnames "2.3.1"
+    "@types/node" "18.14.2"
+    "@types/react" "18.0.28"
+    "@types/react-dom" "17.0.18"
+    "@types/react-table" "7.7.14"
+    classnames "2.3.2"
     nanoid "3.3.4"
     prop-types "15.8.1"
     react-table "7.8.0"
@@ -3035,10 +3035,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.18.tgz#8dfb97f0da23c2293e554c5a50d61ef134d7697f"
   integrity sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==
 
-"@types/node@16.11.47":
-  version "16.11.47"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.47.tgz#efa9e3e0f72e7aa6a138055dace7437a83d9f91c"
-  integrity sha512-fpP+jk2zJ4VW66+wAMFoBJlx1bxmBKx4DUFf68UHgdGCOuyUTDlLWqsaNPJh7xhNDykyJ9eIzAygilP/4WoN8g==
+"@types/node@18.14.2":
+  version "18.14.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.2.tgz#c076ed1d7b6095078ad3cf21dfeea951842778b1"
+  integrity sha512-1uEQxww3DaghA0RxqHx0O0ppVlo43pJhepY51OxuQIKHpjbnYLA7vcdwioNPzIqmC2u3I/dmylcqjlh0e7AyUA==
 
 "@types/node@18.14.6":
   version "18.14.6"
@@ -3095,19 +3095,12 @@
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
-"@types/react-dom@17.0.17", "@types/react-dom@17.0.19", "@types/react-dom@<18.0.0":
+"@types/react-dom@17.0.18", "@types/react-dom@17.0.19", "@types/react-dom@<18.0.0":
   version "17.0.19"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.19.tgz#36feef3aa35d045cacd5ed60fe0eef5272f19492"
   integrity sha512-PiYG40pnQRdPHnlf7tZnp0aQ6q9tspYr72vD61saO6zFCybLfMqwUCN0va1/P+86DXn18ZWeW30Bk7xlC5eEAQ==
   dependencies:
     "@types/react" "^17"
-
-"@types/react-table@7.7.12":
-  version "7.7.12"
-  resolved "https://registry.yarnpkg.com/@types/react-table/-/react-table-7.7.12.tgz#628011d3cb695b07c678704a61f2f1d5b8e567fd"
-  integrity sha512-bRUent+NR/WwtDGwI/BqhZ8XnHghwHw0HUKeohzB5xN3K2qKWYE5w19e7GCuOkL1CXD9Gi1HFy7TIm2AvgWUHg==
-  dependencies:
-    "@types/react" "*"
 
 "@types/react-table@7.7.14":
   version "7.7.14"
@@ -3116,7 +3109,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@17.0.48", "@types/react@17.0.53", "@types/react@^17":
+"@types/react@*", "@types/react@17.0.53", "@types/react@18.0.28", "@types/react@^17":
   version "17.0.53"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.53.tgz#10d4d5999b8af3d6bc6a9369d7eb953da82442ab"
   integrity sha512-1yIpQR2zdYu1Z/dc1OxC+MA6GR240u3gcnP4l6mvj/PJiVaqHsQPmWttsvHsfnhfPbU2FuGmo0wSITPygjBmsw==
@@ -5085,11 +5078,6 @@ class-utils@^0.3.5:
     define-property "^0.2.5"
     isobject "^3.0.0"
     static-extend "^0.1.1"
-
-classnames@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
-  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 classnames@2.3.2:
   version "2.3.2"
