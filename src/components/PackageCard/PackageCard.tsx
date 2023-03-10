@@ -113,13 +113,12 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
                 </>
               )}
             </p>
+            <p>{item?.package?.description}</p>
             {hasRating && (
               <div className="star-rating" data-testid="ratings">
                 {stars}
               </div>
             )}
-            <p>{item?.package?.description}</p>
-
             {isBundle && (
               <div data-testid="bundled-charms">
                 {featuredCharms.map((charm) => (
