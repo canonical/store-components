@@ -22,6 +22,7 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
   };
   const hasRating = item?.ratings?.value;
   const stars = [];
+  const totalRatings = item?.ratings?.count;
 
   let featuredCharms = [];
 
@@ -117,6 +118,9 @@ function PackageCard({ item, highlighted }: PackageCardProps) {
             {hasRating && (
               <div className="star-rating" data-testid="ratings">
                 {stars}
+                <span className="total-ratings u-text--muted">
+                  {totalRatings}
+                </span>
               </div>
             )}
             {isBundle && (
