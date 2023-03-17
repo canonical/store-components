@@ -25,5 +25,6 @@ export type Package = {
   }>;
   ratings?: {
     value: number | null;
+    count: number | null;
   };
 };
