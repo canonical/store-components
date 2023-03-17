@@ -17,8 +17,8 @@ function CardList({ packages, itemsPerPage }: Props) {
 
   return (
     <>
-      <Row className="u-equal-height">
-        {packagesToShow &&
+      <Row>
+        {packagesToShow.length > 0 &&
           packagesToShow.map((item) => (
             <Col
               size={3}
