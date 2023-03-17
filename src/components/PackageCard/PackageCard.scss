@@ -1,3 +1,7 @@
+@import "vanilla-framework";
+@include vf-base;
+@include vf-p-icons;
+
 .p-card__content {
   height: 100%;
 }
@@ -38,4 +42,27 @@
 
 .sc-charm-bundle-count {
   font-size: 0.875rem;
+}
+
+.star-rating {
+  display: inline-block;
+  padding-bottom: 1rem;
+}
+
+.p-icon--star-filled {
+  @extend %icon;
+
+  background-image: url("https://assets.ubuntu.com/v1/1d918a74-starY.svg");
+}
+
+.p-icon--star-empty {
+  @extend %icon;
+
+  background-image: url("https://assets.ubuntu.com/v1/33a591b4-starG.svg");
+}
+
+.p-icon--star-half-filled {
+  @extend %icon;
+
+  background-image: url("https://assets.ubuntu.com/v1/64f5fc15-Star%20half.svg");
 }

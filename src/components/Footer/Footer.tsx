@@ -24,12 +24,19 @@ export type Props = {
   socialLinks: SocialLink[];
   additionalLinks: AdditionalLink[];
   optionalLinks: OptionalLink[];
+  children;
 };
 
-function Footer({ socialLinks, additionalLinks, optionalLinks }: Props) {
+function Footer({
+  socialLinks,
+  additionalLinks,
+  optionalLinks,
+  children,
+}: Props): JSX.Element {
   return (
     <Strip type="light">
-      <Row className="u-equal-height">
+      {children}
+      <Row className="main-footer u-equal-height">
         <Col size={3}>
           <a className="p-link--soft" href="#">
             Back to top
