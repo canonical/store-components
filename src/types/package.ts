@@ -1,6 +1,3 @@
-const PackageType = ["snap", "charm", "bundle", "interface"];
-const ValidationType = ["star", "verified", undefined];
-
 export type Package = {
   package: {
     description: string;
@@ -8,16 +5,16 @@ export type Package = {
     icon_url?: string;
     name: string;
     platforms?: Array<string> | null;
-    type: (typeof PackageType)[number];
+    type?: string;
     charms?: Array<{
       name: string;
       display_name: string;
     }>;
   };
   publisher?: {
-    display_name?: string;
-    name?: string;
-    validation?: (typeof ValidationType)[number];
+    display_name: string;
+    name: string;
+    validation?: string;
   };
   categories?: Array<{
     display_name: string;

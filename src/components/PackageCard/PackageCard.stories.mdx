@@ -3,7 +3,60 @@ import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import PackageCard from "./PackageCard";
 import { Row, Col } from "@canonical/react-components";
 
-<Meta title="PackageCard" component={PackageCard} />
+<Meta
+  title="PackageCard"
+  component={PackageCard}
+  argTypes={{
+    isBundle: {
+      control: {
+        type: "boolean",
+      },
+      defaultValue: false,
+    },
+    isHighlighted: {
+      control: {
+        type: "boolean",
+      },
+      defaultValue: false,
+    },
+    showFeaturedPackages: {
+      control: {
+        type: "boolean",
+      },
+      defaultValue: false,
+    },
+    showIcon: {
+      control: {
+        type: "boolean",
+      },
+      defaultValue: false,
+    },
+    showLibraries: {
+      control: {
+        type: "boolean",
+      },
+      defaultValue: false,
+    },
+    showPlatforms: {
+      control: {
+        type: "boolean",
+      },
+      defaultValue: false,
+    },
+    showRatings: {
+      control: {
+        type: "boolean",
+      },
+      defaultValue: false,
+    },
+    showVerification: {
+      control: {
+        type: "boolean",
+      },
+      defaultValue: false,
+    },
+  }}
+/>
 
 export const Template = (args) => <PackageCard {...args} />;
 
@@ -23,34 +76,57 @@ This is a [React](https://reactjs.org/) component for the a package card.
     args={{
       item: {
         package: {
+          charms: [
+            {
+              display_name: "Traefik Ingress",
+              name: "traefik-k8s",
+            },
+            {
+              display_name: "MicroK8s",
+              name: "microk8s",
+            },
+            {
+              display_name: "Kafka",
+              name: "kafka",
+            },
+            {
+              display_name: "PostgreSQL",
+              name: "postgresql",
+            },
+            {
+              display_name: "Prometheus",
+              name: "prometheus-k8s",
+            },
+            {
+              display_name: "Landscape Server",
+              name: "landscape-server",
+            },
+            {
+              display_name: "Grafana",
+              name: "grafana-k8s",
+            },
+            {
+              display_name: "LXD",
+              name: "lxd",
+            },
+          ],
           description:
-            "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-          display_name: "GNU Image Manipulation Program",
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
           icon_url:
-            "https://dashboard.snapcraft.io/site_media/appmedia/2017/07/gimp.png",
-          name: "gimp",
-          platforms: ["kubernetes"],
-          type: "snap",
+            "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
+          name: "jami",
+          platforms: ["vm", "kubernetes"],
         },
         publisher: {
-          display_name: "John Doe",
-          name: "johndoe",
-          validation: "verified",
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
+          validation: "star",
         },
-        categories: [
-          {
-            display_name: "Big data",
-            name: "bigdata",
-          },
-          {
-            display_name: "Containers",
-            name: "containers",
-          },
-          {
-            display_name: "Networking",
-            name: "networking",
-          },
-        ],
+        ratings: {
+          value: 4,
+          count: 50,
+        },
       },
     }}
   >
@@ -58,270 +134,221 @@ This is a [React](https://reactjs.org/) component for the a package card.
   </Story>
 </Canvas>
 
-## Without package icon
+## With icon
 
 <Canvas>
-  <Story
-    name="Without package icon"
-    args={{
-      item: {
+  <Story name="With icon">
+    <PackageCard
+      item={{
         package: {
           description:
-            "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-          display_name: "GNU Image Manipulation Program",
-          name: "gimp",
-          platforms: ["kubernetes"],
-          type: "snap",
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
+          icon_url:
+            "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
+          name: "jami",
         },
         publisher: {
-          display_name: "John Doe",
-          name: "johndoe",
-          validation: "verified",
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
         },
-        categories: [
-          {
-            display_name: "Big data",
-            name: "bigdata",
-          },
-          {
-            display_name: "Containers",
-            name: "containers",
-          },
-          {
-            display_name: "Networking",
-            name: "networking",
-          },
-        ],
-      },
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-## Highlighted
-
-<Canvas>
-  <Story
-    name="Highlighted"
-    args={{
-      highlighted: true,
-      item: {
-        package: {
-          description:
-            "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-          display_name: "GNU Image Manipulation Program",
-          name: "gimp",
-          platforms: ["kubernetes"],
-          type: "snap",
-        },
-        publisher: {
-          display_name: "John Doe",
-          name: "johndoe",
-          validation: "verified",
-        },
-        categories: [
-          {
-            display_name: "Big data",
-            name: "bigdata",
-          },
-          {
-            display_name: "Containers",
-            name: "containers",
-          },
-          {
-            display_name: "Networking",
-            name: "networking",
-          },
-        ],
-      },
-    }}
-  >
-    {Template.bind({})}
+      }}
+      showIcon={true}
+    />
   </Story>
 </Canvas>
 
 ## Bundle
 
 <Canvas>
-  <Story
-    name="Bundle"
-    args={{
-      item: {
+  <Story name="Bundle">
+    <PackageCard
+      item={{
         package: {
           description:
-            "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-          display_name: "GNU Image Manipulation Program",
-          name: "gimp",
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
+          name: "jami",
           type: "bundle",
+        },
+        publisher: {
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
+        },
+      }}
+      isBundle={true}
+    />
+  </Story>
+</Canvas>
+
+### Highlighted
+
+<Canvas>
+  <Story name="Highlighted">
+    <PackageCard
+      item={{
+        package: {
+          description:
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
+          name: "jami",
+        },
+        publisher: {
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
+        },
+      }}
+      isHighlighted={true}
+    />
+  </Story>
+</Canvas>
+
+## With featured packages
+
+<Canvas>
+  <Story name="With featured packages">
+    <PackageCard
+      item={{
+        package: {
           charms: [
-            { name: "hello-kubecon", display_name: "Hello, Kubecon!" },
             {
-              name: "nginx-ingress-integrator",
-              display_name: "Nginx Ingress Integrator",
+              display_name: "Traefik Ingress",
+              name: "traefik-k8s",
             },
-            { name: "mongodb-k8s", display_name: "Charmed MongoDB" },
-            { name: "elasticsearch-k8s", display_name: "Elasticsearch" },
-            { name: "graylog-k8s", display_name: "Graylog" },
-            { name: "prometheus-k8s", display_name: "Prometheus" },
-            { name: "alertmanager-k8s", display_name: "Alertmanager" },
-            { name: "grafana-k8s", display_name: "Grafana" },
-            { name: "postgresql-k8s", display_name: "PostgreSQL" },
-            { name: "mattermost-k8s", display_name: "Mattermost" },
+            {
+              display_name: "MicroK8s",
+              name: "microk8s",
+            },
+            {
+              display_name: "Kafka",
+              name: "kafka",
+            },
+            {
+              display_name: "PostgreSQL",
+              name: "postgresql",
+            },
+            {
+              display_name: "Prometheus",
+              name: "prometheus-k8s",
+            },
+            {
+              display_name: "Landscape Server",
+              name: "landscape-server",
+            },
+            {
+              display_name: "Grafana",
+              name: "grafana-k8s",
+            },
+            {
+              display_name: "LXD",
+              name: "lxd",
+            },
           ],
+          description:
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
+          name: "jami",
         },
         publisher: {
-          display_name: "John Doe",
-          name: "johndoe",
-          validation: "verified",
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
         },
-        categories: [
-          {
-            display_name: "Big data",
-            name: "bigdata",
-          },
-          {
-            display_name: "Containers",
-            name: "containers",
-          },
-          {
-            display_name: "Networking",
-            name: "networking",
-          },
-        ],
-      },
-    }}
-  >
-    {Template.bind({})}
+      }}
+      showFeaturedPackages={true}
+    />
   </Story>
 </Canvas>
 
-## Platform
+## With libraries
 
 <Canvas>
-  <Story
-    name="Platform"
-    args={{
-      item: {
+  <Story name="With libraries">
+    <PackageCard
+      item={{
         package: {
           description:
-            "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-          display_name: "GNU Image Manipulation Program",
-          name: "gimp",
-          platforms: ["kubernetes"],
-          type: "charm",
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
+          name: "jami",
         },
         publisher: {
-          display_name: "John Doe",
-          name: "johndoe",
-          validation: "verified",
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
         },
-        categories: [
-          {
-            display_name: "Big data",
-            name: "bigdata",
-          },
-          {
-            display_name: "Containers",
-            name: "containers",
-          },
-          {
-            display_name: "Networking",
-            name: "networking",
-          },
-        ],
-      },
-    }}
-  >
-    {Template.bind({})}
+      }}
+      showLibraries={true}
+    />
   </Story>
 </Canvas>
 
-## Interface
+## With platforms
 
 <Canvas>
-  <Story
-    name="Interface"
-    args={{
-      item: {
+  <Story name="With platforms">
+    <PackageCard
+      item={{
         package: {
           description:
-            "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-          display_name: "GNU Image Manipulation Program",
-          name: "gimp",
-          type: "interface",
-          icon_url:
-            "https://dashboard.snapcraft.io/site_media/appmedia/2017/07/gimp.png",
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
+          name: "jami",
+          platforms: ["vm", "kubernetes"],
         },
         publisher: {
-          display_name: "John Doe",
-          name: "johndoe",
-          validation: "verified",
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
         },
-        categories: [
-          {
-            display_name: "Big data",
-            name: "bigdata",
-          },
-          {
-            display_name: "Containers",
-            name: "containers",
-          },
-          {
-            display_name: "Networking",
-            name: "networking",
-          },
-        ],
-      },
-    }}
-  >
-    {Template.bind({})}
+      }}
+      showPlatforms={true}
+    />
   </Story>
 </Canvas>
 
-## Ratings
+## With ratings
 
 <Canvas>
-  <Story
-    name="Ratings"
-    args={{
-      item: {
+  <Story name="With ratings">
+    <PackageCard
+      item={{
         package: {
           description:
-            "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
-          display_name: "GNU Image Manipulation Program",
-          icon_url:
-            "https://dashboard.snapcraft.io/site_media/appmedia/2017/07/gimp.png",
-          name: "gimp",
-          platforms: ["kubernetes"],
-          type: "snap",
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
+          name: "jami",
         },
         publisher: {
-          display_name: "John Doe",
-          name: "johndoe",
-          validation: "verified",
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
         },
-        categories: [
-          {
-            display_name: "Big data",
-            name: "bigdata",
-          },
-          {
-            display_name: "Containers",
-            name: "containers",
-          },
-          {
-            display_name: "Networking",
-            name: "networking",
-          },
-        ],
         ratings: {
-          value: 3.5,
-          count: 100,
+          value: 4,
+          count: 50,
         },
-      },
-    }}
-  >
-    {Template.bind({})}
+      }}
+      showRatings={true}
+    />
+  </Story>
+</Canvas>
+
+## With verification
+
+<Canvas>
+  <Story name="With verfication">
+    <PackageCard
+      item={{
+        package: {
+          description:
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
+          name: "jami",
+        },
+        publisher: {
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
+          validation: "star",
+        },
+      }}
+      showVerification={true}
+    />
   </Story>
 </Canvas>
