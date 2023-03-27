@@ -8,6 +8,8 @@ import "./PackageCard.scss";
 
 import type { Package as PackageProps } from "../../types/package";
 
+export type Props = PackageCardProps;
+
 type PackageCardProps = {
   item: PackageProps;
   isBundle?: boolean;
