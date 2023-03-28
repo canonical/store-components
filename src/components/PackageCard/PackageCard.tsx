@@ -11,7 +11,7 @@ import type { Package as PackageProps } from "../../types/package";
 export type Props = PackageCardProps;
 
 type PackageCardProps = {
-  item: PackageProps;
+  data: PackageProps;
   isBundle?: boolean;
   isHighlighted?: boolean;
   showFeaturedPackages?: boolean;
@@ -23,7 +23,7 @@ type PackageCardProps = {
 };
 
 function PackageCard({
-  item,
+  data,
   isBundle,
   isHighlighted,
   showFeaturedPackages,
@@ -57,12 +57,12 @@ function PackageCard({
   return (
     <Card style={outerCardStyle}>
       {showIcon ? (
-        <IconCard iconUrl={item.package.icon_url}>
-          <InnerCard item={item} {...innerCardProps} />
+        <IconCard iconUrl={data.package.icon_url}>
+          <InnerCard data={data} {...innerCardProps} />
         </IconCard>
       ) : (
         <div className="u-no-margin--bottom" style={{ height: "100%" }}>
-          <InnerCard item={item} {...innerCardProps} />
+          <InnerCard data={data} {...innerCardProps} />
         </div>
       )}
     </Card>

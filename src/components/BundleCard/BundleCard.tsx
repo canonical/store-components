@@ -5,7 +5,7 @@ import PackageCard from "components/PackageCard";
 function BundleCard({ data }) {
   return (
     <PackageCard
-      item={data}
+      data={data}
       showIcon
       showVerification
       showFeaturedPackages

@@ -3,7 +3,7 @@ import React from "react";
 import type { Package as PackageProps } from "../../types/package";
 
 type PackageCardProps = {
-  item: PackageProps;
+  data: PackageProps;
   isBundle?: boolean;
   isHighlighted?: boolean;
   showFeaturedPackages?: boolean;
@@ -15,7 +15,7 @@ type PackageCardProps = {
 };
 
 function InnerCard({
-  item,
+  data,
   isBundle,
   showFeaturedPackages,
   showLibraries,
@@ -25,20 +25,20 @@ function InnerCard({
 }: PackageCardProps) {
   let featuredCharms = [];
 
-  if (item.package.charms) {
-    featuredCharms = item.package.charms.slice(0, 7);
+  if (data.package.charms) {
+    featuredCharms = data.package.charms.slice(0, 7);
   }
 
   const stars = [];
   let ratings = null;
   let totalRatings = null;
 
-  if (item.ratings && item.ratings.value) {
-    ratings = item.ratings.value;
+  if (data.ratings && data.ratings.value) {
+    ratings = data.ratings.value;
   }
 
-  if (item.ratings && item.ratings.count) {
-    totalRatings = item.ratings.count;
+  if (data.ratings && data.ratings.count) {
+    totalRatings = data.ratings.count;
   }
 
   for (let i = 1; i <= 5; i++) {
@@ -64,14 +64,14 @@ function InnerCard({
 
         <div className="sc-package-card__body">
           <h2 className="p-heading--4 u-no-margin--bottom">
-            <a href={`/${item.package.name}`}>{item.package.display_name}</a>
+            <a href={`/${data.package.name}`}>{data.package.display_name}</a>
           </h2>
 
           <p className="u-text--muted">
-            {item.publisher.display_name}{" "}
+            {data.publisher.display_name}{" "}
             {showVerification && (
               <>
-                {item.publisher.validation === "verified" && (
+                {data.publisher.validation === "verified" && (
                   <img
                     src="https://assets.ubuntu.com/v1/ba8a4b7b-Verified.svg"
                     width={14}
@@ -80,7 +80,7 @@ function InnerCard({
                     title="Verified account"
                   />
                 )}
-                {item.publisher.validation === "star" && (
+                {data.publisher.validation === "star" && (
                   <img
                     src="https://assets.ubuntu.com/v1/d810dee9-Orange+Star.svg"
                     width={14}
@@ -93,7 +93,7 @@ function InnerCard({
             )}
           </p>
 
-          <p>{item.package.description}</p>
+          <p>{data.package.description}</p>
 
           {showRatings && (
             <div className="star-rating" data-testid="ratings">
@@ -104,7 +104,7 @@ function InnerCard({
             </div>
           )}
 
-          {showFeaturedPackages && item.package.charms && (
+          {showFeaturedPackages && data.package.charms && (
             <div data-testid="featured-packages">
               {featuredCharms.map((charm) => (
                 <span
@@ -115,9 +115,9 @@ function InnerCard({
                   {charm.display_name.slice(0, 2)}
                 </span>
               ))}
-              {item.package.charms.length - featuredCharms.length > 0 && (
+              {data.package.charms.length - featuredCharms.length > 0 && (
                 <span className="sc-charm-bundle-count u-text--muted">
-                  +{item.package.charms.length - featuredCharms.length}
+                  +{data.package.charms.length - featuredCharms.length}
                 </span>
               )}
             </div>
@@ -127,15 +127,15 @@ function InnerCard({
         {showLibraries && (
           <div className="sc-package-card__footer">
             <hr />
-            <a href={`/${item.package.name}/libraries`}>Libraries</a>
+            <a href={`/${data.package.name}/libraries`}>Libraries</a>
           </div>
         )}
 
-        {showPlatforms && item.package.platforms && (
+        {showPlatforms && data.package.platforms && (
           <div className="sc-package-card__footer">
             <hr />
             <div className="u-align--right">
-              {item.package.platforms.includes("vm") && (
+              {data.package.platforms.includes("vm") && (
                 <img
                   className="sc-platform-icon"
                   src="https://assets.ubuntu.com/v1/a911ecf6-vm-badge.svg"
@@ -145,7 +145,7 @@ function InnerCard({
                 />
               )}
 
-              {item.package.platforms.includes("kubernetes") && (
+              {data.package.platforms.includes("kubernetes") && (
                 <img
                   className="sc-platform-icon"
                   src="https://assets.ubuntu.com/v1/f1852c07-Kubernetes.svg"

@@ -5,7 +5,7 @@ import PackageCard from "./PackageCard";
 
 describe("PackageCard", () => {
   const props = {
-    item: {
+    data: {
       package: {
         charms: [
           {
