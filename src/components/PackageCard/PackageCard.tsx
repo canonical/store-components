@@ -57,7 +57,10 @@ function PackageCard({
   return (
     <Card style={outerCardStyle}>
       {showIcon ? (
-        <IconCard iconUrl={data.package.icon_url}>
+        <IconCard
+          iconUrl={data.package.icon_url}
+          displayName={data.package.display_name}
+        >
           <InnerCard data={data} {...innerCardProps} />
         </IconCard>
       ) : (
