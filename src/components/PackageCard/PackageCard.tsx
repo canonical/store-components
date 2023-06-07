@@ -54,23 +54,22 @@ function PackageCard({
     outerCardStyle["borderTop"] = "3px solid #0f95a1";
   }
 
+  const handleClick = () => {
+    window.location.href = `/${data.package.name}`;
+  };
+
   return (
-    <a href={`/${data.package.name}`}>
-      <Card style={outerCardStyle}>
-        {showIcon ? (
-          <IconCard
-            iconUrl={data.package.icon_url}
-            displayName={data.package.display_name}
-          >
-            <InnerCard data={data} {...innerCardProps} />
-          </IconCard>
-        ) : (
-          <div className="u-no-margin--bottom" style={{ height: "100%" }}>
-            <InnerCard data={data} {...innerCardProps} />
-          </div>
-        )}
-      </Card>
-    </a>
+    <Card style={outerCardStyle} onClick={handleClick}>
+      {showIcon ? (
+        <IconCard iconUrl={data.package.icon_url}>
+          <InnerCard data={data} {...innerCardProps} />
+        </IconCard>
+      ) : (
+        <div className="u-no-margin--bottom" style={{ height: "100%" }}>
+          <InnerCard data={data} {...innerCardProps} />
+        </div>
+      )}
+    </Card>
   );
 }
 

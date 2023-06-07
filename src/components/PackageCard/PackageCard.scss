@@ -18,6 +18,10 @@
   flex-grow: 1;
 }
 
+.sc-package-card__body p:hover{
+  text-decoration: none;
+}
+
 .sc-package-card__header,
 .sc-package-card__footer {
   flex-shrink: 0;
