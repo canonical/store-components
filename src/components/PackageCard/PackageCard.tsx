@@ -55,20 +55,22 @@ function PackageCard({
   }
 
   return (
-    <Card style={outerCardStyle}>
-      {showIcon ? (
-        <IconCard
-          iconUrl={data.package.icon_url}
-          displayName={data.package.display_name}
-        >
-          <InnerCard data={data} {...innerCardProps} />
-        </IconCard>
-      ) : (
-        <div className="u-no-margin--bottom" style={{ height: "100%" }}>
-          <InnerCard data={data} {...innerCardProps} />
-        </div>
-      )}
-    </Card>
+    <a href={`/${data.package.name}`}>
+      <Card style={outerCardStyle}>
+        {showIcon ? (
+          <IconCard
+            iconUrl={data.package.icon_url}
+            displayName={data.package.display_name}
+          >
+            <InnerCard data={data} {...innerCardProps} />
+          </IconCard>
+        ) : (
+          <div className="u-no-margin--bottom" style={{ height: "100%" }}>
+            <InnerCard data={data} {...innerCardProps} />
+          </div>
+        )}
+      </Card>
+    </a>
   );
 }
 
