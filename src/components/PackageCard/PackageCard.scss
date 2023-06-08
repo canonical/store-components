@@ -5,6 +5,7 @@
 .p-card__content {
   height: 100%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .sc-package-card {
@@ -16,6 +17,10 @@
 
 .sc-package-card__body {
   flex-grow: 1;
+}
+
+.sc-package-card__body :hover{
+  text-decoration: none;
 }
 
 .sc-package-card__header,
