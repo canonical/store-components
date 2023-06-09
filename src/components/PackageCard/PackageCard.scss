@@ -12,14 +12,14 @@
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 250px;
 }
 
 .sc-package-card__body {
   flex-grow: 1;
 }
 
-.sc-package-card__body :hover{
+.sc-package-card__body :hover {
   text-decoration: none;
 }
 
