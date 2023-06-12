@@ -16,6 +16,66 @@ This is a [React](https://reactjs.org/) component for a default package card.
 <Canvas>
   <Story name="Default">
     <Row>
+      <CharmCard
+        data={{
+          package: {
+            charms: [
+              {
+                display_name: "Traefik Ingress",
+                name: "traefik-k8s",
+              },
+              {
+                display_name: "MicroK8s",
+                name: "microk8s",
+              },
+              {
+                display_name: "Kafka",
+                name: "kafka",
+              },
+              {
+                display_name: "PostgreSQL",
+                name: "postgresql",
+              },
+              {
+                display_name: "Prometheus",
+                name: "prometheus-k8s",
+              },
+              {
+                display_name: "Landscape Server",
+                name: "landscape-server",
+              },
+              {
+                display_name: "Grafana",
+                name: "grafana-k8s",
+              },
+              {
+                display_name: "LXD",
+                name: "lxd",
+              },
+            ],
+            description:
+              "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+            display_name: "Jami",
+            icon_url:
+              "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
+            name: "jami",
+            platforms: ["vm", "kubernetes"],
+          },
+          publisher: {
+            display_name: "Savoir-faire Linux",
+            name: "sfljami",
+            validation: "star",
+          },
+          ratings: {
+            value: 4,
+            count: 50,
+          },
+        }}
+      />
+    </Row>
+  </Story>
+  <Story name="Lists">
+    <Row>
       <Col size={3} style={{ marginBottom: "1.5rem" }}>
         <CharmCard
           data={{
@@ -55,7 +115,7 @@ This is a [React](https://reactjs.org/) component for a default package card.
                 },
               ],
               description:
-                "Privacy-oriented voice, video, chat, and conference platform and SIP phone.",
+                "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
               display_name: "Jami",
               icon_url:
                 "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
@@ -229,13 +289,10 @@ This is a [React](https://reactjs.org/) component for a default package card.
                   name: "lxd",
                 },
               ],
-              description:
-                "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
               display_name: "Jami",
               icon_url:
                 "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
               name: "jami",
-              platforms: ["vm", "kubernetes"],
             },
             publisher: {
               display_name: "Savoir-faire Linux",
