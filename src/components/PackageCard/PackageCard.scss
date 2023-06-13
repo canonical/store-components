@@ -2,6 +2,10 @@
 @include vf-base;
 @include vf-p-icons;
 
+.p-card {
+  overflow: hidden;
+}
+
 .p-card__content {
   height: 100%;
   overflow: hidden;
@@ -12,14 +16,14 @@
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  overflow: hidden;
 }
 
 .sc-package-card__body {
   flex-grow: 1;
 }
 
-.sc-package-card__body :hover{
+.sc-package-card__body :hover {
   text-decoration: none;
 }
 
