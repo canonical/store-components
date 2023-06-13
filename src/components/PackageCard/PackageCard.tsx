@@ -62,7 +62,7 @@ function PackageCard({
     <Card style={outerCardStyle} onClick={handleClick}>
       {showIcon ? (
         <IconCard iconUrl={data.package.icon_url}>
-          <InnerCard data={data} {...innerCardProps} />
+          <InnerCard data={data} {...innerCardProps} height="100%" />
         </IconCard>
       ) : (
         <div className="u-no-margin--bottom" style={{ height: "100%" }}>
