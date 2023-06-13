@@ -2,6 +2,10 @@
 @include vf-base;
 @include vf-p-icons;
 
+.p-card {
+  overflow: hidden;
+}
+
 .p-card__content {
   height: 100%;
   overflow: hidden;
