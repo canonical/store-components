@@ -12,6 +12,7 @@ type PackageCardProps = {
   showPlatforms?: boolean;
   showRatings?: boolean;
   showVerification?: boolean;
+  height?: string;
 };
 
 function InnerCard({
@@ -22,6 +23,7 @@ function InnerCard({
   showPlatforms,
   showRatings,
   showVerification,
+  height,
 }: PackageCardProps) {
   let featuredCharms = [];
 
@@ -52,10 +54,12 @@ function InnerCard({
 
     stars.push(<i className={className} key={i}></i>);
   }
-
   return (
     <>
-      <div className="sc-package-card" style={{ width: "100%" }}>
+      <div
+        className="sc-package-card"
+        style={{ width: "100%", height: height }}
+      >
         {isBundle && (
           <div className="sc-package-card__header">
             <h3 className="p-muted-heading">Bundle</h3>
