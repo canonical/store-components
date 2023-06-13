@@ -1,139 +1,104 @@
-import React, { useState, useEffect } from "react";
+import React, { SyntheticEvent } from "react";
 import { CheckboxInput, Select } from "@canonical/react-components";
 
-import type { Package } from "types/package";
+import type { Category } from "../../types/category";
 
 type Props = {
-  categories?: Array<{ display_name: string; name: string }> | null;
-  packages: Array<Package>;
-  setFilteredPackages: Function;
-  types?: Array<{
-    label: string;
-    value?: string;
-  }> | null;
-  platforms?: Array<{
-    label: string;
-    value: string;
-  }> | null;
+  categories: Array<Category>;
+  selectedCategories: Array<string>;
+  setSelectedCategories: Function;
+  platforms: Array<{ display_name: string; name: string }>;
+  selectedPlatform: string | undefined;
+  setSelectedPlatform: Function;
+  packageTypes: Array<{ display_name: string; name: string }>;
+  selectedPackageType: string | undefined;
+  setSelectedPackageType: Function;
+  disabled: boolean;
 };
 
 function Filters({
   categories,
-  types,
-  packages,
-  setFilteredPackages,
+  selectedCategories,
+  setSelectedCategories,
   platforms,
+  selectedPlatform,
+  setSelectedPlatform,
+  packageTypes,
+  selectedPackageType,
+  setSelectedPackageType,
+  disabled,
 }: Props) {
-  const [selectedCategories, setSelectedCategories] = useState([]);
-  const [selectedPlatform, setSelectedPlatform] = useState("all");
-  const [selectedType, setSelectedType] = useState("all");
+  const handleSelectedCategoriesChange = (
+    event: SyntheticEvent,
+    categoryName: string
+  ) => {
+    const target = event.target as HTMLInputElement;
 
-  const hasPlatform = (item: Package, platform: string) => {
-    if (!platform || platform === "all") {
-      return true;
+    let newSelectedCategories = [...selectedCategories];
+
+    if (target.checked) {
+      newSelectedCategories = [...selectedCategories, categoryName];
+    } else {
+      newSelectedCategories.splice(
+        newSelectedCategories.indexOf(categoryName),
+        1
+      );
     }
 
-    return item.package.platforms && item.package.platforms.includes(platform);
+    setSelectedCategories(newSelectedCategories);
   };
 
-  const isType = (item: Package, type: string) => {
-    if (!type || type === "all") {
-      return true;
-    }
+  const formattedPlatforms = platforms.map((platform) => {
+    return {
+      label: platform.display_name,
+      value: platform.name,
+    };
+  });
 
-    return item.package.type === type;
-  };
-
-  const hasCategories = (item: Package, categoryList: Array<string>) => {
-    const itemCategories = item.categories.map((itemCategory) => {
-      return itemCategory.name;
-    });
-
-    let hasCategory = true;
-
-    categoryList.forEach((categoryItem) => {
-      if (!itemCategories.includes(categoryItem)) {
-        hasCategory = false;
-      }
-    });
-
-    return hasCategory;
-  };
-
-  useEffect(() => {
-    setFilteredPackages(
-      packages.filter(
-        (item) =>
-          hasPlatform(item, selectedPlatform) &&
-          isType(item, selectedType) &&
-          hasCategories(item, selectedCategories)
-      )
-    );
-  }, [
-    selectedCategories,
-    selectedPlatform,
-    selectedType,
-    packages,
-    setFilteredPackages,
-  ]);
+  const formattedPackageTypes = packageTypes.map((packageType) => {
+    return {
+      label: packageType.display_name,
+      value: packageType.name,
+    };
+  });
 
   return (
     <>
-      <h3 className="p-muted-heading">Filters</h3>
-      {categories &&
+      <h2 className="p-muted-heading">Filters</h2>
+      {categories.length > 0 &&
         categories.map((category) => (
           <CheckboxInput
-            key={category?.name}
-            label={category?.display_name}
-            onChange={(e) => {
-              const target = e.target as HTMLInputElement;
-
-              if (
-                !selectedCategories.includes(category.name) &&
-                target.checked
-              ) {
-                setSelectedCategories(
-                  [category.name].concat(selectedCategories)
-                );
-              }
-
-              if (
-                selectedCategories.includes(category.name) &&
-                !target.checked
-              ) {
-                setSelectedCategories(
-                  selectedCategories.filter(
-                    (selectedCategory) => selectedCategory !== category.name
-                  )
-                );
-              }
+            disabled={disabled}
+            key={category.name}
+            label={category.display_name}
+            onChange={(event: SyntheticEvent) => {
+              handleSelectedCategoriesChange(event, category.name);
             }}
+            checked={selectedCategories?.includes(category.name)}
           />
         ))}
 
-      {platforms && (
-        <Select
-          defaultValue="all"
-          id="platforms"
-          label="Platforms"
-          options={platforms}
-          onChange={(e) => {
-            setSelectedPlatform(e.target.value);
-          }}
-        />
-      )}
+      <Select
+        disabled={disabled}
+        defaultValue={selectedPlatform}
+        id="platforms"
+        label="Platforms"
+        options={formattedPlatforms}
+        onChange={(e) => {
+          setSelectedPlatform(e.target.value);
+        }}
+      />
 
-      {types && (
-        <Select
-          defaultValue="all"
-          id="types"
-          label="Types"
-          options={types}
-          onChange={(e) => {
-            setSelectedType(e.target.value);
-          }}
-        />
-      )}
+      <Select
+        disabled={disabled}
+        defaultValue={selectedPackageType}
+        id="package-types"
+        label="Filter by"
+        options={formattedPackageTypes}
+        onChange={(e) => {
+          setSelectedPackageType(e.target.value);
+        }}
+      />
     </>
   );
 }
