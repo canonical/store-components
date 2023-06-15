@@ -4,7 +4,7 @@ import { Card } from "@canonical/react-components";
 import "./LoadingCard.scss";
 
 type Props = {
-  height: number;
+  height?: number;
 };
 
 function LoadingCard({ height }: Props) {
