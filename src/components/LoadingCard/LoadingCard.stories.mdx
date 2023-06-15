@@ -1,0 +1,30 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+import LoadingCard from "./LoadingCard";
+import { Row, Col } from "@canonical/react-components";
+
+<Meta title="LoadingCard" component={LoadingCard} />
+
+export const Template = (args) => <LoadingCard {...args} />;
+
+### LoadingCard
+
+This is a [React](https://reactjs.org/) component for a default package card.
+
+<ArgsTable of={LoadingCard} />
+
+<Canvas>
+  <Story name="Default">
+    <Row>
+      <LoadingCard />
+    </Row>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Custom height">
+    <Row>
+      <LoadingCard height={120} />
+    </Row>
+  </Story>
+</Canvas>
