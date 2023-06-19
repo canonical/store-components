@@ -27,3 +27,37 @@ This is a [React](https://reactjs.org/) component for a default package card.
     </Row>
   </Story>
 </Canvas>
+
+<Canvas>
+  <Story name="Trunact title">
+    <Row>
+      <Col size={3}>
+        <TopicCard
+          truncateTitle={true}
+          data={{
+            description:
+              "At Canonical, we have been referring to LMA as a system of machine charms currently in use to monitor Canonical and customer systems. COS draws a lot of learning from years of operational experience with LMA, but it is also different enough that we felt we needed to make a distinction from the previous iteration.",
+            name: "Canonical Observability Stack",
+            slug: "canonical-observability-stack",
+          }}
+        />
+      </Col>
+    </Row>
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story name="Trunact content">
+    <Row>
+      <TopicCard
+        truncateContent={2}
+        data={{
+          description:
+            "At Canonical, we have been referring to LMA as a system of machine charms currently in use to monitor Canonical and customer systems. COS draws a lot of learning from years of operational experience with LMA, but it is also different enough that we felt we needed to make a distinction from the previous iteration.",
+          name: "Canonical Observability Stack",
+          slug: "canonical-observability-stack",
+        }}
+      />
+    </Row>
+  </Story>
+</Canvas>
