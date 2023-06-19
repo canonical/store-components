@@ -1,6 +1,8 @@
 import React from "react";
 import { Card } from "@canonical/react-components";
 
+import "./TopicCard.scss";
+
 type Props = {
   data: {
     slug: string;
@@ -8,23 +10,10 @@ type Props = {
     description: string;
   };
   truncateTitle?: boolean;
-  truncateContent?: number;
+  truncateContent?: boolean;
 };
 
 function TopicCard({ data, truncateTitle, truncateContent }: Props) {
-  const truncateTitleStyles = {
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    whiteSpace: "nowrap",
-  };
-
-  const truncateContentStyles = {
-    display: "-webkit-box",
-    WebkitLineClamp: truncateContent,
-    WebkitBoxOrient: "vertical",
-    overflow: "hidden",
-  };
-
   return (
     <Card
       style={{ borderTop: "3px solid #f2a031" }}
@@ -32,14 +21,11 @@ function TopicCard({ data, truncateTitle, truncateContent }: Props) {
         window.location.href = `/topics/${data.slug}`;
       }}
     >
-      <h3
-        style={truncateTitle ? truncateTitleStyles : null}
-        className="p-muted-heading"
-      >
+      <h3 className={`p-muted-heading ${truncateTitle ? "u-truncate" : ""}`}>
         {data.name}
       </h3>
       <hr />
-      <p style={truncateContent ? truncateContentStyles : null}>
+      <p className={truncateContent ? "u-line-clamp" : ""}>
         {data.description}
       </p>
     </Card>
