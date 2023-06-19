@@ -5,6 +5,7 @@ export { default as Filters } from "./components/Filters";
 export { default as Footer } from "./components/Footer";
 export { default as InterfaceCard } from "./components/InterfaceCard";
 export { default as LoadingCard } from "./components/LoadingCard";
+export { default as TopicCard } from "./components/TopicCard";
 
 export type {
   ClassName,
