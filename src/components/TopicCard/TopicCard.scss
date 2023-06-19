@@ -1,0 +1,6 @@
+.u-line-clamp {
+  -webkit-box-orient: vertical;
+  display: -webkit-box; // stylelint-disable-line
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
