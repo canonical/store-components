@@ -22,7 +22,9 @@ function TopicCard({ data, truncateTitle, truncateContent }: Props) {
       }}
     >
       <h3 className={`p-muted-heading ${truncateTitle ? "u-truncate" : ""}`}>
-        {data.name}
+        <a className="p-link--soft" href={`/topics/${data.slug}`}>
+          {data.name}
+        </a>
       </h3>
       <hr />
       <p className={truncateContent ? "u-line-clamp" : ""}>
