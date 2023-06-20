@@ -67,9 +67,17 @@ function InnerCard({
         )}
 
         <div className="sc-package-card__body">
-          <h2 className="p-heading--4 u-no-margin--bottom">
-            <a href={`/${data.package.name}`}>{data.package.display_name}</a>
-          </h2>
+          {data.package.display_name && (
+            <h2 className="p-heading--4 u-no-margin--bottom">
+              {data.package.name ? (
+                <a href={`/${data.package.name}`}>
+                  {data.package.display_name}
+                </a>
+              ) : (
+                <>{data.package.display_name}</>
+              )}
+            </h2>
+          )}
 
           <p className="u-text--muted">
             {data.publisher.display_name}{" "}
