@@ -105,7 +105,7 @@ function InnerCard({
             )}
           </p>
 
-          <p>{data.package.description}</p>
+          <p className="u-line-clamp">{data.package.description}</p>
 
           {showRatings && (
             <div className="star-rating" data-testid="ratings">
