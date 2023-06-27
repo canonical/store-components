@@ -96,8 +96,10 @@ describe("PackageCard", () => {
     expect(screen.queryByText("Libraries")).not.toBeInTheDocument();
   });
 
-  it("shows libraries if enabled", () => {
-    render(<PackageCard {...props} showLibraries={true} />);
+  it("shows libraries when showPlatforms is enabled", () => {
+    render(
+      <PackageCard {...props} showPlatforms={true} showLibraries={true} />
+    );
     expect(screen.getByText("Libraries")).toBeInTheDocument();
   });
 

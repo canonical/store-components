@@ -7,9 +7,9 @@
 }
 
 .p-card__content {
+  cursor: pointer;
   height: 100%;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .sc-package-card {
@@ -32,9 +32,9 @@
 }
 
 .sc-package-card__footer {
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
 }
 
 .sc-package-card__footer-content {
@@ -47,8 +47,8 @@
 }
 
 .sc-platform {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-left: auto;
 }
 
