@@ -27,9 +27,29 @@
   text-decoration: none;
 }
 
-.sc-package-card__header,
+.sc-package-card__header {
+  flex-shrink: 0;
+}
+
 .sc-package-card__footer {
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sc-package-card__footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sc-package-card__footer-link {
+  display: block
+}
+
+.sc-platform {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .sc-charm-bundle-icon {
@@ -82,7 +102,7 @@
 }
 
 .sc-platform-icon {
-  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .u-line-clamp {

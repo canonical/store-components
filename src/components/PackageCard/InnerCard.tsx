@@ -134,41 +134,45 @@ function InnerCard({
               )}
             </div>
           )}
+
+          {showPlatforms &&
+            data.package.platforms &&
+            data.package.platforms.length > 0 && (
+              <div className="sc-package-card__footer">
+                <hr />
+                <div className="sc-package-card__footer-content">
+                  {showLibraries && (
+                    <a
+                      href={`/${data.package.name}/libraries`}
+                      className="sc-package-card__footer-link"
+                    >
+                      Libraries
+                    </a>
+                  )}
+                  <div className="sc-platform u-align--right">
+                    {data.package.platforms.includes("vm") && (
+                      <img
+                        className="sc-platform-icon"
+                        src="https://assets.ubuntu.com/v1/a911ecf6-vm-badge.svg"
+                        width={24}
+                        height={24}
+                        alt="VM"
+                      />
+                    )}
+                    {data.package.platforms.includes("kubernetes") && (
+                      <img
+                        className="sc-platform-icon"
+                        src="https://assets.ubuntu.com/v1/f1852c07-Kubernetes.svg"
+                        width={24}
+                        height={24}
+                        alt="Kubernetes"
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
         </div>
-
-        {showLibraries && (
-          <div className="sc-package-card__footer">
-            <hr />
-            <a href={`/${data.package.name}/libraries`}>Libraries</a>
-          </div>
-        )}
-
-        {showPlatforms && data.package.platforms && (
-          <div className="sc-package-card__footer">
-            <hr />
-            <div className="u-align--right">
-              {data.package.platforms.includes("vm") && (
-                <img
-                  className="sc-platform-icon"
-                  src="https://assets.ubuntu.com/v1/a911ecf6-vm-badge.svg"
-                  width={24}
-                  height={24}
-                  alt="VM"
-                />
-              )}
-
-              {data.package.platforms.includes("kubernetes") && (
-                <img
-                  className="sc-platform-icon"
-                  src="https://assets.ubuntu.com/v1/f1852c07-Kubernetes.svg"
-                  width={24}
-                  height={24}
-                  alt="Kubernetes"
-                />
-              )}
-            </div>
-          </div>
-        )}
       </div>
     </>
   );
