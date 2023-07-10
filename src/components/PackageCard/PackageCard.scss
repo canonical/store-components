@@ -21,6 +21,8 @@
 
 .sc-package-card__body {
   flex-grow: 1;
+  display: flex;
+  flex-flow: column;
 }
 
 .sc-package-card__body :hover {
@@ -35,6 +37,7 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  margin-top: auto;
 }
 
 .sc-package-card__footer-content {
@@ -43,7 +46,7 @@
 }
 
 .sc-package-card__footer-link {
-  display: block
+  display: block;
 }
 
 .sc-platform {
