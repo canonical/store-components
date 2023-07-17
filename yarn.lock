@@ -1448,19 +1448,20 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@canonical/react-components@0.42.0":
-  version "0.42.0"
-  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-0.42.0.tgz#c73e0b5557714dbff29c78a12269a5969d85ff17"
-  integrity sha512-VPkAQ5glsoZ52EAXIAk68UBXtUc4NqVpZr783E7lIn05bL6BDcmF9ItRixBD2eI0u8r/XHwhxpkXZds0BIz6xA==
+"@canonical/react-components@0.44.0":
+  version "0.44.0"
+  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-0.44.0.tgz#584f7f9c889e4d73d799a901436eee45ed5db436"
+  integrity sha512-uyBlbZnP3HQe1mzqF3UB6r+VYY8WUwDXqPPXn+rJjpYeaxI/uj0xF3lnOFS2l2ZJQ4rhZfRYC02RHzf2UAPFvA==
   dependencies:
     "@types/jest" "27.5.2"
-    "@types/node" "18.16.3"
-    "@types/react" "18.2.0"
-    "@types/react-dom" "17.0.20"
+    "@types/node" "18.16.18"
+    "@types/react" "18.2.14"
+    "@types/react-dom" "18.2.6"
     "@types/react-table" "7.7.14"
     classnames "2.3.2"
     nanoid "3.3.6"
     prop-types "15.8.1"
+    react-router-dom "6.6.1"
     react-table "7.8.0"
     react-useportal "1.0.18"
 
@@ -2185,6 +2186,11 @@
     loader-utils "^2.0.4"
     schema-utils "^3.0.0"
     source-map "^0.7.3"
+
+"@remix-run/router@1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.2.1.tgz#812edd4104a15a493dda1ccac0b352270d7a188c"
+  integrity sha512-XiY0IsyHR+DXYS5vBxpoBe/8veTeoRpMHP+vDosLZxL5bnpetzI0igkxkLZS235ldLzyfkxF+2divEwWHP3vMQ==
 
 "@rushstack/eslint-patch@^1.1.0":
   version "1.2.0"
@@ -3292,11 +3298,6 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.18.tgz#85da09bafb66d4bc14f7c899185336d0c1736390"
   integrity sha512-/aNaQZD0+iSBAGnvvN2Cx92HqE5sZCPZtx2TsK+4nvV23fFe09jVDvpArXr2j9DnYlzuU9WuoykDDc6wqvpNcw==
 
-"@types/node@18.16.3":
-  version "18.16.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.3.tgz#6bda7819aae6ea0b386ebc5b24bdf602f1b42b01"
-  integrity sha512-OPs5WnnT1xkCBiuQrZA4+YAV4HEJejmHneyraIaxsbev5yCEr6KMwINNFP9wQeFIw8FWcoTqF3vQsa5CDaI+8Q==
-
 "@types/node@^14.0.10 || ^16.0.0", "@types/node@^14.14.20 || ^16.0.0":
   version "16.18.11"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.11.tgz#cbb15c12ca7c16c85a72b6bdc4d4b01151bb3cae"
@@ -3347,7 +3348,7 @@
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
-"@types/react-dom@17.0.20", "@types/react-dom@<18.0.0":
+"@types/react-dom@17.0.20", "@types/react-dom@18.2.6", "@types/react-dom@<18.0.0":
   version "17.0.20"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.20.tgz#e0c8901469d732b36d8473b40b679ad899da1b53"
   integrity sha512-4pzIjSxDueZZ90F52mU3aPoogkHIoSIDG+oQ+wQK7Cy2B9S+MvOqY0uEA/qawKz381qrEDkvpwyt8Bm31I8sbA==
@@ -3361,7 +3362,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@17.0.62", "@types/react@18.2.0", "@types/react@^17":
+"@types/react@*", "@types/react@17.0.62", "@types/react@18.2.14", "@types/react@^17":
   version "17.0.62"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.62.tgz#2efe8ddf8533500ec44b1334dd1a97caa2f860e3"
   integrity sha512-eANCyz9DG8p/Vdhr0ZKST8JV12PhH2ACCDYlFw6DIO+D+ca+uP4jtEDEpVqXZrh/uZdXQGwk7whJa3ah5DtyLw==
@@ -11755,6 +11756,21 @@ react-refresh@^0.11.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.11.0.tgz#77198b944733f0f1f1a90e791de4541f9f074046"
   integrity sha512-F27qZr8uUqwhWZboondsPx8tnC3Ct3SxZA3V5WyEvujRyyNv0VYPhoBg1gZ8/MV5tubQp76Trw8lTv9hzRBa+A==
 
+react-router-dom@6.6.1:
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.6.1.tgz#1b96ec0b2cefa7319f1251383ea5b41295ee260d"
+  integrity sha512-u+8BKUtelStKbZD5UcY0NY90WOzktrkJJhyhNg7L0APn9t1qJNLowzrM9CHdpB6+rcPt6qQrlkIXsTvhuXP68g==
+  dependencies:
+    "@remix-run/router" "1.2.1"
+    react-router "6.6.1"
+
+react-router@6.6.1:
+  version "6.6.1"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.6.1.tgz#17de6cf285f2d1c9721a3afca999c984e5558854"
+  integrity sha512-YkvlYRusnI/IN0kDtosUCgxqHeulN5je+ew8W+iA1VvFhf86kA+JEI/X/8NqYcr11hCDDp906S+SGMpBheNeYQ==
+  dependencies:
+    "@remix-run/router" "1.2.1"
+
 react-sizeme@^3.0.1:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/react-sizeme/-/react-sizeme-3.0.2.tgz#4a2f167905ba8f8b8d932a9e35164e459f9020e4"
@@ -13916,10 +13932,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vanilla-framework@3.15.0:
-  version "3.15.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-3.15.0.tgz#d6e317962b643239ba1b99d2590f5eacd0a50b69"
-  integrity sha512-0pspKu/DeOv9cqpsSH8jfTcu4N7AHflUNXYnGudEL9NMIwxpVsi5Rq6OsmaiUjPilJ/WH1GHNoi77EX6aoMF/Q==
+vanilla-framework@3.15.1:
+  version "3.15.1"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-3.15.1.tgz#3059f97e1fff68f3a274dd2950e2daa5409eeb21"
+  integrity sha512-wOHprZ01HyMByojT2RlhLL18Jq8P4U7wIfkMIH0fwjbR4HR6rbhaCbh1zh9Fkot+KBdgNQGTgqWw52liDtHmNA==
 
 vary@~1.1.2:
   version "1.1.2"
