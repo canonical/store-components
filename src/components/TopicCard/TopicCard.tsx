@@ -11,15 +11,25 @@ type Props = {
   };
   truncateTitle?: boolean;
   truncateContent?: boolean;
+  className?: string;
+  key?: string;
 };
 
-function TopicCard({ data, truncateTitle, truncateContent }: Props) {
+function TopicCard({
+  data,
+  truncateTitle,
+  truncateContent,
+  className,
+  key,
+}: Props) {
   return (
     <Card
-      style={{ borderTop: "3px solid #f2a031" }}
+      style={{ borderTop: "3px solid #f2a031", minHeight: "182px" }}
       onClick={() => {
         window.location.href = `/topics/${data.slug}`;
       }}
+      className={className}
+      key={key}
     >
       <h3 className={`p-muted-heading ${truncateTitle ? "u-truncate" : ""}`}>
         <a className="p-link--soft" href={`/topics/${data.slug}`}>
