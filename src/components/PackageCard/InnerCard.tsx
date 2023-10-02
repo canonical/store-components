@@ -117,15 +117,20 @@ function InnerCard({
           )}
 
           {showFeaturedPackages && data.package.charms && (
-            <div data-testid="featured-packages">
+            <div
+              data-testid="featured-packages"
+              className="sc-charm-bundle-icons"
+            >
               {featuredCharms.map((charm) => (
-                <span
-                  className="sc-charm-bundle-icon"
-                  key={charm.name}
+                <img
+                  src={`/${charm.name}/icon-no-default`}
+                  alt=""
                   title={charm.display_name}
-                >
-                  {charm.display_name.slice(0, 2)}
-                </span>
+                  key={charm.name}
+                  width={25}
+                  height={25}
+                  className="sc-charm-bundle-icon"
+                />
               ))}
               {data.package.charms.length - featuredCharms.length > 0 && (
                 <span className="sc-charm-bundle-count u-text--muted">
