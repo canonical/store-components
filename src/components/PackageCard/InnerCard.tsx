@@ -123,7 +123,7 @@ function InnerCard({
             >
               {featuredCharms.map((charm) => (
                 <img
-                  src={`/${charm.name}/icon-no-default`}
+                  src={`/${charm.name}/icon`}
                   alt=""
                   title={charm.display_name}
                   key={charm.name}
