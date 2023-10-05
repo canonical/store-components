@@ -28,7 +28,7 @@ function InnerCard({
   let featuredCharms = [];
 
   if (data.package.charms) {
-    featuredCharms = data.package.charms.slice(0, 7);
+    featuredCharms = data.package.charms.slice(0, 5);
   }
 
   const stars = [];
