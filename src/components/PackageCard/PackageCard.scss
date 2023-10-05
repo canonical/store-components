@@ -29,6 +29,10 @@
   text-decoration: none;
 }
 
+.sc-package-card__heading {
+  text-transform: capitalize;
+}
+
 .sc-package-card__header {
   flex-shrink: 0;
 }
