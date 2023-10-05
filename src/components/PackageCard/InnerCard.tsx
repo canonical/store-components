@@ -54,6 +54,11 @@ function InnerCard({
 
     stars.push(<i className={className} key={i}></i>);
   }
+
+  if (data.package.display_name === "") {
+    data.package.display_name = data.package.name.replace(/-/g, " ");
+  }
+
   return (
     <>
       <div
@@ -68,7 +73,7 @@ function InnerCard({
 
         <div className="sc-package-card__body">
           {data.package.display_name && (
-            <h2 className="p-heading--4 u-no-margin--bottom">
+            <h2 className="sc-package-card__heading p-heading--4 u-no-margin--bottom">
               {data.package.name ? (
                 <a href={`/${data.package.name}`}>
                   {data.package.display_name}
