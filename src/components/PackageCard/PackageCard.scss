@@ -33,6 +33,10 @@
   text-transform: capitalize;
 }
 
+.sc-package-card__heading-link {
+  color: inherit;
+}
+
 .sc-package-card__header {
   flex-shrink: 0;
 }
@@ -66,9 +70,9 @@
 
 .sc-charm-bundle-icon {
   border-radius: 0.75rem;
-  height: 1.5rem;
+  height: 32px;
   margin-right: 0.25rem;
-  width: 1.5rem;
+  width: 32px;
 }
 
 .sc-charm-bundle-count {

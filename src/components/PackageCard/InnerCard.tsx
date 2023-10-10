@@ -65,17 +65,14 @@ function InnerCard({
         className="sc-package-card"
         style={{ width: "100%", height: height }}
       >
-        {isBundle && (
-          <div className="sc-package-card__header">
-            <h3 className="p-muted-heading">Bundle</h3>
-          </div>
-        )}
-
         <div className="sc-package-card__body">
           {data.package.display_name && (
-            <h2 className="sc-package-card__heading p-heading--4 u-no-margin--bottom">
+            <h2 className="sc-package-card__heading p-heading--5 u-no-margin--bottom">
               {data.package.name ? (
-                <a href={`/${data.package.name}`}>
+                <a
+                  className="sc-package-card__heading-link"
+                  href={`/${data.package.name}`}
+                >
                   {data.package.display_name}
                 </a>
               ) : (
@@ -84,8 +81,8 @@ function InnerCard({
             </h2>
           )}
 
-          <p className="u-text--muted">
-            {data.publisher.display_name}{" "}
+          <p className="u-text--muted u-no-padding--top">
+            <em>{data.publisher.display_name} </em>
             {showVerification && (
               <>
                 {data.publisher.validation === "verified" && (
@@ -110,6 +107,12 @@ function InnerCard({
             )}
           </p>
 
+          {isBundle && (
+            <div className="sc-package-card__header">
+              <h3 className="p-muted-heading u-no-margin--bottom">Bundle</h3>
+            </div>
+          )}
+
           <p className="u-line-clamp">{data.package.description}</p>
 
           {showRatings && (
@@ -132,8 +135,8 @@ function InnerCard({
                   alt=""
                   title={charm.display_name}
                   key={charm.name}
-                  width={25}
-                  height={25}
+                  width={32}
+                  height={32}
                   className="sc-charm-bundle-icon"
                 />
               ))}
