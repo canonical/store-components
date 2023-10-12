@@ -15,6 +15,4 @@ yarn-error.log*
 storybook-static/
 *.fuse*
 
-cypress/screenshots/
-cypress/videos
 /package-lock.json
