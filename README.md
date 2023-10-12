@@ -7,7 +7,6 @@ This is a collection of components designed to be used in store UIs when using R
 See the [component docs](https://canonical.github.io/store-components/) for usage instructions.
 
 ![CI](https://github.com/canonical/store-components/workflows/CI/badge.svg?branch=main)
-![Cypress chrome headless](https://github.com/canonical/store-components/workflows/Cypress%20chrome%20headless/badge.svg)
 
 ## Requirements
 
