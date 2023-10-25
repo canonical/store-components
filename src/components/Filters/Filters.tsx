@@ -45,7 +45,7 @@ function Filters({
       );
     }
 
-    setSelectedCategories(newSelectedCategories);
+    setSelectedCategories(newSelectedCategories.sort());
   };
 
   const formattedPlatforms = platforms.map((platform) => {
