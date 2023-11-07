@@ -1,15 +1,15 @@
 const path = require("path");
 
 module.exports = {
-  core: {
-    builder: "webpack5",
-  },
   stories: ["../src/**/*.stories.@(js|ts|jsx|tsx|mdx)"],
+
   addons: [
     "@storybook/addon-docs",
     "@storybook/addon-controls",
     "@storybook/addon-a11y",
+    "@storybook/addon-mdx-gfm"
   ],
+
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.scss$/,
@@ -18,4 +18,13 @@ module.exports = {
     });
     return config;
   },
+
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {}
+  },
+
+  docs: {
+    autodocs: true
+  }
 };
