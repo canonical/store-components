@@ -1,13 +1,13 @@
 const path = require("path");
 
 module.exports = {
-  stories: ["../src/**/*.stories.@(js|ts|jsx|tsx|mdx)"],
+  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|ts|jsx|tsx)"],
 
   addons: [
     "@storybook/addon-docs",
     "@storybook/addon-controls",
     "@storybook/addon-a11y",
-    "@storybook/addon-mdx-gfm"
+    "@storybook/addon-mdx-gfm",
   ],
 
   webpackFinal: async (config, { configType }) => {
@@ -21,10 +21,10 @@ module.exports = {
 
   framework: {
     name: "@storybook/react-webpack5",
-    options: {}
+    options: {},
   },
 
   docs: {
-    autodocs: true
-  }
+    autodocs: true,
+  },
 };
