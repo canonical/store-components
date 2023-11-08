@@ -1,63 +1,70 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-
 import TopicCard from "./TopicCard";
-import { Row, Col } from "@canonical/react-components";
 
 <Meta title="TopicCard" component={TopicCard} />
 
 export const Template = (args) => <TopicCard {...args} />;
 
-### TopicCard
+# TopicCard
 
 This is a [React](https://reactjs.org/) component for a default package card.
 
+## Props
+
 <ArgsTable of={TopicCard} />
 
+## Default
+
 <Canvas>
-  <Story name="Default">
-    <Row>
-      <TopicCard
-        data={{
-          description:
-            "At Canonical, we have been referring to LMA as a system of machine charms currently in use to monitor Canonical and customer systems. COS draws a lot of learning from years of operational experience with LMA, but it is also different enough that we felt we needed to make a distinction from the previous iteration.",
-          name: "Canonical Observability Stack",
-          slug: "canonical-observability-stack",
-        }}
-      />
-    </Row>
+  <Story
+    name="Default"
+    args={{
+      data: {
+        description:
+          "At Canonical, we have been referring to LMA as a system of machine charms currently in use to monitor Canonical and customer systems. COS draws a lot of learning from years of operational experience with LMA, but it is also different enough that we felt we needed to make a distinction from the previous iteration.",
+        name: "Canonical Observability Stack",
+        slug: "canonical-observability-stack",
+      },
+    }}
+  >
+    {Template.bind({})}
   </Story>
 </Canvas>
 
+## Truncate title
+
 <Canvas>
-  <Story name="Truncate title">
-    <Row>
-      <Col size={3}>
-        <TopicCard
-          truncateTitle
-          data={{
-            description:
-              "At Canonical, we have been referring to LMA as a system of machine charms currently in use to monitor Canonical and customer systems. COS draws a lot of learning from years of operational experience with LMA, but it is also different enough that we felt we needed to make a distinction from the previous iteration.",
-            name: "Canonical Observability Stack",
-            slug: "canonical-observability-stack",
-          }}
-        />
-      </Col>
-    </Row>
+  <Story
+    name="Truncate title"
+    args={{
+      truncateTitle,
+      data: {
+        description:
+          "At Canonical, we have been referring to LMA as a system of machine charms currently in use to monitor Canonical and customer systems. COS draws a lot of learning from years of operational experience with LMA, but it is also different enough that we felt we needed to make a distinction from the previous iteration.",
+        name: "Canonical Observability Stack",
+        slug: "canonical-observability-stack",
+      },
+    }}
+  >
+    {Template.bind({})}
   </Story>
 </Canvas>
 
+## Truncate content
+
 <Canvas>
-  <Story name="Truncate content">
-    <Row>
-      <TopicCard
-        truncateContent
-        data={{
-          description:
-            "At Canonical, we have been referring to LMA as a system of machine charms currently in use to monitor Canonical and customer systems. COS draws a lot of learning from years of operational experience with LMA, but it is also different enough that we felt we needed to make a distinction from the previous iteration. At Canonical, we have been referring to LMA as a system of machine charms currently in use to monitor Canonical and customer systems. COS draws a lot of learning from years of operational experience with LMA, but it is also different enough that we felt we needed to make a distinction from the previous iteration.",
-          name: "Canonical Observability Stack",
-          slug: "canonical-observability-stack",
-        }}
-      />
-    </Row>
+  <Story
+    name="Truncate content"
+    args={{
+      truncateContent,
+      data: {
+        description:
+          "At Canonical, we have been referring to LMA as a system of machine charms currently in use to monitor Canonical and customer systems. COS draws a lot of learning from years of operational experience with LMA, but it is also different enough that we felt we needed to make a distinction from the previous iteration. At Canonical, we have been referring to LMA as a system of machine charms currently in use to monitor Canonical and customer systems. COS draws a lot of learning from years of operational experience with LMA, but it is also different enough that we felt we needed to make a distinction from the previous iteration.",
+        name: "Canonical Observability Stack",
+        slug: "canonical-observability-stack",
+      },
+    }}
+  >
+    {Template.bind({})}
   </Story>
 </Canvas>

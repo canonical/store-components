@@ -1,205 +1,212 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-
 import DefaultCard from "./DefaultCard";
-import { Row, Col } from "@canonical/react-components";
 
 <Meta title="DefaultCard" component={DefaultCard} />
 
 export const Template = (args) => <DefaultCard {...args} />;
 
-### DefaultCard
+# DefaultCard
 
 This is a [React](https://reactjs.org/) component for a default package card.
 
+## Props
+
 <ArgsTable of={DefaultCard} />
 
+## Default
+
 <Canvas>
-  <Story name="Default">
-    <Row>
-      <DefaultCard
-        data={{
-          package: {
-            charms: [
-              {
-                display_name: "Traefik Ingress",
-                name: "traefik-k8s",
-              },
-              {
-                display_name: "MicroK8s",
-                name: "microk8s",
-              },
-              {
-                display_name: "Kafka",
-                name: "kafka",
-              },
-              {
-                display_name: "PostgreSQL",
-                name: "postgresql",
-              },
-              {
-                display_name: "Prometheus",
-                name: "prometheus-k8s",
-              },
-              {
-                display_name: "Landscape Server",
-                name: "landscape-server",
-              },
-              {
-                display_name: "Grafana",
-                name: "grafana-k8s",
-              },
-              {
-                display_name: "LXD",
-                name: "lxd",
-              },
-            ],
-            description:
-              "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
-            display_name: "Jami",
-            icon_url:
-              "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
-            name: "jami",
-            platforms: ["vm", "kubernetes"],
-          },
-          publisher: {
-            display_name: "Savoir-faire Linux",
-            name: "sfljami",
-            validation: "star",
-          },
-          ratings: {
-            value: 4,
-            count: 50,
-          },
-        }}
-      />
-    </Row>
+  <Story
+    name="Default"
+    args={{
+      data: {
+        package: {
+          charms: [
+            {
+              display_name: "Traefik Ingress",
+              name: "traefik-k8s",
+            },
+            {
+              display_name: "MicroK8s",
+              name: "microk8s",
+            },
+            {
+              display_name: "Kafka",
+              name: "kafka",
+            },
+            {
+              display_name: "PostgreSQL",
+              name: "postgresql",
+            },
+            {
+              display_name: "Prometheus",
+              name: "prometheus-k8s",
+            },
+            {
+              display_name: "Landscape Server",
+              name: "landscape-server",
+            },
+            {
+              display_name: "Grafana",
+              name: "grafana-k8s",
+            },
+            {
+              display_name: "LXD",
+              name: "lxd",
+            },
+          ],
+          description:
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
+          icon_url:
+            "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
+          name: "jami",
+          platforms: ["vm", "kubernetes"],
+        },
+        publisher: {
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
+          validation: "star",
+        },
+        ratings: {
+          value: 4,
+          count: 50,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
   </Story>
 </Canvas>
 
+## No heading
+
 <Canvas>
-  <Story name="No heading">
-    <Row>
-      <DefaultCard
-        data={{
-          package: {
-            charms: [
-              {
-                display_name: "Traefik Ingress",
-                name: "traefik-k8s",
-              },
-              {
-                display_name: "MicroK8s",
-                name: "microk8s",
-              },
-              {
-                display_name: "Kafka",
-                name: "kafka",
-              },
-              {
-                display_name: "PostgreSQL",
-                name: "postgresql",
-              },
-              {
-                display_name: "Prometheus",
-                name: "prometheus-k8s",
-              },
-              {
-                display_name: "Landscape Server",
-                name: "landscape-server",
-              },
-              {
-                display_name: "Grafana",
-                name: "grafana-k8s",
-              },
-              {
-                display_name: "LXD",
-                name: "lxd",
-              },
-            ],
-            description:
-              "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
-            display_name: "",
-            icon_url:
-              "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
-            name: "",
-            platforms: ["vm", "kubernetes"],
-          },
-          publisher: {
-            display_name: "Savoir-faire Linux",
-            name: "sfljami",
-            validation: "star",
-          },
-          ratings: {
-            value: 4,
-            count: 50,
-          },
-        }}
-      />
-    </Row>
+  <Story
+    name="No heading"
+    args={{
+      data: {
+        package: {
+          charms: [
+            {
+              display_name: "Traefik Ingress",
+              name: "traefik-k8s",
+            },
+            {
+              display_name: "MicroK8s",
+              name: "microk8s",
+            },
+            {
+              display_name: "Kafka",
+              name: "kafka",
+            },
+            {
+              display_name: "PostgreSQL",
+              name: "postgresql",
+            },
+            {
+              display_name: "Prometheus",
+              name: "prometheus-k8s",
+            },
+            {
+              display_name: "Landscape Server",
+              name: "landscape-server",
+            },
+            {
+              display_name: "Grafana",
+              name: "grafana-k8s",
+            },
+            {
+              display_name: "LXD",
+              name: "lxd",
+            },
+          ],
+          description:
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "",
+          icon_url:
+            "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
+          name: "",
+          platforms: ["vm", "kubernetes"],
+        },
+        publisher: {
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
+          validation: "star",
+        },
+        ratings: {
+          value: 4,
+          count: 50,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
   </Story>
 </Canvas>
 
+## Long description
+
 <Canvas>
-  <Story name="Long description">
-    <Row>
-      <Col size={3}>
-        <DefaultCard
-          data={{
-            package: {
-              charms: [
-                {
-                  display_name: "Traefik Ingress",
-                  name: "traefik-k8s",
-                },
-                {
-                  display_name: "MicroK8s",
-                  name: "microk8s",
-                },
-                {
-                  display_name: "Kafka",
-                  name: "kafka",
-                },
-                {
-                  display_name: "PostgreSQL",
-                  name: "postgresql",
-                },
-                {
-                  display_name: "Prometheus",
-                  name: "prometheus-k8s",
-                },
-                {
-                  display_name: "Landscape Server",
-                  name: "landscape-server",
-                },
-                {
-                  display_name: "Grafana",
-                  name: "grafana-k8s",
-                },
-                {
-                  display_name: "LXD",
-                  name: "lxd",
-                },
-              ],
-              description:
-                "Privacy-oriented voice, video, chat, and conference platform and SIP phone. Privacy-oriented voice, video, chat, and conference platform and SIP phone. Privacy-oriented voice, video, chat, and conference platform and SIP phone. Privacy-oriented voice, video, chat, and conference platform and SIP phone. Privacy-oriented voice, video, chat, and conference platform and SIP phone. Privacy-oriented voice, video, chat, and conference platform and SIP phone",
-              display_name: "Jami",
-              icon_url:
-                "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
-              name: "jami",
-              platforms: ["vm", "kubernetes"],
+  <Story
+    name="Long description"
+    args={{
+      data: {
+        package: {
+          charms: [
+            {
+              display_name: "Traefik Ingress",
+              name: "traefik-k8s",
             },
-            publisher: {
-              display_name: "Savoir-faire Linux",
-              name: "sfljami",
-              validation: "star",
+            {
+              display_name: "MicroK8s",
+              name: "microk8s",
             },
-            ratings: {
-              value: 4,
-              count: 50,
+            {
+              display_name: "Kafka",
+              name: "kafka",
             },
-          }}
-        />
-      </Col>
-    </Row>
+            {
+              display_name: "PostgreSQL",
+              name: "postgresql",
+            },
+            {
+              display_name: "Prometheus",
+              name: "prometheus-k8s",
+            },
+            {
+              display_name: "Landscape Server",
+              name: "landscape-server",
+            },
+            {
+              display_name: "Grafana",
+              name: "grafana-k8s",
+            },
+            {
+              display_name: "LXD",
+              name: "lxd",
+            },
+          ],
+          description:
+            "Privacy-oriented voice, video, chat, and conference platform and SIP phone. Privacy-oriented voice, video, chat, and conference platform and SIP phone. Privacy-oriented voice, video, chat, and conference platform and SIP phone. Privacy-oriented voice, video, chat, and conference platform and SIP phone. Privacy-oriented voice, video, chat, and conference platform and SIP phone. Privacy-oriented voice, video, chat, and conference platform and SIP phone",
+          display_name: "Jami",
+          icon_url:
+            "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
+          name: "jami",
+          platforms: ["vm", "kubernetes"],
+        },
+        publisher: {
+          display_name: "Savoir-faire Linux",
+          name: "sfljami",
+          validation: "star",
+        },
+        ratings: {
+          value: 4,
+          count: 50,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
   </Story>
 </Canvas>

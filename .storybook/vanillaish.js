@@ -32,8 +32,8 @@ export default create({
   inputTextColor: "#111",
   inputBorderRadius: ".125rem",
 
-  brandTitle: "Vanilla React Library",
-  brandUrl: "https://vanillaframework.io",
+  brandTitle: "Vanilla React tore components library",
+  brandUrl: "/",
   brandImage:
     "https://assets.ubuntu.com/v1/746e552e-vanilla_black-orange_hex.svg",
 });

@@ -1,3 +1,4 @@
+import { DocsContainer } from "@storybook/addon-docs";
 import { themes } from "@storybook/theming";
 import "vanilla-framework/scss/build.scss";
 
@@ -5,5 +6,8 @@ import "vanilla-framework/scss/build.scss";
 export const parameters = {
   docs: {
     theme: themes.vanillaish,
+    container: ({ children, context }) => (
+      <DocsContainer context={context}>{children}</DocsContainer>
+    ),
   },
 };
