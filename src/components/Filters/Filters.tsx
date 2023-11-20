@@ -7,12 +7,12 @@ type Props = {
   categories: Array<Category>;
   selectedCategories: Array<string>;
   setSelectedCategories: Function;
-  platforms: Array<{ display_name: string; name: string }>;
-  selectedPlatform: string | undefined;
-  setSelectedPlatform: Function;
-  packageTypes: Array<{ display_name: string; name: string }>;
-  selectedPackageType: string | undefined;
-  setSelectedPackageType: Function;
+  platforms?: Array<{ display_name: string; name: string }>;
+  selectedPlatform?: string | undefined;
+  setSelectedPlatform?: Function;
+  packageTypes?: Array<{ display_name: string; name: string }>;
+  selectedPackageType?: string | undefined;
+  setSelectedPackageType?: Function;
   disabled: boolean;
 };
 
@@ -48,20 +48,6 @@ function Filters({
     setSelectedCategories(newSelectedCategories.sort());
   };
 
-  const formattedPlatforms = platforms.map((platform) => {
-    return {
-      label: platform.display_name,
-      value: platform.name,
-    };
-  });
-
-  const formattedPackageTypes = packageTypes.map((packageType) => {
-    return {
-      label: packageType.display_name,
-      value: packageType.name,
-    };
-  });
-
   return (
     <>
       <h2 className="p-muted-heading">Filters</h2>
@@ -78,27 +64,41 @@ function Filters({
           />
         ))}
 
-      <Select
-        disabled={disabled}
-        defaultValue={selectedPlatform}
-        id="platforms"
-        label="Platforms"
-        options={formattedPlatforms}
-        onChange={(e) => {
-          setSelectedPlatform(e.target.value);
-        }}
-      />
+      {platforms && (
+        <Select
+          disabled={disabled}
+          defaultValue={selectedPlatform}
+          id="platforms"
+          label="Platforms"
+          options={platforms.map((platform) => {
+            return {
+              label: platform.display_name,
+              value: platform.name,
+            };
+          })}
+          onChange={(e) => {
+            setSelectedPlatform(e.target.value);
+          }}
+        />
+      )}
 
-      <Select
-        disabled={disabled}
-        defaultValue={selectedPackageType}
-        id="package-types"
-        label="Filter by"
-        options={formattedPackageTypes}
-        onChange={(e) => {
-          setSelectedPackageType(e.target.value);
-        }}
-      />
+      {packageTypes && (
+        <Select
+          disabled={disabled}
+          defaultValue={selectedPackageType}
+          id="package-types"
+          label="Filter by"
+          options={packageTypes.map((packageType) => {
+            return {
+              label: packageType.display_name,
+              value: packageType.name,
+            };
+          })}
+          onChange={(e) => {
+            setSelectedPackageType(e.target.value);
+          }}
+        />
+      )}
     </>
   );
 }
