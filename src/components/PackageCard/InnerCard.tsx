@@ -81,31 +81,33 @@ function InnerCard({
             </h2>
           )}
 
-          <p className="u-text--muted u-no-padding--top">
-            <em>{data.publisher.display_name} </em>
-            {showVerification && (
-              <>
-                {data.publisher.validation === "verified" && (
-                  <img
-                    src="https://assets.ubuntu.com/v1/ba8a4b7b-Verified.svg"
-                    width={14}
-                    height={14}
-                    alt="Verified account"
-                    title="Verified account"
-                  />
-                )}
-                {data.publisher.validation === "star" && (
-                  <img
-                    src="https://assets.ubuntu.com/v1/d810dee9-Orange+Star.svg"
-                    width={14}
-                    height={14}
-                    alt="Star developer"
-                    title="Star developer"
-                  />
-                )}
-              </>
-            )}
-          </p>
+          {data.publisher && (
+            <p className="u-text--muted u-no-padding--top">
+              <em>{data.publisher.display_name} </em>
+              {showVerification && (
+                <>
+                  {data.publisher.validation === "verified" && (
+                    <img
+                      src="https://assets.ubuntu.com/v1/ba8a4b7b-Verified.svg"
+                      width={14}
+                      height={14}
+                      alt="Verified account"
+                      title="Verified account"
+                    />
+                  )}
+                  {data.publisher.validation === "star" && (
+                    <img
+                      src="https://assets.ubuntu.com/v1/d810dee9-Orange+Star.svg"
+                      width={14}
+                      height={14}
+                      alt="Star developer"
+                      title="Star developer"
+                    />
+                  )}
+                </>
+              )}
+            </p>
+          )}
 
           {isBundle && (
             <div className="sc-package-card__header">
