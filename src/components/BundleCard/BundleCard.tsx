@@ -6,7 +6,7 @@ function BundleCard({ data }) {
   return (
     <PackageCard
       data={data}
-      showIcon
+      showIcon={false}
       showVerification
       showFeaturedPackages
       isBundle
