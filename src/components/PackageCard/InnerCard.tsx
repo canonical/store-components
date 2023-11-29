@@ -66,6 +66,12 @@ function InnerCard({
         style={{ width: "100%", height: height }}
       >
         <div className="sc-package-card__body">
+          {isBundle && (
+            <div className="sc-package-card__header">
+              <h3 className="p-muted-heading u-no-margin--bottom">Bundle</h3>
+            </div>
+          )}
+
           {data.package.display_name && (
             <h2 className="sc-package-card__heading p-heading--5 u-no-margin--bottom">
               {data.package.name ? (
@@ -107,12 +113,6 @@ function InnerCard({
                 </>
               )}
             </p>
-          )}
-
-          {isBundle && (
-            <div className="sc-package-card__header">
-              <h3 className="p-muted-heading u-no-margin--bottom">Bundle</h3>
-            </div>
           )}
 
           <p className="u-line-clamp">{data.package.description}</p>
