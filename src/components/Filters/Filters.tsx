@@ -14,6 +14,7 @@ type Props = {
   selectedPackageType?: string | undefined;
   setSelectedPackageType?: Function;
   disabled: boolean;
+  showFeatured?: boolean;
 };
 
 function Filters({
@@ -27,6 +28,7 @@ function Filters({
   selectedPackageType,
   setSelectedPackageType,
   disabled,
+  showFeatured,
 }: Props) {
   const handleSelectedCategoriesChange = (
     event: SyntheticEvent,
@@ -51,6 +53,20 @@ function Filters({
   return (
     <>
       <h2 className="p-muted-heading">Filters</h2>
+      {showFeatured && (
+        <strong>
+          <CheckboxInput
+            disabled={disabled}
+            key="featured"
+            label="Featured"
+            labelClassName="u-no-margin--bottom"
+            onChange={(event: SyntheticEvent) => {
+              handleSelectedCategoriesChange(event, "featured");
+            }}
+            checked={selectedCategories?.includes("featured")}
+          />
+        </strong>
+      )}
       {categories.length > 0 &&
         categories.map((category) => (
           <CheckboxInput

@@ -268,3 +268,61 @@ This is a [React](https://reactjs.org/) component for filters.
     {Template.bind({})}
   </Story>
 </Canvas>
+
+## With Featured category
+
+<Canvas>
+  <Story
+    name="With Featured category"
+    args={{
+      categories: [
+        {
+          display_name: "AI/ML",
+          name: "ai-ml",
+        },
+        {
+          display_name: "Big Data",
+          name: "big-data",
+        },
+        {
+          display_name: "Cloud",
+          name: "cloud",
+        },
+        {
+          display_name: "Containers",
+          name: "containers",
+        },
+        {
+          display_name: "Databases",
+          name: "databases",
+        },
+        {
+          display_name: "Logging and Tracing",
+          name: "logging-and-tracing",
+        },
+        {
+          display_name: "Monitoring",
+          name: "monitoring",
+        },
+        {
+          display_name: "Networking",
+          name: "networking",
+        },
+        {
+          display_name: "Security",
+          name: "security",
+        },
+        {
+          display_name: "Storage",
+          name: "storage",
+        },
+      ],
+      selectedCategories: ["featured"],
+      setSelectedCategories: () => false,
+      disabled: false,
+      showFeatured: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
