@@ -52,7 +52,7 @@ function Filters({
 
   return (
     <>
-      <h2 className="p-muted-heading">Filters</h2>
+      <h2 className="p-muted-heading">Categories</h2>
       {showFeatured && (
         <strong>
           <CheckboxInput
