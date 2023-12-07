@@ -15,6 +15,7 @@ type Props = {
   setSelectedPackageType?: Function;
   disabled: boolean;
   showFeatured?: boolean;
+  order?: Array<string>;
 };
 
 function Filters({
@@ -29,6 +30,7 @@ function Filters({
   setSelectedPackageType,
   disabled,
   showFeatured,
+  order,
 }: Props) {
   const handleSelectedCategoriesChange = (
     event: SyntheticEvent,
@@ -50,6 +52,25 @@ function Filters({
     setSelectedCategories(newSelectedCategories.sort());
   };
 
+  let sortedCategories = [];
+
+  if (order && order.length > 0) {
+    order.forEach((item) => {
+      const category = categories.find((cat) => cat.name === item);
+      if (category) {
+        sortedCategories.push(category);
+      }
+    });
+
+    categories.forEach((cat) => {
+      if (!order.includes(cat.name)) {
+        sortedCategories.push(cat);
+      }
+    });
+  } else {
+    sortedCategories = categories;
+  }
+
   return (
     <>
       <h2 className="p-muted-heading">Categories</h2>
@@ -67,8 +88,8 @@ function Filters({
           />
         </strong>
       )}
-      {categories.length > 0 &&
-        categories.map((category) => (
+      {sortedCategories.length > 0 &&
+        sortedCategories.map((category) => (
           <CheckboxInput
             disabled={disabled}
             key={category.name}
