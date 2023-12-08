@@ -19,6 +19,7 @@ export type Package = {
   categories?: Array<{
     display_name: string;
     name: string;
+    featured?: boolean;
   }>;
   ratings?: {
     value: number | null;
