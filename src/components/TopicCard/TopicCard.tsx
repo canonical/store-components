@@ -29,7 +29,7 @@ function TopicCard({ data, truncateTitle, truncateContent, className }: Props) {
         </a>
       </h3>
       <hr />
-      <p className={truncateContent ? "u-line-clamp" : ""}>
+      <p className={truncateContent ? "u-line-clamp--4" : ""}>
         {data.description}
       </p>
     </Card>
