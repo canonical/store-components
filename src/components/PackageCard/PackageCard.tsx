@@ -61,7 +61,12 @@ function PackageCard({
   return (
     <Card style={outerCardStyle} onClick={handleClick}>
       {showIcon ? (
-        <IconCard iconUrl={data.package.icon_url}>
+        <IconCard
+          iconUrl={
+            data.package.icon_url ||
+            "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg"
+          }
+        >
           <InnerCard data={data} {...innerCardProps} height="100%" />
         </IconCard>
       ) : (
