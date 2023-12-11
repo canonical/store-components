@@ -59,7 +59,11 @@ function PackageCard({
   };
 
   return (
-    <Card style={outerCardStyle} onClick={handleClick}>
+    <Card
+      style={outerCardStyle}
+      onClick={handleClick}
+      className="u-no-margin--bottom"
+    >
       {showIcon ? (
         <IconCard
           iconUrl={
