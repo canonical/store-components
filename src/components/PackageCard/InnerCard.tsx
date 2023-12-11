@@ -115,7 +115,15 @@ function InnerCard({
             </p>
           )}
 
-          <p className="u-line-clamp">{data.package.description}</p>
+          <p
+            className={`u-line-clamp ${
+              !showRatings && !showFeaturedPackages && !showPlatforms
+                ? "u-no-margin--bottom"
+                : ""
+            }`}
+          >
+            {data.package.description}
+          </p>
 
           {showRatings && (
             <div className="star-rating" data-testid="ratings">
