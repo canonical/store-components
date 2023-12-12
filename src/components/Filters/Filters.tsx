@@ -75,18 +75,15 @@ function Filters({
     <>
       <h2 className="p-muted-heading">Categories</h2>
       {showFeatured && (
-        <strong>
-          <CheckboxInput
-            disabled={disabled}
-            key="featured"
-            label="Featured"
-            labelClassName="u-no-margin--bottom"
-            onChange={(event: SyntheticEvent) => {
-              handleSelectedCategoriesChange(event, "featured");
-            }}
-            checked={selectedCategories?.includes("featured")}
-          />
-        </strong>
+        <CheckboxInput
+          disabled={disabled}
+          key="featured"
+          label="Featured"
+          onChange={(event: SyntheticEvent) => {
+            handleSelectedCategoriesChange(event, "featured");
+          }}
+          checked={selectedCategories?.includes("featured")}
+        />
       )}
       {sortedCategories.length > 0 &&
         sortedCategories.map((category) => (
