@@ -1,5 +1,10 @@
-import React, { SyntheticEvent } from "react";
-import { CheckboxInput, Select } from "@canonical/react-components";
+import React, { useState, SyntheticEvent } from "react";
+import {
+  CheckboxInput,
+  Select,
+  Button,
+  Icon,
+} from "@canonical/react-components";
 
 import type { Category } from "../../types/category";
 
@@ -16,6 +21,8 @@ type Props = {
   disabled: boolean;
   showFeatured?: boolean;
   order?: Array<string>;
+  showMore?: boolean;
+  showMoreCount?: number;
 };
 
 function Filters({
@@ -31,7 +38,12 @@ function Filters({
   disabled,
   showFeatured,
   order,
+  showMore,
+  showMoreCount,
 }: Props) {
+  const [showAllCategories, setShowAllCategories] = useState(false);
+  const categoryCount = showMoreCount ? showMoreCount - 1 : 9;
+
   const handleSelectedCategoriesChange = (
     event: SyntheticEvent,
     categoryName: string
@@ -86,17 +98,49 @@ function Filters({
         />
       )}
       {sortedCategories.length > 0 &&
-        sortedCategories.map((category) => (
+        sortedCategories.map((category, index) => (
           <CheckboxInput
             disabled={disabled}
             key={category.name}
             label={category.display_name}
+            labelClassName={
+              showMore && !showAllCategories && index > categoryCount
+                ? "u-hide"
+                : ""
+            }
             onChange={(event: SyntheticEvent) => {
               handleSelectedCategoriesChange(event, category.name);
             }}
             checked={selectedCategories?.includes(category.name)}
           />
         ))}
+
+      {showMore &&
+        sortedCategories &&
+        sortedCategories.length > categoryCount &&
+        !showAllCategories && (
+          <Button
+            className="has-icon p-button--link"
+            onClick={() => {
+              setShowAllCategories(true);
+            }}
+          >
+            <span>Show more</span>
+            <Icon name="chevron-down"></Icon>
+          </Button>
+        )}
+
+      {showMore && showAllCategories && (
+        <Button
+          className="has-icon p-button--link"
+          onClick={() => {
+            setShowAllCategories(false);
+          }}
+        >
+          <span>Show less</span>
+          <Icon name="chevron-up"></Icon>
+        </Button>
+      )}
 
       {platforms && (
         <Select
