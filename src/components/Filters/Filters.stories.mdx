@@ -466,3 +466,67 @@ This is a [React](https://reactjs.org/) component for filters.
     {Template.bind({})}
   </Story>
 </Canvas>
+
+## With architectures
+
+<Canvas>
+  <Story
+    name="With architectures"
+    args={{
+      categories: [
+        {
+          display_name: "AI/ML",
+          name: "ai-ml",
+        },
+        {
+          display_name: "Big Data",
+          name: "big-data",
+        },
+        {
+          display_name: "Cloud",
+          name: "cloud",
+        },
+        {
+          display_name: "Containers",
+          name: "containers",
+        },
+        {
+          display_name: "Databases",
+          name: "databases",
+        },
+        {
+          display_name: "Logging and Tracing",
+          name: "logging-and-tracing",
+        },
+        {
+          display_name: "Monitoring",
+          name: "monitoring",
+        },
+        {
+          display_name: "Networking",
+          name: "networking",
+        },
+        {
+          display_name: "Security",
+          name: "security",
+        },
+        {
+          display_name: "Storage",
+          name: "storage",
+        },
+      ],
+      selectedCategories: [],
+      setSelectedCategories: () => false,
+      architectures: [
+        { name: "all", display_name: "All" },
+        { name: "amd64", display_name: "AMD64" },
+        { name: "arm64", display_name: "ARM64" },
+      ],
+      selectedArchitecture: "",
+      setSelectedArchitecture: () => false,
+      disabled: false,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
