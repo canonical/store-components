@@ -18,6 +18,9 @@ type Props = {
   packageTypes?: Array<{ display_name: string; name: string }>;
   selectedPackageType?: string | undefined;
   setSelectedPackageType?: Function;
+  architectures?: Array<{ display_name: string; name: string }>;
+  selectedArchitecture?: string | undefined;
+  setSelectedArchitecture?: Function;
   disabled: boolean;
   showFeatured?: boolean;
   order?: Array<string>;
@@ -35,6 +38,9 @@ function Filters({
   packageTypes,
   selectedPackageType,
   setSelectedPackageType,
+  architectures,
+  selectedArchitecture,
+  setSelectedArchitecture,
   disabled,
   showFeatured,
   order,
@@ -174,6 +180,24 @@ function Filters({
           })}
           onChange={(e) => {
             setSelectedPackageType(e.target.value);
+          }}
+        />
+      )}
+
+      {architectures && (
+        <Select
+          disabled={disabled}
+          defaultValue={selectedArchitecture}
+          id="package-types"
+          label="Architecture"
+          options={architectures.map((architecture) => {
+            return {
+              label: architecture.display_name,
+              value: architecture.name,
+            };
+          })}
+          onChange={(e) => {
+            setSelectedArchitecture(e.target.value);
           }}
         />
       )}
