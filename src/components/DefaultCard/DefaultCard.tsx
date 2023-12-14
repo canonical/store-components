@@ -12,7 +12,9 @@ function DefaultCard({ data }: Props) {
   let isFeatured = false;
 
   if (data.categories && data.categories.length > 0) {
-    const featuredPackage = data.categories.find((cat) => cat.featured);
+    const featuredPackage = data.categories.find(
+      (cat) => cat.name === "featured"
+    );
     if (featuredPackage) {
       isFeatured = true;
     }
