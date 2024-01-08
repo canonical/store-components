@@ -2,7 +2,13 @@ import React from "react";
 
 import PackageCard from "components/PackageCard";
 
-function BundleCard({ data }) {
+import type { Package } from "types/package";
+
+type Props = {
+  data: Package;
+};
+
+function BundleCard({ data }: Props) {
   return (
     <PackageCard
       data={data}
