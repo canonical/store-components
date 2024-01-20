@@ -48,6 +48,11 @@ describe("PackageCard", () => {
           "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
         name: "jami",
         platforms: ["vm", "kubernetes"],
+        channel: {
+          name: "stable",
+          risk: "stable",
+          track: "latest",
+        },
       },
       publisher: {
         display_name: "Savoir-faire Linux",
@@ -131,5 +136,15 @@ describe("PackageCard", () => {
   it("shows verfication if enabled", () => {
     render(<PackageCard {...props} showVerification={true} />);
     expect(screen.getByAltText("Star developer")).toBeInTheDocument();
+  });
+
+  it("doesn't show channel if not enabled", () => {
+    render(<PackageCard {...props} />);
+    expect(screen.queryByTestId("package-channel")).not.toBeInTheDocument();
+  });
+
+  it("shows channel if enabled", () => {
+    render(<PackageCard {...props} showChannel={true} />);
+    expect(screen.getByTestId("package-channel")).toBeInTheDocument();
   });
 });

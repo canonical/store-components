@@ -13,6 +13,7 @@ type PackageCardProps = {
   showRatings?: boolean;
   showVerification?: boolean;
   height?: string;
+  showChannel?: boolean;
 };
 
 function InnerCard({
@@ -24,6 +25,7 @@ function InnerCard({
   showRatings,
   showVerification,
   height,
+  showChannel,
 }: PackageCardProps) {
   let featuredCharms = [];
 
@@ -88,7 +90,11 @@ function InnerCard({
           )}
 
           {data.publisher && (
-            <p className="u-text--muted u-no-padding--top">
+            <p
+              className={`u-text--muted u-no-padding--top ${
+                showChannel ? "u-no-margin--bottom" : ""
+              }`}
+            >
               <em>{data.publisher.display_name} </em>
               {showVerification && (
                 <>
@@ -112,6 +118,13 @@ function InnerCard({
                   )}
                 </>
               )}
+            </p>
+          )}
+
+          {showChannel && data.package.channel && (
+            <p className="u-text--muted" data-testid="package-channel">
+              {data.package.channel.track === "latest" ? "latest/" : ""}
+              {data.package.channel.risk}
             </p>
           )}
 
