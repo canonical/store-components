@@ -20,6 +20,7 @@ type PackageCardProps = {
   showPlatforms?: boolean;
   showRatings?: boolean;
   showVerification?: boolean;
+  showChannel?: boolean;
 };
 
 function PackageCard({
@@ -32,6 +33,7 @@ function PackageCard({
   showPlatforms,
   showRatings,
   showVerification,
+  showChannel,
 }: PackageCardProps) {
   const innerCardProps = {
     isBundle: isBundle,
@@ -40,6 +42,7 @@ function PackageCard({
     showPlatforms: showPlatforms,
     showRatings: showRatings,
     showVerification: showVerification,
+    showChannel: showChannel,
   };
 
   const outerCardStyle = {

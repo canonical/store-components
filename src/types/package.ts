@@ -10,6 +10,11 @@ export type Package = {
       name: string;
       display_name: string;
     }>;
+    channel?: {
+      name: string;
+      risk: string;
+      track: string;
+    };
   };
   publisher?: {
     display_name: string;
