@@ -163,5 +163,6 @@
       "prefer-alphabetical-dependencies": "error",
       "prefer-alphabetical-devDependencies": "error"
     }
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }
