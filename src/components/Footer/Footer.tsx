@@ -38,7 +38,7 @@ function Footer({
       {children}
       <Row className="main-footer u-equal-height">
         <Col size={3}>
-          <a className="p-link--soft" href="#">
+          <a className="p-link--soft" href="#main">
             Back to top
             <i className="p-icon--chevron-up"></i>
           </a>
