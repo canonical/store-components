@@ -1692,28 +1692,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@canonical/react-components@npm:0.50.2":
-  version: 0.50.2
-  resolution: "@canonical/react-components@npm:0.50.2"
+"@canonical/react-components@npm:0.51.4":
+  version: 0.51.4
+  resolution: "@canonical/react-components@npm:0.51.4"
   dependencies:
     "@types/jest": "npm:29.5.11"
-    "@types/node": "npm:18.19.4"
+    "@types/node": "npm:20.8.5"
     "@types/react": "npm:18.2.46"
     "@types/react-dom": "npm:18.2.18"
     "@types/react-table": "npm:7.7.19"
     classnames: "npm:2.5.1"
     jest-environment-jsdom: "npm:29.7.0"
-    nanoid: "npm:5.0.4"
+    lodash.isequal: "npm:4.5.0"
     prop-types: "npm:15.8.1"
     react-table: "npm:7.8.0"
     react-useportal: "npm:1.0.19"
   peerDependencies:
     "@types/react": ^17.0.2 || ^18.0.0
     "@types/react-dom": ^17.0.2 || ^18.0.0
+    formik: ^2.4.5
     react: ^17.0.2 || ^18.0.0
     react-dom: ^17.0.2 || ^18.0.0
     vanilla-framework: ^3.15.1 || ^4.0.0
-  checksum: 10c0/f47f063206103f3b0d92f40695ffd6a89d215528f15c09d5fe1d84fce5d5a1992b4ea41f7db116c4fb993e63a2d29ad6bbacaee641715a4657fd7df381e91980
+  checksum: 10c0/5b0adecb6ca1ed36fb9d15c55ea1ec24818de4df3fcf2b5edc4c18cde08c2963e755fd563032f9b89a9f065f53018b3e6a3ad70cf9dbd950bc42805f9d6bcf5c
   languageName: node
   linkType: hard
 
@@ -1725,7 +1726,7 @@ __metadata:
     "@babel/eslint-parser": "npm:7.23.10"
     "@babel/plugin-proposal-private-property-in-object": "npm:7.21.11"
     "@babel/preset-typescript": "npm:7.23.3"
-    "@canonical/react-components": "npm:0.50.2"
+    "@canonical/react-components": "npm:0.51.4"
     "@storybook/addon-a11y": "npm:7.6.13"
     "@storybook/addon-controls": "npm:7.6.13"
     "@storybook/addon-docs": "npm:7.6.13"
@@ -1787,13 +1788,13 @@ __metadata:
     ts-jest: "npm:27.1.5"
     tsc-alias: "npm:1.8.8"
     typescript: "npm:4.9.5"
-    vanilla-framework: "npm:4.7.0"
+    vanilla-framework: "npm:4.10.0"
     wait-on: "npm:5.3.0"
     webpack: "npm:5.90.1"
   peerDependencies:
     react: ^17.0.2 || ^18.0.0
     react-dom: ^17.0.2 || ^18.0.0
-    vanilla-framework: 4.7.0
+    vanilla-framework: 4.10.0
   languageName: unknown
   linkType: soft
 
@@ -4615,12 +4616,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.19.4":
-  version: 18.19.4
-  resolution: "@types/node@npm:18.19.4"
+"@types/node@npm:20.8.5":
+  version: 20.8.5
+  resolution: "@types/node@npm:20.8.5"
   dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 10c0/e395bf591e79bd91c0819e7bee39c56e881399da2ca37fba5a59194ff28941fb8ed663c3fb4fba89465842720d916110dee9b774a3e4aecbe08b9e1ada4ab4fe
+    undici-types: "npm:~5.25.1"
+  checksum: 10c0/43f23241c8c0bbeda9d7913fcb702e3b4f98bd37f568d961fe738c3d4bc15e0d875febd4647c524641e18d64b3edc4a6b7cb812633d198883b90354ec003e8b8
   languageName: node
   linkType: hard
 
@@ -11070,6 +11071,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.isequal@npm:4.5.0":
+  version: 4.5.0
+  resolution: "lodash.isequal@npm:4.5.0"
+  checksum: 10c0/dfdb2356db19631a4b445d5f37868a095e2402292d59539a987f134a8778c62a2810c2452d11ae9e6dcac71fc9de40a6fedcb20e2952a15b431ad8b29e50e28f
+  languageName: node
+  linkType: hard
+
 "lodash.memoize@npm:4.x":
   version: 4.1.2
   resolution: "lodash.memoize@npm:4.1.2"
@@ -12140,15 +12148,6 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 10c0/e3fb661aa083454f40500473bb69eedb85dc160e763150b9a2c567c7e9ff560ce028a9f833123b618a6ea742e311138b591910e795614a629029e86e180660f3
-  languageName: node
-  linkType: hard
-
-"nanoid@npm:5.0.4":
-  version: 5.0.4
-  resolution: "nanoid@npm:5.0.4"
-  bin:
-    nanoid: bin/nanoid.js
-  checksum: 10c0/28c22d3ff96ea9e6abc059813b8483890c1f52de0f185d8347b0ea205c5966530205c374f1f77492bb53dc5d649de5d36d6eade16645055eb9220dc62080c1b1
   languageName: node
   linkType: hard
 
@@ -15470,6 +15469,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~5.25.1":
+  version: 5.25.3
+  resolution: "undici-types@npm:5.25.3"
+  checksum: 10c0/60a47c6db451c00d27186d86a41fbd9677fa1f6d1a5350bff342c3985bd79fc3f5a638ebf56bbce21df46c701a687db43b3fbd588e1726e58047cea14d182fef
+  languageName: node
+  linkType: hard
+
 "undici-types@npm:~5.26.4":
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
@@ -15838,10 +15844,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vanilla-framework@npm:4.7.0":
-  version: 4.7.0
-  resolution: "vanilla-framework@npm:4.7.0"
-  checksum: 10c0/85a221467c588cfe0b040f03bff3e9c1c61bce6c0274d8767cff70782c1d5a8764a8d4e1cd3337e4cdcde92cd1da66e2a9b485b530c7292cb3c65c2f6d6f73c9
+"vanilla-framework@npm:4.10.0":
+  version: 4.10.0
+  resolution: "vanilla-framework@npm:4.10.0"
+  checksum: 10c0/b403d4114ef5a0553332859e6d4601987da097350494598f8cc9252aa492154d5caf30cf2799ca06f6c5a43a58d0bfdf3897f998e9cceb27d68d8dd17bc23526
   languageName: node
   linkType: hard
 
