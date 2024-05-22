@@ -26,6 +26,7 @@ type Props = {
   order?: Array<string>;
   showMore?: boolean;
   showMoreCount?: number;
+  displayAllCategories?: boolean;
 };
 
 function Filters({
@@ -46,8 +47,11 @@ function Filters({
   order,
   showMore,
   showMoreCount,
+  displayAllCategories,
 }: Props) {
-  const [showAllCategories, setShowAllCategories] = useState(false);
+  const [showAllCategories, setShowAllCategories] = useState(
+    displayAllCategories || false
+  );
   const categoryCount = showMoreCount ? showMoreCount - 1 : 9;
 
   const handleSelectedCategoriesChange = (
