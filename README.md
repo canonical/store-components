@@ -2,6 +2,8 @@
 
 This is a collection of components designed to be used in store UIs when using React. This is currently a work in progress and therefore not recommended to use in projects at this time.
 
+These components are an extension of the [Vanilla React Components](https://github.com/canonical/react-components) library.
+
 ## How to use the components
 
 See the [component docs](https://canonical.github.io/store-components/) for usage instructions.
