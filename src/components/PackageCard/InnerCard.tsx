@@ -189,10 +189,10 @@ function InnerCard({
                     {data.package.platforms.includes("vm") && (
                       <img
                         className="sc-platform-icon"
-                        src="https://assets.ubuntu.com/v1/a911ecf6-vm-badge.svg"
+                        src="https://assets.ubuntu.com/v1/bf61e269-machine-badge.svg"
                         width={24}
                         height={24}
-                        alt="VM"
+                        alt="Machine"
                       />
                     )}
                     {data.package.platforms.includes("kubernetes") && (
