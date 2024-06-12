@@ -110,12 +110,12 @@ describe("PackageCard", () => {
 
   it("doesn't show platforms if not enabled", () => {
     render(<PackageCard {...props} />);
-    expect(screen.queryByAltText("VM")).not.toBeInTheDocument();
+    expect(screen.queryByAltText("Machine")).not.toBeInTheDocument();
   });
 
   it("shows platforms if enabled", () => {
     render(<PackageCard {...props} showPlatforms={true} />);
-    expect(screen.getByAltText("VM")).toBeInTheDocument();
+    expect(screen.getByAltText("Machine")).toBeInTheDocument();
   });
 
   it("doesn't show ratings if not enabled", () => {
