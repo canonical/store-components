@@ -1705,15 +1705,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@canonical/react-components@npm:0.51.4":
-  version: 0.51.4
-  resolution: "@canonical/react-components@npm:0.51.4"
+"@canonical/react-components@npm:0.59.0":
+  version: 0.59.0
+  resolution: "@canonical/react-components@npm:0.59.0"
   dependencies:
-    "@types/jest": "npm:29.5.11"
-    "@types/node": "npm:20.8.5"
-    "@types/react": "npm:18.2.46"
-    "@types/react-dom": "npm:18.2.18"
-    "@types/react-table": "npm:7.7.19"
+    "@types/jest": "npm:29.5.12"
+    "@types/node": "npm:20.12.11"
+    "@types/react": "npm:18.3.1"
+    "@types/react-dom": "npm:18.3.0"
+    "@types/react-table": "npm:7.7.20"
     classnames: "npm:2.5.1"
     jest-environment-jsdom: "npm:29.7.0"
     lodash.isequal: "npm:4.5.0"
@@ -1727,7 +1727,7 @@ __metadata:
     react: ^17.0.2 || ^18.0.0
     react-dom: ^17.0.2 || ^18.0.0
     vanilla-framework: ^3.15.1 || ^4.0.0
-  checksum: 10c0/5b0adecb6ca1ed36fb9d15c55ea1ec24818de4df3fcf2b5edc4c18cde08c2963e755fd563032f9b89a9f065f53018b3e6a3ad70cf9dbd950bc42805f9d6bcf5c
+  checksum: 10c0/4d1dfee4e0a48280f13d3c425d07a10c2291f75c6d6745ff0b1c6d296366d033ed8e6f3bf686c632ce09c479e8861429e0fefdee379edc8131f3e64e96c30708
   languageName: node
   linkType: hard
 
@@ -1739,7 +1739,7 @@ __metadata:
     "@babel/eslint-parser": "npm:7.24.1"
     "@babel/plugin-proposal-private-property-in-object": "npm:7.21.11"
     "@babel/preset-typescript": "npm:7.24.1"
-    "@canonical/react-components": "npm:0.51.4"
+    "@canonical/react-components": "npm:0.59.0"
     "@storybook/addon-a11y": "npm:7.6.17"
     "@storybook/addon-controls": "npm:7.6.17"
     "@storybook/addon-docs": "npm:7.6.17"
@@ -1802,13 +1802,13 @@ __metadata:
     ts-jest: "npm:27.1.5"
     tsc-alias: "npm:1.8.8"
     typescript: "npm:4.9.5"
-    vanilla-framework: "npm:4.10.0"
+    vanilla-framework: "npm:4.14.0"
     wait-on: "npm:5.3.0"
     webpack: "npm:5.91.0"
   peerDependencies:
     react: ^17.0.2 || ^18.0.0
     react-dom: ^17.0.2 || ^18.0.0
-    vanilla-framework: 4.10.0
+    vanilla-framework: 4.14.0
   languageName: unknown
   linkType: soft
 
@@ -4521,13 +4521,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:29.5.11":
-  version: 29.5.11
-  resolution: "@types/jest@npm:29.5.11"
+"@types/jest@npm:29.5.12":
+  version: 29.5.12
+  resolution: "@types/jest@npm:29.5.12"
   dependencies:
     expect: "npm:^29.0.0"
     pretty-format: "npm:^29.0.0"
-  checksum: 10c0/524a3394845214581278bf4d75055927261fbeac7e1a89cd621bd0636da37d265fe0a85eac58b5778758faad1cbd7c7c361dfc190c78ebde03a91cce33463261
+  checksum: 10c0/25fc8e4c611fa6c4421e631432e9f0a6865a8cb07c9815ec9ac90d630271cad773b2ee5fe08066f7b95bebd18bb967f8ce05d018ee9ab0430f9dfd1d84665b6f
   languageName: node
   linkType: hard
 
@@ -4635,12 +4635,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.8.5":
-  version: 20.8.5
-  resolution: "@types/node@npm:20.8.5"
+"@types/node@npm:20.12.11":
+  version: 20.12.11
+  resolution: "@types/node@npm:20.12.11"
   dependencies:
-    undici-types: "npm:~5.25.1"
-  checksum: 10c0/43f23241c8c0bbeda9d7913fcb702e3b4f98bd37f568d961fe738c3d4bc15e0d875febd4647c524641e18d64b3edc4a6b7cb812633d198883b90354ec003e8b8
+    undici-types: "npm:~5.26.4"
+  checksum: 10c0/efaa7b08c50ba6e6982ac7d531ba08d5935539ba76e954807df1ff9382a319ead7e003ccaca5ad7cf33ecf53f212507f7c1f2794bd2ff52df6365fef21f6e1fb
   languageName: node
   linkType: hard
 
@@ -4699,15 +4699,6 @@ __metadata:
   dependencies:
     "@types/react": "npm:^17"
   checksum: 10c0/18a95d4d684cacc697d97ae66e3c8402da2f866c053fa6a5982694aa8eb6229afcefd3bfaaab4175c1b0ef3494c881e4d25e2167aa669bcbbb84114fd02ae5ba
-  languageName: node
-  linkType: hard
-
-"@types/react-table@npm:7.7.19":
-  version: 7.7.19
-  resolution: "@types/react-table@npm:7.7.19"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 10c0/bbbe6a82c330adad3d2fe26a7937f74718f9e2c56d495009f95e3ceb4340b47d41ec0c6d77b255fae6e19b9fdff7fc31735155739b25dd9e31da3761e3cd397e
   languageName: node
   linkType: hard
 
@@ -15681,13 +15672,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~5.25.1":
-  version: 5.25.3
-  resolution: "undici-types@npm:5.25.3"
-  checksum: 10c0/60a47c6db451c00d27186d86a41fbd9677fa1f6d1a5350bff342c3985bd79fc3f5a638ebf56bbce21df46c701a687db43b3fbd588e1726e58047cea14d182fef
-  languageName: node
-  linkType: hard
-
 "undici-types@npm:~5.26.4":
   version: 5.26.5
   resolution: "undici-types@npm:5.26.5"
@@ -16056,10 +16040,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vanilla-framework@npm:4.10.0":
-  version: 4.10.0
-  resolution: "vanilla-framework@npm:4.10.0"
-  checksum: 10c0/b403d4114ef5a0553332859e6d4601987da097350494598f8cc9252aa492154d5caf30cf2799ca06f6c5a43a58d0bfdf3897f998e9cceb27d68d8dd17bc23526
+"vanilla-framework@npm:4.14.0":
+  version: 4.14.0
+  resolution: "vanilla-framework@npm:4.14.0"
+  checksum: 10c0/5c5bca2c24df400adfd45ecbcc59dca220775f4e0e8ff767114f5c74525620500455c23598f4ad2489d66e8683b762c065eb002cae93c2ffcaf55fccdd331a84
   languageName: node
   linkType: hard
 
