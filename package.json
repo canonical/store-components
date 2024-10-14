@@ -54,14 +54,14 @@
     "eslint-plugin-flowtype": "8.0.3",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-jsx-a11y": "6.8.0",
-    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-prettier": "5.2.1",
     "eslint-plugin-react": "7.34.1",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-storybook": "0.8.0",
     "eslint-plugin-testing-library": "5.11.1",
     "jest": "27.5.1",
     "npm-package-json-lint": "5.4.2",
-    "prettier": "2.8.8",
+    "prettier": "3.3.3",
     "react": "18.2.0",
     "react-docgen-typescript-loader": "3.7.2",
     "react-dom": "18.2.0",
@@ -164,6 +164,5 @@
       "prefer-alphabetical-dependencies": "error",
       "prefer-alphabetical-devDependencies": "error"
     }
-  },
-  "packageManager": "yarn@4.1.1"
+  }
 }
