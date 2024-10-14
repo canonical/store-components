@@ -69,7 +69,9 @@ module.exports = {
       rules: {
         "testing-library/no-node-access": "warn",
         "testing-library/no-container": "warn",
-        "testing-library/no-render-in-setup": "warn",
+        "testing-library/no-debugging-utils": "warn",
+        "testing-library/await-async-queries": "error",
+        "testing-library/no-await-sync-queries": "error",
       },
     },
   ],
