@@ -107,7 +107,8 @@ function InnerCard({
                       title="Verified account"
                     />
                   )}
-                  {data.publisher.validation === "star" && (
+
+                  {data.publisher.validation === "starred" && (
                     <img
                       src="https://assets.ubuntu.com/v1/d810dee9-Orange+Star.svg"
                       width={14}
