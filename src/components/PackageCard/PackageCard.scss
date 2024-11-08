@@ -12,6 +12,8 @@
   overflow: hidden;
 }
 
+
+
 .sc-package-card {
   align-items: stretch;
   display: flex;
@@ -115,4 +117,8 @@
   display: -webkit-box; // stylelint-disable-line
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+
+.sc-package-publisher-icon {
+  vertical-align: middle;
 }

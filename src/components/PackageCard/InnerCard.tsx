@@ -105,6 +105,7 @@ function InnerCard({
                       height={14}
                       alt="Verified account"
                       title="Verified account"
+                      className="sc-package-publisher-icon"
                     />
                   )}
 
@@ -116,6 +117,7 @@ function InnerCard({
                       height={14}
                       alt="Star developer"
                       title="Star developer"
+                      className="sc-package-publisher-icon"
                     />
                   )}
                 </>
