@@ -105,15 +105,19 @@ function InnerCard({
                       height={14}
                       alt="Verified account"
                       title="Verified account"
+                      className="sc-package-publisher-icon"
                     />
                   )}
-                  {data.publisher.validation === "star" && (
+
+                  {(data.publisher.validation === "star" ||
+                    data.publisher.validation === "starred") && (
                     <img
                       src="https://assets.ubuntu.com/v1/d810dee9-Orange+Star.svg"
                       width={14}
                       height={14}
                       alt="Star developer"
                       title="Star developer"
+                      className="sc-package-publisher-icon"
                     />
                   )}
                 </>
