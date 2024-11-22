@@ -42,10 +42,6 @@ Publish the [latest release on Github](https://github.com/canonical/store-compon
 
 #### Publish to NPM
 
-This should happen automatically after publishing the release on GH (thanks to [GH actions workflow](https://github.com/canonical/store-components/blob/main/.github/workflows/publish-on-release.yml)).
-
-In case it fails and you need to publish manually, here are manual steps:
-
 Get a fresh copy of the main branch
 
 ```shell
