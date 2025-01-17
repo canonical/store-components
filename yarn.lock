@@ -1142,10 +1142,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@canonical/react-components@1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-1.7.0.tgz#e1863b92a0115e9a1d64d894b32197cb4b19b912"
-  integrity sha512-L+H99qfv6lIpHDfiMLQutN7VPYBCyu8SezWvOkomfixL4OsdFPw0Whr92l85p553BN9FyXjtEyqX8s+D1U0JlQ==
+"@canonical/react-components@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-1.9.0.tgz#9337b35e632d7419eddf51823a5243156893185e"
+  integrity sha512-CB2xHvGs/KFsCAbh79pSsJfg+j5Pxmye1qXCeAoirTWj1WIwRiDVV32R07Xys/bAafzINy6kStqJHkq8XUld/g==
   dependencies:
     "@types/jest" "29.5.12"
     "@types/node" "20.16.3"
@@ -11814,10 +11814,10 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
-vanilla-framework@4.17.1:
-  version "4.17.1"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.17.1.tgz#8f0913e51bbe14ec3ed0686fe4f91ab7685eda41"
-  integrity sha512-vmjx08LnGnNC37GF4shnrknmWhjV1Xq2LciBvzIBZFy4zCVbDO7O2HJbPvXzLkWClgICk7zkpnKJMVBAUk4wjA==
+vanilla-framework@4.20.0:
+  version "4.20.0"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.20.0.tgz#017362c0814a69f4759842c8f35d4ee9e9f5ad83"
+  integrity sha512-XCaLzqlo8Qd/awGD5sNG/1c4LfcaGLCgCZfVPRWyxQIVZRVQrY+Tk335Juz7u/DqUMuULt800oy0sOIVyqABWA==
 
 vary@~1.1.2:
   version "1.1.2"
