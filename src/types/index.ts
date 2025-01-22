@@ -32,7 +32,7 @@ export type SubComponentProps<P> = Partial<P> & {
  * This type is simply an alias for the 'any' type and should be used sparingly,
  * if at all.
  */
-export type TSFixMe = any; // eslint-disable-line @typescript-eslint/no-explicit-any
+export type TSFixMe = any;
 /**
  * This type allows for converting an object const into an enum-like construct,
  * e.g. value: ValueOf<typeof EnumLike> will only allow value to be a value

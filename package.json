@@ -26,6 +26,9 @@
     "@babel/eslint-parser": "7.26.5",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
     "@babel/preset-typescript": "7.26.0",
+    "@eslint/compat": "1.2.5",
+    "@eslint/eslintrc": "3.2.0",
+    "@eslint/js": "9.18.0",
     "@storybook/addon-a11y": "7.6.20",
     "@storybook/addon-controls": "7.6.20",
     "@storybook/addon-docs": "7.6.20",
@@ -48,7 +51,7 @@
     "concurrently": "8.2.2",
     "css-loader": "7.1.2",
     "deepmerge": "4.3.1",
-    "eslint": "8.57.1",
+    "eslint": "9.18.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-config-react-app": "7.0.1",
     "eslint-plugin-flowtype": "8.0.3",
@@ -97,9 +100,7 @@
   },
   "resolutions": {
     "@types/react": "17.0.83",
-    "@types/react-dom": "17.0.26",
-    "postcss": "^8.3.11",
-    "jackspeak": "2.3.6"
+    "@types/react-dom": "17.0.26"
   },
   "peerDependencies": {
     "react": "^17.0.2 || ^18.0.0",
