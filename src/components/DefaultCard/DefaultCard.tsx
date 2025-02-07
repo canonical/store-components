@@ -6,9 +6,11 @@ import type { Package } from "types/package";
 
 type Props = {
   data: Package;
+  highlighted?: boolean;
+  highlightColor?: string;
 };
 
-function DefaultCard({ data }: Props) {
+function DefaultCard({ data, highlighted, highlightColor }: Props) {
   let isFeatured = false;
 
   if (data.categories && data.categories.length > 0) {
@@ -25,7 +27,8 @@ function DefaultCard({ data }: Props) {
       data={data}
       showIcon
       showVerification
-      isHighlighted={isFeatured}
+      isHighlighted={isFeatured || highlighted}
+      highlightColor={highlightColor}
     />
   );
 }
