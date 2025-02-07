@@ -21,6 +21,7 @@ type PackageCardProps = {
   showRatings?: boolean;
   showVerification?: boolean;
   showChannel?: boolean;
+  highlightColor?: string;
 };
 
 function PackageCard({
@@ -34,6 +35,7 @@ function PackageCard({
   showRatings,
   showVerification,
   showChannel,
+  highlightColor,
 }: PackageCardProps) {
   const innerCardProps = {
     isBundle: isBundle,
@@ -50,7 +52,7 @@ function PackageCard({
   };
 
   if (isHighlighted) {
-    outerCardStyle["borderTop"] = "3px solid #f2a031";
+    outerCardStyle["borderTop"] = `3px solid ${highlightColor || "#f2a031"}`;
   }
 
   if (isBundle) {
