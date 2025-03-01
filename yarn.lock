@@ -5556,7 +5556,7 @@ css-select@^4.1.3:
     domutils "^2.8.0"
     nth-check "^2.0.1"
 
-css-tree@^3.1.0:
+css-tree@^3.0.1, css-tree@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/css-tree/-/css-tree-3.1.0.tgz#7aabc035f4e66b5c86f54570d55e05b1346eb0fd"
   integrity sha512-0eW44TGN5SQXU1mWSkKwFstI/22X2bG1nYzZTYMAWjylYURhse752YgbE4Cx46AC+bAvI+/dYTPRk1LqSUnu6w==
@@ -9613,6 +9613,11 @@ mdn-data@2.12.2:
   resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.12.2.tgz#9ae6c41a9e65adf61318b32bff7b64fbfb13f8cf"
   integrity sha512-IEn+pegP1aManZuckezWCO+XZQDplx1366JoVhTpMpBB1sPey/SbveZQUosKiKiGYjg1wH4pMlNgXbCiYgihQA==
 
+mdn-data@^2.15.0:
+  version "2.17.0"
+  resolved "https://registry.yarnpkg.com/mdn-data/-/mdn-data-2.17.0.tgz#6978ea53c38228a6cb2dae71bff652bc02ce5585"
+  integrity sha512-VT5LJBdLRI+cc3DPXJD89PGwI8yXuciE5gZJoSPnH4yeGzMPqxwkZv3BjFSoaWpmOlJNBhVT6HKeQPcZKlNEvA==
+
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
@@ -10796,7 +10801,7 @@ postcss-modules-values@^4.0.0:
   dependencies:
     icss-utils "^5.0.0"
 
-postcss-resolve-nested-selector@^0.1.1, postcss-resolve-nested-selector@^0.1.6:
+postcss-resolve-nested-selector@^0.1.6:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/postcss-resolve-nested-selector/-/postcss-resolve-nested-selector-0.1.6.tgz#3d84dec809f34de020372c41b039956966896686"
   integrity sha512-0sglIs9Wmkzbr8lQwEyIzlDOOC9bGmfVKcJTaxv3vMmd3uo4o4DerC3En0bnmgceeql9BfC8hRkp7cg0fjdVqw==
@@ -10806,12 +10811,12 @@ postcss-safe-parser@^7.0.1:
   resolved "https://registry.yarnpkg.com/postcss-safe-parser/-/postcss-safe-parser-7.0.1.tgz#36e4f7e608111a0ca940fd9712ce034718c40ec0"
   integrity sha512-0AioNCJZ2DPYz5ABT6bddIqlhgwhpHZ/l65YAYo0BCIn0xiDpsnTHz0gnoTGk0OXZW0JRs+cDwL8u/teRdz+8A==
 
-postcss-scss@^4.0.2:
+postcss-scss@^4.0.9:
   version "4.0.9"
   resolved "https://registry.yarnpkg.com/postcss-scss/-/postcss-scss-4.0.9.tgz#a03c773cd4c9623cb04ce142a52afcec74806685"
   integrity sha512-AjKOeiwAitL/MXxQW2DliT28EKukvvbEWx3LBmJIRN8KfBGZbRTxNYW0kSqi1COiTZ57nZ9NW06S6ux//N1c9A==
 
-postcss-selector-parser@^6.0.11, postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4:
+postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.1.2.tgz#27ecb41fb0e3b6ba7a1ec84fff347f734c7929de"
   integrity sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==
@@ -10823,6 +10828,14 @@ postcss-selector-parser@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-7.0.0.tgz#41bd8b56f177c093ca49435f65731befe25d6b9c"
   integrity sha512-9RbEr1Y7FFfptd/1eEdntyjMwLeghW1bHX9GWjXo19vx4ytPQhANltvVxDggzJl7mnWM+dX28kb6cyS/4iQjlQ==
+  dependencies:
+    cssesc "^3.0.0"
+    util-deprecate "^1.0.2"
+
+postcss-selector-parser@^7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-7.1.0.tgz#4d6af97eba65d73bc4d84bcb343e865d7dd16262"
+  integrity sha512-8sLjZwK0R+JlxlYcTuVnyT2v+htpdrjDOKuMcOVdYjt52Lh8hWRYpxBPoKx/Zg+bcjc3wx6fmQevMmUztS/ccA==
   dependencies:
     cssesc "^3.0.0"
     util-deprecate "^1.0.2"
@@ -12201,19 +12214,19 @@ stylelint-config-prettier@9.0.5:
   resolved "https://registry.yarnpkg.com/stylelint-config-prettier/-/stylelint-config-prettier-9.0.5.tgz#9f78bbf31c7307ca2df2dd60f42c7014ee9da56e"
   integrity sha512-U44lELgLZhbAD/xy/vncZ2Pq8sh2TnpiPvo38Ifg9+zeioR+LAkHu0i6YORIOxFafZoVg0xqQwex6e6F25S5XA==
 
-stylelint-config-recommended-scss@5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-5.0.2.tgz#193f483861c76a36ece24c52eb6baca4838f4a48"
-  integrity sha512-b14BSZjcwW0hqbzm9b0S/ScN2+3CO3O4vcMNOw2KGf8lfVSwJ4p5TbNEXKwKl1+0FMtgRXZj6DqVUe/7nGnuBg==
+stylelint-config-recommended-scss@14.1.0:
+  version "14.1.0"
+  resolved "https://registry.yarnpkg.com/stylelint-config-recommended-scss/-/stylelint-config-recommended-scss-14.1.0.tgz#1a5855655cddcb5f77c10f38c76567adf2bb9aa3"
+  integrity sha512-bhaMhh1u5dQqSsf6ri2GVWWQW5iUjBYgcHkh7SgDDn92ijoItC/cfO/W+fpXshgTQWhwFkP1rVcewcv4jaftRg==
   dependencies:
-    postcss-scss "^4.0.2"
-    stylelint-config-recommended "^6.0.0"
-    stylelint-scss "^4.0.0"
+    postcss-scss "^4.0.9"
+    stylelint-config-recommended "^14.0.1"
+    stylelint-scss "^6.4.0"
 
-stylelint-config-recommended@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-6.0.0.tgz#fd2523a322836005ad9bf473d3e5534719c09f9d"
-  integrity sha512-ZorSSdyMcxWpROYUvLEMm0vSZud2uB7tX1hzBZwvVY9SV/uly4AvvJPPhCcymZL3fcQhEQG5AELmrxWqtmzacw==
+stylelint-config-recommended@^14.0.1:
+  version "14.0.1"
+  resolved "https://registry.yarnpkg.com/stylelint-config-recommended/-/stylelint-config-recommended-14.0.1.tgz#d25e86409aaf79ee6c6085c2c14b33c7e23c90c6"
+  integrity sha512-bLvc1WOz/14aPImu/cufKAZYfXs/A/owZfSMZ4N+16WGXLoX5lOir53M6odBxvhgmgdxCVnNySJmZKx73T93cg==
 
 stylelint-order@5.0.0:
   version "5.0.0"
@@ -12230,14 +12243,18 @@ stylelint-prettier@2.0.0:
   dependencies:
     prettier-linter-helpers "^1.0.0"
 
-stylelint-scss@^4.0.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-4.7.0.tgz#f986bf8c5a4b93eae2b67d3a3562eef822657908"
-  integrity sha512-TSUgIeS0H3jqDZnby1UO1Qv3poi1N8wUYIJY6D1tuUq2MN3lwp/rITVo0wD+1SWTmRm0tNmGO0b7nKInnqF6Hg==
+stylelint-scss@^6.4.0:
+  version "6.11.1"
+  resolved "https://registry.yarnpkg.com/stylelint-scss/-/stylelint-scss-6.11.1.tgz#03860aab250112825b2deb77ca7ff1e2ba3a5414"
+  integrity sha512-e4rYo0UY+BIMtGeGanghrvHTjcryxgZbyFxUedp8dLFqC4P70aawNdYjRrQxbnKhu3BNr4+lt5e/53tcKXiwFA==
   dependencies:
+    css-tree "^3.0.1"
+    is-plain-object "^5.0.0"
+    known-css-properties "^0.35.0"
+    mdn-data "^2.15.0"
     postcss-media-query-parser "^0.2.3"
-    postcss-resolve-nested-selector "^0.1.1"
-    postcss-selector-parser "^6.0.11"
+    postcss-resolve-nested-selector "^0.1.6"
+    postcss-selector-parser "^7.1.0"
     postcss-value-parser "^4.2.0"
 
 stylelint@16.13.2:
