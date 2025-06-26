@@ -98,7 +98,10 @@ function RockCard({ data, showVerification }: PackageCardProps) {
                   className="u-text--muted u-no-margin--bottom"
                   data-testid="package-channel"
                 >
-                  <em>Updated {data.package.last_updated}</em>
+                  <em>
+                    <i className="p-icon--change-version"></i>&nbsp;
+                    Updated {data.package.last_updated}
+                  </em>
                 </p>
               )}
             </div>
