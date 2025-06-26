@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "@canonical/react-components";
 
-import type { Rock } from "../../types/rock"
+import type { Rock } from "../../types/rock";
 import "./RockCard.scss";
 
 export type Props = PackageCardProps;
@@ -11,13 +11,9 @@ type PackageCardProps = {
   showVerification?: boolean;
 };
 
-function RockCard({
-  data,  
-  showVerification,
-}: PackageCardProps) {
-
+function RockCard({ data, showVerification }: PackageCardProps) {
   const outerCardStyle: React.CSSProperties = {
-    height: "100%"
+    height: "100%",
   };
 
   const handleClick = () => {
@@ -25,15 +21,15 @@ function RockCard({
   };
 
   return (
-    <Card
-      style={outerCardStyle}
-      onClick={handleClick}
-    >
+    <Card style={outerCardStyle} onClick={handleClick}>
       <div className="sc-rock-card">
         <div className="sc-rock-card__body">
           <div>
-            <img src={data.package.icon_url ||
-              "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg"}
+            <img
+              src={
+                data.package.icon_url ||
+                "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg"
+              }
               width={48}
               height={48}
               className="p-media-object__image"
@@ -44,13 +40,13 @@ function RockCard({
 
           <div className="">
             {data.package.display_name && (
-              <h2 className="p-heading--5 u-no-margin--bottom u-no-padding--top">{data.package.display_name}</h2>
+              <h2 className="p-heading--5 u-no-margin--bottom u-no-padding--top">
+                {data.package.display_name}
+              </h2>
             )}
 
             {data.publisher && (
-              <p
-                className="u-text--muted u-no-padding--top"
-              >
+              <p className="u-text--muted u-no-padding--top">
                 <em>{data.publisher.display_name} </em>
                 {showVerification && (
                   <>
@@ -80,25 +76,30 @@ function RockCard({
                 )}
               </p>
             )}
-            <p className={"u-line-clamp"}>{data.package.summary}
-            </p>
+            <p className={"u-line-clamp"}>{data.package.summary}</p>
           </div>
           <button className="p-chip--caution sc-rock-support-chip">
             <span className="p-chip__value">LTS</span>
           </button>
-
         </div>
-        {(data.package.last_updated || data.package.cves)  && (
+        {(data.package.last_updated || data.package.cves) && (
           <div className="sc-rock-card__footer">
             <hr />
             <div className="sc-rock-card__footer-content">
               {data.package.support && (
-                <p className="u-text--small u-no-padding--top u-no-margin--bottom" data-testid="package-channel">
-                  {data.package.cves}&nbsp;&nbsp;<i className="p-icon--priority-critical"></i>
+                <p
+                  className="u-text--small u-no-padding--top u-no-margin--bottom"
+                  data-testid="package-channel"
+                >
+                  {data.package.cves}&nbsp;&nbsp;
+                  <i className="p-icon--priority-critical"></i>
                 </p>
               )}
               {data.package.last_updated && (
-                <p className="u-text--muted u-no-margin--bottom" data-testid="package-channel">
+                <p
+                  className="u-text--muted u-no-margin--bottom"
+                  data-testid="package-channel"
+                >
                   <em>Updated {data.package.last_updated}</em>
                 </p>
               )}
