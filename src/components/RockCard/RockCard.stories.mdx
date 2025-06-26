@@ -1,0 +1,45 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import RockCard from "./RockCard";
+
+<Meta title="RockCard" component={RockCard} />
+
+export const Template = (args) => <RockCard {...args} />;
+
+# RockCard
+
+This is a [React](https://reactjs.org/) component for a default package card.
+
+## Props
+
+<ArgsTable of={RockCard} />
+
+## Default
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      data: {
+        "package": {
+            "contact": "",
+            "cves": 2,
+            "description": "Rocks aren't just minerals. They could be other amazing things like this image. Let's rock it!",
+            "display_name": "The Best Rock",
+            "icon_url": "",
+            "last_updated": "5 hours ago",
+            "name": "miloslu-service-prompt",
+            "platforms": [ ],
+            "summary": "Rocks aren't just minerals",
+            "support": "LTS",
+            "website": ""
+        },
+        "publisher": {
+            "display_name": "Milos Lukic",
+            "name": "miloslu",
+            "validation": "verified"
+        }}
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
