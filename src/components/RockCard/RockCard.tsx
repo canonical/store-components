@@ -23,22 +23,20 @@ function RockCard({ data, showVerification }: PackageCardProps) {
   return (
     <Card style={outerCardStyle} onClick={handleClick}>
       <div className="sc-rock-card">
-        <div className="sc-rock-card__body">
-          <div>
-            <img
-              src={
-                data.package.icon_url ||
-                "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg"
-              }
-              width={48}
-              height={48}
-              className="p-media-object__image"
-              data-testid="package-icon"
-              alt=""
-            />
-          </div>
+        <div className="p-media-object sc-rock-card__body">
+          <img
+            src={
+              data.package.icon_url ||
+              "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg"
+            }
+            width={48}
+            height={48}
+            className="p-media-object__image"
+            data-testid="package-icon"
+            alt="Package icon"
+          />
 
-          <div className="">
+          <div className="p-meida-object__details">
             {data.package.display_name && (
               <h2 className="p-heading--5 u-no-margin--bottom u-no-padding--top">
                 {data.package.display_name}
