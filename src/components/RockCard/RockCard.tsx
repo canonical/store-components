@@ -99,8 +99,8 @@ function RockCard({ data, showVerification }: PackageCardProps) {
                   data-testid="package-channel"
                 >
                   <em>
-                    <i className="p-icon--change-version"></i>&nbsp;
-                    Updated {data.package.last_updated}
+                    <i className="p-icon--change-version"></i>&nbsp;Updated
+                    {data.package.last_updated}
                   </em>
                 </p>
               )}
