@@ -1,0 +1,27 @@
+@import "vanilla-framework";
+@include vf-base;
+@include vf-p-icons;
+
+.sc-rock-card {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.sc-rock-card__body {
+    position: relative;
+}
+
+.sc-rock-support-chip {
+    position: absolute;
+    right: 0;
+}
+
+.sc-rock-card__footer {
+    margin-top: auto;
+}
+
+.sc-rock-card__footer-content {
+    display: flex;
+    justify-content: space-between;
+}
