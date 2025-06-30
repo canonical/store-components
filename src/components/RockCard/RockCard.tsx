@@ -35,56 +35,57 @@ function RockCard({ data, showVerification }: PackageCardProps) {
             data-testid="package-icon"
             alt="Package icon"
           />
+          <div className="sc-rock-card__details-wrapper">
+            <div className="p-media-object__details">
+              {data.package.display_name && (
+                <h2 className="p-heading--5 u-no-margin--bottom u-no-padding--top">
+                  {data.package.display_name}
+                </h2>
+              )}
 
-          <div className="p-meida-object__details">
-            {data.package.display_name && (
-              <h2 className="p-heading--5 u-no-margin--bottom u-no-padding--top">
-                {data.package.display_name}
-              </h2>
-            )}
+              {data.publisher && (
+                <p className="u-text--muted u-no-padding--top">
+                  <em>{data.publisher.display_name} </em>
+                  {showVerification && (
+                    <>
+                      {data.publisher.validation === "verified" && (
+                        <img
+                          src="https://assets.ubuntu.com/v1/ba8a4b7b-Verified.svg"
+                          width={14}
+                          height={14}
+                          alt="Verified account"
+                          title="Verified account"
+                          className="sc-package-publisher-icon"
+                        />
+                      )}
 
-            {data.publisher && (
-              <p className="u-text--muted u-no-padding--top">
-                <em>{data.publisher.display_name} </em>
-                {showVerification && (
-                  <>
-                    {data.publisher.validation === "verified" && (
-                      <img
-                        src="https://assets.ubuntu.com/v1/ba8a4b7b-Verified.svg"
-                        width={14}
-                        height={14}
-                        alt="Verified account"
-                        title="Verified account"
-                        className="sc-package-publisher-icon"
-                      />
-                    )}
-
-                    {(data.publisher.validation === "star" ||
-                      data.publisher.validation === "starred") && (
-                      <img
-                        src="https://assets.ubuntu.com/v1/d810dee9-Orange+Star.svg"
-                        width={14}
-                        height={14}
-                        alt="Star developer"
-                        title="Star developer"
-                        className="sc-package-publisher-icon"
-                      />
-                    )}
-                  </>
-                )}
-              </p>
-            )}
-            <p className={"u-line-clamp"}>{data.package.summary}</p>
+                      {(data.publisher.validation === "star" ||
+                        data.publisher.validation === "starred") && (
+                        <img
+                          src="https://assets.ubuntu.com/v1/d810dee9-Orange+Star.svg"
+                          width={14}
+                          height={14}
+                          alt="Star developer"
+                          title="Star developer"
+                          className="sc-package-publisher-icon"
+                        />
+                      )}
+                    </>
+                  )}
+                </p>
+              )}
+              <p className={"u-line-clamp"}>{data.package.summary}</p>
+            </div>
+            <button className="p-chip--caution sc-rock-support-chip">
+              <span className="p-chip__value">{data.package.support}</span>
+            </button>
           </div>
-          <button className="p-chip--caution sc-rock-support-chip">
-            <span className="p-chip__value">LTS</span>
-          </button>
         </div>
         {(data.package.last_updated || data.package.cves) && (
           <div className="sc-rock-card__footer">
             <hr />
             <div className="sc-rock-card__footer-content">
-              {data.package.support && (
+              {data.package.cves && (
                 <p
                   className="u-text--small u-no-padding--top u-no-margin--bottom"
                   data-testid="package-channel"
@@ -98,8 +99,9 @@ function RockCard({ data, showVerification }: PackageCardProps) {
                   className="u-text--muted u-no-margin--bottom"
                   data-testid="package-channel"
                 >
+                  <i className="p-icon--change-version"></i>&nbsp;
                   <em>
-                    <i className="p-icon--change-version"></i>&nbsp;Updated
+                    Updated&nbsp;
                     {data.package.last_updated}
                   </em>
                 </p>

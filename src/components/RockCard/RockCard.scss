@@ -8,20 +8,29 @@
     align-content: space-between;
 }
 
-.sc-rock-card__body {
-    position: relative;
-}
-
 .sc-rock-support-chip {
-    position: absolute;
-    right: 0;
+    opacity: 0.7;
+    height: 22px;
+    min-width: 39px;
+    padding: 0;
 }
 
 .sc-rock-card__footer {
     margin-top: auto;
 }
 
+.sc-rock-card__details-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .sc-rock-card__footer-content {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: $breakpoint-x-small) {
+        flex-direction: column;  
+    }
+
 }
