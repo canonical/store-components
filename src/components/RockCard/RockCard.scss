@@ -28,4 +28,9 @@
 .sc-rock-card__footer-content {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: $breakpoint-x-small) {
+        flex-direction: column;  
+    }
+
 }
