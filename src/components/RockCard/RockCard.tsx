@@ -76,9 +76,11 @@ function RockCard({ data, showVerification }: PackageCardProps) {
               )}
               <p className={"u-line-clamp"}>{data.package.summary}</p>
             </div>
-            <button className="p-chip--caution sc-rock-support-chip">
-              <span className="p-chip__value">{data.package.support}</span>
-            </button>
+            {data.package.support && (
+              <button className="p-chip--caution sc-rock-support-chip">
+                <span className="p-chip__value">{data.package.support}</span>
+              </button>
+            )}
           </div>
         </div>
         {(data.package.last_updated || data.package.cves) && (
