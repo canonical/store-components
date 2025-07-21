@@ -77,12 +77,12 @@
     "ts-jest": "27.1.5",
     "tsc-alias": "1.8.10",
     "typescript": "4.9.5",
-    "vanilla-framework": "4.20.0",
+    "vanilla-framework": "4.26.1",
     "wait-on": "5.3.0",
     "webpack": "5.97.1"
   },
   "dependencies": {
-    "@canonical/react-components": "1.9.0",
+    "@canonical/react-components": "1.10.0",
     "@types/jest": "27.5.2",
     "@types/node": "18.19.71",
     "@types/react": "17.0.83",
@@ -104,7 +104,7 @@
   "peerDependencies": {
     "react": "^17.0.2 || ^18.0.0",
     "react-dom": "^17.0.2 || ^18.0.0",
-    "vanilla-framework": "4.20.0"
+    "vanilla-framework": "4.26.1"
   },
   "scripts": {
     "build": "rm -rf dist && yarn build-local; yarn build-declaration",
