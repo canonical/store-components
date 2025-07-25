@@ -82,7 +82,7 @@
     "webpack": "5.97.1"
   },
   "dependencies": {
-    "@canonical/react-components": "1.9.0",
+    "@canonical/react-components": "2.11.0",
     "@types/jest": "27.5.2",
     "@types/node": "18.19.71",
     "@types/react": "17.0.83",
