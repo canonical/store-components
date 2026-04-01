@@ -4,7 +4,6 @@
 
 import { fixupConfigRules, fixupPluginRules } from "@eslint/compat";
 import prettier from "eslint-plugin-prettier";
-import testingLibrary from "eslint-plugin-testing-library";
 import babelParser from "@babel/eslint-parser";
 import tsParser from "@typescript-eslint/parser";
 import path from "node:path";
@@ -25,7 +24,6 @@ export default [...fixupConfigRules(
 ), {
     plugins: {
         prettier: fixupPluginRules(prettier),
-        "testing-library": testingLibrary,
     },
 
     languageOptions: {
