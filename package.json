@@ -51,7 +51,7 @@
     "css-loader": "7.1.4",
     "deepmerge": "4.3.1",
     "eslint": "9.39.4",
-    "eslint-config-prettier": "9.1.2",
+    "eslint-config-prettier": "10.1.8",
     "eslint-config-react-app": "7.0.1",
     "eslint-plugin-flowtype": "8.0.3",
     "eslint-plugin-import": "2.32.0",
