@@ -1,6 +1,6 @@
 {
   "name": "@canonical/store-components",
-  "version": "0.52.0",
+  "version": "0.55.0",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "author": "Canonical",
@@ -61,9 +61,9 @@
     "eslint-plugin-react": "7.37.4",
     "eslint-plugin-react-hooks": "4.6.2",
     "eslint-plugin-storybook": "0.11.2",
-    "eslint-plugin-testing-library": "6.5.0",
+    "eslint-plugin-testing-library": "7.1.1",
     "jest": "27.5.1",
-    "npm-package-json-lint": "5.4.2",
+    "npm-package-json-lint": "8.0.0",
     "prettier": "3.4.2",
     "react": "18.3.1",
     "react-docgen-typescript-loader": "3.7.2",
@@ -85,7 +85,7 @@
     "webpack": "5.97.1"
   },
   "dependencies": {
-    "@canonical/react-components": "1.9.0",
+    "@canonical/react-components": "3.6.0",
     "@types/jest": "27.5.2",
     "@types/node": "18.19.71",
     "@types/react": "17.0.83",
@@ -105,7 +105,7 @@
   "peerDependencies": {
     "react": "^17.0.2 || ^18.0.0",
     "react-dom": "^17.0.2 || ^18.0.0",
-    "vanilla-framework": "4.20.0"
+    "vanilla-framework": "4.37.0"
   },
   "scripts": {
     "build": "rm -rf dist && yarn build-local; yarn build-declaration",
@@ -165,5 +165,6 @@
       "prefer-alphabetical-dependencies": "error",
       "prefer-alphabetical-devDependencies": "error"
     }
-  }
+  },
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
 }

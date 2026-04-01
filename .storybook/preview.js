@@ -1,6 +1,6 @@
 import { DocsContainer } from "@storybook/addon-docs";
 import { themes } from "@storybook/theming";
-import "vanilla-framework/scss/build.scss";
+import "./vanilla.scss";
 
 // or global addParameters
 export const parameters = {

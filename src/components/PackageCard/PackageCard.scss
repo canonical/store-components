@@ -12,8 +12,6 @@
   overflow: hidden;
 }
 
-
-
 .sc-package-card {
   align-items: stretch;
   display: flex;
@@ -102,6 +100,18 @@
   @extend %icon;
 
   background-image: url("https://assets.ubuntu.com/v1/64f5fc15-Star%20half.svg");
+}
+
+.p-icon--priority-critical {
+  @extend %icon;
+
+  background-image: url("https://assets.ubuntu.com/v1/c96f27b9-CVE-Priority-icon-Critical.svg")
+}
+
+.p-icon--change-version {
+  @extend %icon;
+
+  background-image: url("https://assets.ubuntu.com/v1/16c9b258-change-version.svg");
 }
 
 .total-ratings {
