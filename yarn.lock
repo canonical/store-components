@@ -1356,10 +1356,10 @@
     hashery "^1.5.1"
     keyv "^5.6.0"
 
-"@canonical/react-components@3.12.4":
-  version "3.12.4"
-  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-3.12.4.tgz#c3866397c34c806f027fe57a56849ef516df9e71"
-  integrity sha512-3i++qm4hs0TTUc9gwMmtxYaXwXibPmHI4s5qOesVpALcjrdcHWH1qkDEAvIrELUPINCxj/ATfgtL0gBvP16tyQ==
+"@canonical/react-components@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-4.0.1.tgz#73175f6ab82fa8e0971be98c1efff37cb317784f"
+  integrity sha512-lfD/SoSZQVgttKi4isgkSraowyQNxAodnSWk/Ksmv8A1gO9Oz3dRcPdKnMDfGx3ih8Lb1n+gBZFcDgq+dbmY2g==
   dependencies:
     "@types/jest" "30.0.0"
     "@types/node" "20.19.30"
