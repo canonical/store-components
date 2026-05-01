@@ -9899,6 +9899,11 @@ mime-db@1.52.0:
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.53.0.tgz#3cb63cd820fc29896d9d4e8c32ab4fcd74ccb447"
   integrity sha512-oHlN/w+3MQ3rba9rqFr6V/ypF10LSkdwUysQL7GkXoTgIWeV+tcXGA852TBxH+gsh8UWoyhR1hKcoMJTuWflpg==
 
+mime-db@^1.54.0:
+  version "1.54.0"
+  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.54.0.tgz#cddb3ee4f9c64530dff640236661d42cb6a314f5"
+  integrity sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==
+
 mime-types@^2.1.12, mime-types@^2.1.25, mime-types@^2.1.27, mime-types@^2.1.31, mime-types@~2.1.24, mime-types@~2.1.34:
   version "2.1.35"
   resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.35.tgz#381a871b62a734450660ae3deee44813f70d959a"
@@ -10064,10 +10069,10 @@ mylas@^2.1.9:
   resolved "https://registry.yarnpkg.com/mylas/-/mylas-2.1.13.tgz#1e23b37d58fdcc76e15d8a5ed23f9ae9fc0cbdf4"
   integrity sha512-+MrqnJRtxdF+xngFfUUkIMQrUUL0KsxbADUkn23Z/4ibGg192Q+z+CQyiYwvWTsYjJygmMR8+w3ZDa98Zh6ESg==
 
-nanoid@5.1.7:
-  version "5.1.7"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-5.1.7.tgz#a9f09a4ce73ba0b88830af36ee49666bad7827b6"
-  integrity sha512-ua3NDgISf6jdwezAheMOk4mbE1LXjm1DfMUDMuJf4AqxLFK3ccGpgWizwa5YV7Yz9EpXwEaWoRXSb/BnV0t5dQ==
+nanoid@5.1.11:
+  version "5.1.11"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-5.1.11.tgz#559dbdbc41737da341ac938c25514563d2dd94c7"
+  integrity sha512-v+KEsUv2ps74PaSKv0gHTxTCgMXOIfBEbaqa6w6ISIGC7ZsvHN4N9oJ8d4cmf0n5oTzQz2SLmThbQWhjd/8eKg==
 
 nanoid@^3.3.11:
   version "3.3.11"
@@ -10852,10 +10857,10 @@ prettier-linter-helpers@^1.0.1:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@3.8.1:
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.8.1.tgz#edf48977cf991558f4fcbd8a3ba6015ba2a3a173"
-  integrity sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==
+prettier@3.8.3:
+  version "3.8.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.8.3.tgz#560f2de55bf01b4c0503bc629d5df99b9a1d09b0"
+  integrity sha512-7igPTM53cGHMW8xWuVTydi2KO233VFiTNyF5hLJqpilHfmn8C8gPf+PS7dUT64YcXFbiMGZxS9pCSxL/Dxm/Jw==
 
 prettier@^2.8.0:
   version "2.8.8"
@@ -11573,10 +11578,10 @@ sass-loader@16.0.7:
   dependencies:
     neo-async "^2.6.2"
 
-sass@1.98.0:
-  version "1.98.0"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.98.0.tgz#924ce85a3745ccaccd976262fdc1bc0c13aa8e57"
-  integrity sha512-+4N/u9dZ4PrgzGgPlKnaaRQx64RO0JBKs9sDhQ2pLgN6JQZ25uPQZKQYaBJU48Kd5BxgXoJ4e09Dq7nMcOUW3A==
+sass@1.99.0:
+  version "1.99.0"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.99.0.tgz#ff9d1594da4886249dfaafabbeea2dea2dc74b26"
+  integrity sha512-kgW13M54DUB7IsIRM5LvJkNlpH+WhMpooUcaWGFARkF1Tc82v9mIWkCbCYf+MBvpIUBSeSOTilpZjEPr2VYE6Q==
   dependencies:
     chokidar "^4.0.0"
     immutable "^5.1.5"
@@ -12533,10 +12538,10 @@ ts-jest@27.1.5:
     semver "7.x"
     yargs-parser "20.x"
 
-tsc-alias@1.8.16:
-  version "1.8.16"
-  resolved "https://registry.yarnpkg.com/tsc-alias/-/tsc-alias-1.8.16.tgz#dbc74e797071801c7284f1a478259de920f852d4"
-  integrity sha512-QjCyu55NFyRSBAl6+MTFwplpFcnm2Pq01rR/uxfqJoLMm6X3O14KEGtaSDZpJYaE1bJBGDjD0eSuiIWPe2T58g==
+tsc-alias@1.8.17:
+  version "1.8.17"
+  resolved "https://registry.yarnpkg.com/tsc-alias/-/tsc-alias-1.8.17.tgz#67b55b33ff4af037ce0da43bcf49abee667fc421"
+  integrity sha512-EIduCZHqbNwPm8BZYfq1aD7BQ697A4h6uSGMOFQfYGoQwfrYFTKwYfy9Bv42YxHkduVBcn9Zx0DkX111DKskyg==
   dependencies:
     chokidar "^3.5.3"
     commander "^9.0.0"
@@ -13161,10 +13166,10 @@ webpack@5:
     watchpack "^2.4.1"
     webpack-sources "^3.2.3"
 
-webpack@5.105.4:
-  version "5.105.4"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.105.4.tgz#1b77fcd55a985ac7ca9de80a746caffa38220169"
-  integrity sha512-jTywjboN9aHxFlToqb0K0Zs9SbBoW4zRUlGzI2tYNxVYcEi/IPpn+Xi4ye5jTLvX2YeLuic/IvxNot+Q1jMoOw==
+webpack@5.106.2:
+  version "5.106.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.106.2.tgz#ca8174b4fd80f055cc5a45fcc5577d6db76c8ac5"
+  integrity sha512-wGN3qcrBQIFmQ/c0AiOAQBvrZ5lmY8vbbMv4Mxfgzqd/B6+9pXtLo73WuS1dSGXM5QYY3hZnIbvx+K1xxe6FyA==
   dependencies:
     "@types/eslint-scope" "^3.7.7"
     "@types/estree" "^1.0.8"
@@ -13182,9 +13187,8 @@ webpack@5.105.4:
     events "^3.2.0"
     glob-to-regexp "^0.4.1"
     graceful-fs "^4.2.11"
-    json-parse-even-better-errors "^2.3.1"
     loader-runner "^4.3.1"
-    mime-types "^2.1.27"
+    mime-db "^1.54.0"
     neo-async "^2.6.2"
     schema-utils "^4.3.3"
     tapable "^2.3.0"
