@@ -1,13 +1,14 @@
 import React from "react";
 import { Card } from "@canonical/react-components";
 
+import type { Package as PackageProps } from "../../types/package";
 import "./CharmCard.scss";
 
 const FALLBACK_ICON =
   "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg";
 
 export type Props = {
-  data: any;
+  data: PackageProps;
   href?: string;
   platformIcons?: Record<string, React.ReactNode>;
 };
