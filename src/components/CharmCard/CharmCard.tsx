@@ -6,6 +6,9 @@ import "./CharmCard.scss";
 
 const FALLBACK_ICON =
   "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg";
+const relativeTimeFormatter = new Intl.RelativeTimeFormat("en", {
+  numeric: "auto",
+});
 
 export type Props = {
   data: PackageProps;
@@ -25,24 +28,15 @@ const formatLastUpdated = (lastUpdated: string) => {
   );
 
   if (Math.abs(elapsedDays) < 30) {
-    return new Intl.RelativeTimeFormat("en", { numeric: "auto" }).format(
-      elapsedDays,
-      "day"
-    );
+    return relativeTimeFormatter.format(elapsedDays, "day");
   }
 
   const elapsedMonths = Math.round(elapsedDays / 30.4375);
   if (Math.abs(elapsedMonths) < 12) {
-    return new Intl.RelativeTimeFormat("en", { numeric: "auto" }).format(
-      elapsedMonths,
-      "month"
-    );
+    return relativeTimeFormatter.format(elapsedMonths, "month");
   }
 
-  return new Intl.RelativeTimeFormat("en", { numeric: "auto" }).format(
-    Math.round(elapsedMonths / 12),
-    "year"
-  );
+  return relativeTimeFormatter.format(Math.round(elapsedMonths / 12), "year");
 };
 
 const platformDetails = {
