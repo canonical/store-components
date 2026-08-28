@@ -13,65 +13,85 @@ This is a [React](https://reactjs.org/) component for a default package card.
 
 <ArgsTable of={CharmCard} />
 
-## Default
+## Kubernetes charm
 
 <Canvas>
   <Story
-    name="Default"
+    name="Kubernetes charm"
     args={{
       data: {
         package: {
-          charms: [
-            {
-              display_name: "Traefik Ingress",
-              name: "traefik-k8s",
-            },
-            {
-              display_name: "MicroK8s",
-              name: "microk8s",
-            },
-            {
-              display_name: "Kafka",
-              name: "kafka",
-            },
-            {
-              display_name: "PostgreSQL",
-              name: "postgresql",
-            },
-            {
-              display_name: "Prometheus",
-              name: "prometheus-k8s",
-            },
-            {
-              display_name: "Landscape Server",
-              name: "landscape-server",
-            },
-            {
-              display_name: "Grafana",
-              name: "grafana-k8s",
-            },
-            {
-              display_name: "LXD",
-              name: "lxd",
-            },
-          ],
-          description:
-            "Privacy-oriented voice, video, chat, and conference platform and SIP phone",
-          display_name: "Jami",
+          description: "A MongoDB operator charm",
+          display_name: "MongoDB",
+          channel: {
+            name: "6/stable",
+            risk: "stable",
+            track: "6",
+          },
           icon_url:
-            "https://dashboard.snapcraft.io/site_media/appmedia/2020/11/jami-512.png",
-          name: "jami",
-          platforms: ["vm", "kubernetes"],
+            "https://api.charmhub.io/api/v1/media/download/charm_UUQcdJOSAfUQYBmFoNRuBw3giz1ebvGS_icon_ad1a94cf9bb9f68614cb6c17e54e2fbd9dcc7fecc514dc6012b7f58fb5b87f8f.png",
+          last_updated: new Date(
+            Date.now() - 8 * 24 * 60 * 60 * 1000
+          ).toISOString(),
+          name: "mongodb-k8s",
+          platforms: ["kubernetes"],
+          summary: "A MongoDB operator charm",
         },
         publisher: {
-          display_name: "Savoir-faire Linux",
-          name: "sfljami",
-          validation: "star",
+          display_name: "Canonical",
+          name: "canonical",
+          validation: "verified",
         },
-        ratings: {
-          value: 4,
-          count: 50,
+        categories: [
+          {
+            display_name: "Databases",
+            name: "databases",
+          },
+          {
+            display_name: "Big Data",
+            name: "big_data",
+          },
+        ],
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Machine charm
+
+<Canvas>
+  <Story
+    name="Machine charm"
+    args={{
+      data: {
+        package: {
+          description: "Deploy and operate PostgreSQL on virtual machines",
+          display_name: "PostgreSQL",
+          channel: {
+            name: "14/stable",
+            risk: "stable",
+            track: "14",
+          },
+          last_updated: new Date(
+            Date.now() - 45 * 24 * 60 * 60 * 1000
+          ).toISOString(),
+          name: "postgresql",
+          platforms: ["vm"],
+          summary: "Deploy and operate PostgreSQL on virtual machines",
         },
+        publisher: {
+          display_name: "Canonical",
+          name: "canonical",
+          validation: "verified",
+        },
+        categories: [
+          {
+            display_name: "Databases",
+            name: "databases",
+          },
+        ],
       },
     }}
   >
