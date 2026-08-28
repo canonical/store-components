@@ -2,9 +2,13 @@ export type Package = {
   package: {
     description: string;
     display_name: string;
+    // added optional downloads in case we can get this data from the API in the future
+    downloads?: number;
     icon_url?: string;
+    last_updated?: string;
     name: string;
     platforms?: Array<string> | null;
+    summary?: string;
     type?: string;
     charms?: Array<{
       name: string;

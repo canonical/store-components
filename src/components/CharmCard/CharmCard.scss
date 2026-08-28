@@ -1,0 +1,73 @@
+@import "vanilla-framework";
+@include vf-base;
+@include vf-p-chip;
+@include vf-p-icon-revisions;
+
+.sc-charm-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 14rem;
+  padding: 0;
+}
+
+.sc-charm-card > .p-card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.sc-charm-card__body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: $spv--small;
+  padding: $spv--medium $sph--large;
+}
+
+.sc-charm-card__verified {
+  margin-left: $sph--small;
+}
+
+.sc-charm-card__qualities {
+  align-items: center;
+  display: flex;
+}
+
+.sc-charm-card__categories,
+.sc-charm-card__platforms {
+  align-items: center;
+  display: flex;
+  gap: $sph--small;
+}
+
+.sc-charm-card__categories {
+  overflow: hidden;
+}
+
+.sc-charm-card__platforms--divided {
+  border-left: 1px solid $color-mid-light;
+  margin-left: $sph--small;
+  padding-left: $sph--small;
+}
+
+.sc-charm-card__footer {
+  align-items: center;
+  border-top: 1px solid $color-mid-light;
+  display: flex;
+  gap: $sph--small;
+  min-height: 2.75rem;
+  padding: $spv--small $sph--large;
+}
+
+.sc-charm-card__footer > span {
+  align-items: center;
+  display: flex;
+  gap: $sph--x-small;
+}
+
+.sc-charm-card__footer > span + span {
+  border-left: 1px solid $color-mid-light;
+  padding-left: $sph--small;
+}
