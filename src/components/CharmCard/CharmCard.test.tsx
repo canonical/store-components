@@ -36,7 +36,7 @@ describe("CharmCard", () => {
   };
 
   it("renders all charm details", () => {
-    render(<CharmCard data={data} href="/mongodb-k8s" />);
+    render(<CharmCard data={data} />);
 
     expect(screen.getByRole("link", { name: "MongoDB" })).toHaveAttribute(
       "href",
@@ -136,7 +136,7 @@ describe("CharmCard", () => {
     delete window.location;
     window.location = { ...location, href: "" };
 
-    render(<CharmCard data={data} href="/mongodb-k8s" />);
+    render(<CharmCard data={data} />);
     fireEvent.click(screen.getByRole("group"));
 
     expect(window.location.href).toBe("/mongodb-k8s");

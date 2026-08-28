@@ -12,7 +12,6 @@ const relativeTimeFormatter = new Intl.RelativeTimeFormat("en", {
 
 export type Props = {
   data: PackageProps;
-  href?: string;
   platformIcons?: Record<string, React.ReactNode>;
 };
 
@@ -50,13 +49,10 @@ const platformDetails = {
   },
 };
 
-function CharmCard({
-  data,
-  href = `/${data.package.name}`,
-  platformIcons,
-}: Props) {
+function CharmCard({ data, platformIcons }: Props) {
   const { package: charm } = data;
   const displayName = charm.display_name || charm.name.replace(/-/g, " ");
+  const href = `/${charm.name}`;
   const showFooter = Boolean(charm.channel?.name || charm.last_updated);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
