@@ -108,7 +108,7 @@ function CharmCard({ data, platformIcons }: Props) {
           </div>
         </div>
 
-        <p className="sc-charm-card__summary u-text--small u-line-clamp--2 u-no-margin--bottom u-no-padding--top">
+        <p className="sc-charm-card__summary u-text--small u-no-margin--bottom u-no-padding--top">
           {charm.summary || charm.description}
         </p>
 

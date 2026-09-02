@@ -42,7 +42,7 @@
 .sc-charm-card__summary {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  display: -webkit-box;
+  display: -webkit-box; // stylelint-disable-line
   line-clamp: 2;
   min-height: 2 * map-get($settings-text-small, line-height);
   overflow: hidden;
