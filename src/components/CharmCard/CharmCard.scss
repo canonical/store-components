@@ -7,8 +7,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  min-height: 14rem;
+  height: 14rem;
   padding: 0;
 }
 
@@ -30,9 +29,23 @@
   margin-left: $sph--small;
 }
 
+.sc-charm-card__publisher {
+  align-items: center;
+  display: flex;
+}
+
 .sc-charm-card__qualities {
   align-items: center;
   display: flex;
+}
+
+.sc-charm-card__summary {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box; // stylelint-disable-line
+  line-clamp: 2;
+  min-height: 2 * map-get($settings-text-small, line-height);
+  overflow: hidden;
 }
 
 .sc-charm-card__categories,
@@ -44,6 +57,15 @@
 
 .sc-charm-card__categories {
   overflow: hidden;
+}
+
+.sc-charm-card__categories .p-chip {
+  background-color: #ddd;
+}
+
+.sc-charm-card__categories .p-chip,
+.sc-charm-card__categories .p-chip__value {
+  color: #4d4d4d;
 }
 
 .sc-charm-card__platforms--divided {

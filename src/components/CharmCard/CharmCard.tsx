@@ -80,7 +80,7 @@ function CharmCard({ data, platformIcons }: Props) {
               </a>
             </h6>
             {data.publisher && (
-              <p className="u-text--muted u-text--small u-no-margin--bottom u-no-padding--top">
+              <p className="sc-charm-card__publisher u-text--muted u-text--small u-no-margin--bottom u-no-padding--top">
                 {data.publisher.display_name || data.publisher.name}
                 {data.publisher.validation === "verified" && (
                   <img
@@ -108,7 +108,7 @@ function CharmCard({ data, platformIcons }: Props) {
           </div>
         </div>
 
-        <p className="u-text--small u-line-clamp--2 u-no-margin--bottom u-no-padding--top">
+        <p className="sc-charm-card__summary u-text--small u-no-margin--bottom u-no-padding--top">
           {charm.summary || charm.description}
         </p>
 
