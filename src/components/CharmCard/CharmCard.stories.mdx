@@ -7,7 +7,7 @@ export const Template = (args) => <CharmCard {...args} />;
 export const ThreeCardTemplate = ({ cards }) => (
   <div style={{ display: "flex", gap: "32px" }}>
     {cards.map((data) => (
-      <div key={data.package.name} style={{ flex: "0 0 280px" }}>
+      <div key={data.package.name} style={{ flex: "0 0 280px", minWidth: 0 }}>
         <CharmCard data={data} />
       </div>
     ))}
@@ -75,7 +75,8 @@ This example fixes three cards at their designed width to exercise the maximum s
             summary: "MySQL Router",
           },
           publisher: {
-            display_name: "MySQL Charm Maintainers",
+            display_name:
+              "MySQL Charm Maintainers MySQL Charm Maintainers MySQL Charm Maintainers",
             name: "mysql-charm-maintainers",
           },
           categories: [
@@ -184,7 +185,8 @@ This example fixes three cards at their designed width to exercise the maximum s
           summary: "MySQL Router",
         },
         publisher: {
-          display_name: "MySQL Charm Maintainers",
+          display_name:
+            "MySQL Charm Maintainers MySQL Charm Maintainers MySQL Charm Maintainers MySQL Charm Maintainers MySQL Charm Maintainers MySQL Charm Maintainers MySQL Charm Maintainers",
           name: "mysql-charm-maintainers",
         },
         categories: [

@@ -81,7 +81,9 @@ function CharmCard({ data, platformIcons }: Props) {
             </h6>
             {data.publisher && (
               <p className="sc-charm-card__publisher u-text--muted">
-                {data.publisher.display_name || data.publisher.name}
+                <span className="sc-charm-card__publisher-name">
+                  {data.publisher.display_name || data.publisher.name}
+                </span>
                 {data.publisher.validation === "verified" && (
                   <img
                     alt="Verified account"

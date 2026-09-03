@@ -83,6 +83,27 @@ describe("CharmCard", () => {
     expect(screen.getByText("canonical")).toBeInTheDocument();
   });
 
+  it("keeps the verified badge separate from a long publisher name", () => {
+    render(
+      <CharmCard
+        data={{
+          ...data,
+          publisher: {
+            ...data.publisher,
+            display_name: "A publisher name that is too long for the card",
+          },
+        }}
+      />
+    );
+
+    expect(
+      screen.getByText("A publisher name that is too long for the card")
+    ).toHaveClass("sc-charm-card__publisher-name");
+    expect(screen.getByAltText("Verified account")).toHaveClass(
+      "sc-charm-card__verified"
+    );
+  });
+
   it("supports existing data without optional metrics", () => {
     render(
       <CharmCard

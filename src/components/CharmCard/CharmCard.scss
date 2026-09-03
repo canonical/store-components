@@ -29,16 +29,18 @@
 }
 
 .sc-charm-card__verified {
+  flex-shrink: 0;
   margin-left: $sph--small;
 }
 
 .sc-charm-card .p-media-object__image {
-  flex-basis: 2.75rem;
   height: 2.75rem;
   margin-right: $sph--small;
-  max-height: 2.75rem;
-  max-width: 2.75rem;
   width: 2.75rem;
+}
+
+.sc-charm-card .p-media-object__details {
+  min-width: 0;
 }
 
 .sc-charm-card .sc-charm-card__title {
@@ -54,11 +56,12 @@
 .sc-charm-card__publisher {
   align-items: center;
   display: flex;
-  font-size: #{map-get($settings-text-small, font-size)}rem;
-  line-height: map-get($settings-text-small, line-height);
-  margin-bottom: 0;
+}
+
+.sc-charm-card__publisher-name {
+  flex: 1 1 auto;
+  min-width: 0;
   overflow: hidden;
-  padding: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -74,16 +77,21 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   display: -webkit-box; // stylelint-disable-line
-  font-size: #{map-get($settings-text-small, font-size)}rem;
   line-clamp: 2;
-  line-height: map-get($settings-text-small, line-height);
-  margin-bottom: 0;
   min-height: 2 * map-get($settings-text-small, line-height);
   overflow: hidden;
+}
+
+.sc-charm-card__publisher,
+.sc-charm-card__summary {
+  margin: 0;
   padding: 0;
 }
 
-.sc-charm-card__platform-name {
+.sc-charm-card__publisher,
+.sc-charm-card__summary,
+.sc-charm-card__platform-name,
+.sc-charm-card__footer {
   font-size: #{map-get($settings-text-small, font-size)}rem;
   line-height: map-get($settings-text-small, line-height);
 }
@@ -121,10 +129,7 @@
   border-top: 1px solid $color-mid-light;
   display: flex;
   flex-shrink: 0;
-  font-size: #{map-get($settings-text-small, font-size)}rem;
   gap: $sph--small;
-  line-height: map-get($settings-text-small, line-height);
-  margin-bottom: 0;
   min-height: 2.75rem;
   padding: $spv--small $sph--large;
 }
