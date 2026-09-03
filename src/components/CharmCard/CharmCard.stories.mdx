@@ -4,6 +4,15 @@ import CharmCard from "./CharmCard";
 <Meta title="CharmCard" component={CharmCard} />
 
 export const Template = (args) => <CharmCard {...args} />;
+export const ThreeCardTemplate = ({ cards }) => (
+  <div style={{ display: "flex", gap: "32px" }}>
+    {cards.map((data) => (
+      <div key={data.package.name} style={{ flex: "0 0 280px" }}>
+        <CharmCard data={data} />
+      </div>
+    ))}
+  </div>
+);
 
 # CharmCard
 
@@ -12,6 +21,99 @@ This is a [React](https://reactjs.org/) component for a default package card.
 ## Props
 
 <ArgsTable of={CharmCard} />
+
+## Three charm row
+
+This example fixes three cards at their designed width to exercise the maximum supported title and summary lengths and verify their alignment.
+
+<Canvas>
+  <Story
+    name="Two-line title and summary"
+    args={{
+      cards: [
+        {
+          package: {
+            description: "A MongoDB operator charm",
+            display_name: "MongoDB",
+            channel: {
+              name: "6/stable",
+              risk: "stable",
+              track: "6",
+            },
+            icon_url:
+              "https://api.charmhub.io/api/v1/media/download/charm_Jfd56ZWJ9IaNHuPjXVLP9d9Xa2XMTSKp_icon_ad1a94cf9bb9f68614cb6c17e54e2fbd9dcc7fecc514dc6012b7f58fb5b87f8f.png",
+            last_updated: new Date(
+              Date.now() - 8 * 24 * 60 * 60 * 1000
+            ).toISOString(),
+            name: "mongodb",
+            platforms: ["vm"],
+            summary: "A MongoDB operator charm",
+          },
+          publisher: {
+            display_name: "Canonical",
+            name: "canonical",
+            validation: "verified",
+          },
+          categories: [{ display_name: "Databases", name: "databases" }],
+        },
+        {
+          package: {
+            description: "MySQL Router",
+            display_name: "Charmed MySQL Router",
+            channel: {
+              name: "8.0/stable",
+              risk: "stable",
+              track: "8.0",
+            },
+            icon_url:
+              "https://api.charmhub.io/api/v1/media/download/charm_CjjVf4bSJGT6rKjg7Qk3EZteCoEhKXHh_icon_25f8b693a1e5f581babac5b8c6c5478e900df66a8cc633aecf2717afcc5217d8.png",
+            last_updated: new Date(
+              Date.now() - 45 * 24 * 60 * 60 * 1000
+            ).toISOString(),
+            name: "mysql-router",
+            platforms: ["vm"],
+            summary: "MySQL Router",
+          },
+          publisher: {
+            display_name: "MySQL Charm Maintainers",
+            name: "mysql-charm-maintainers",
+          },
+          categories: [
+            { display_name: "Cloud", name: "cloud" },
+            { display_name: "Databases", name: "databases" },
+          ],
+        },
+        {
+          package: {
+            description: "A Juju charm to run a Traefik-powered ingress",
+            display_name: "Traefik Ingress Operator for Kubernetes",
+            channel: {
+              name: "latest/stable",
+              risk: "stable",
+              track: "latest",
+            },
+            icon_url:
+              "https://api.charmhub.io/api/v1/media/download/charm_9jjrT5C28rJhnK4yaGUEM51nQvWR26YG_icon_72c619c767b59b9147040735ad204012f1f37e79a190054bb64ca8c83c42e0c4.png",
+            last_updated: new Date(
+              Date.now() - 8 * 24 * 60 * 60 * 1000
+            ).toISOString(),
+            name: "traefik-k8s",
+            platforms: ["kubernetes"],
+            summary: "A Juju charm to run a Traefik-powered ingress controller",
+          },
+          publisher: {
+            display_name: "Canonical IS DevOps",
+            name: "canonical-is-devops",
+            validation: "verified",
+          },
+          categories: [{ display_name: "Networking", name: "networking" }],
+        },
+      ],
+    }}
+  >
+    {ThreeCardTemplate.bind({})}
+  </Story>
+</Canvas>
 
 ## Kubernetes charm
 
