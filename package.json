@@ -22,10 +22,10 @@
   },
   "homepage": "https://canonical.github.io/store-components",
   "devDependencies": {
-    "@babel/cli": "7.28.6",
-    "@babel/eslint-parser": "7.28.6",
+    "@babel/cli": "8.0.4",
+    "@babel/eslint-parser": "8.0.1",
     "@babel/plugin-proposal-private-property-in-object": "7.21.11",
-    "@babel/preset-typescript": "7.28.5",
+    "@babel/preset-typescript": "8.0.1",
     "@eslint/compat": "1.4.1",
     "@eslint/eslintrc": "3.3.5",
     "@eslint/js": "9.39.4",
