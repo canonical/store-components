@@ -1356,10 +1356,10 @@
     hashery "^1.5.1"
     keyv "^5.6.0"
 
-"@canonical/react-components@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-4.0.1.tgz#73175f6ab82fa8e0971be98c1efff37cb317784f"
-  integrity sha512-lfD/SoSZQVgttKi4isgkSraowyQNxAodnSWk/Ksmv8A1gO9Oz3dRcPdKnMDfGx3ih8Lb1n+gBZFcDgq+dbmY2g==
+"@canonical/react-components@4.10.2":
+  version "4.10.2"
+  resolved "https://registry.yarnpkg.com/@canonical/react-components/-/react-components-4.10.2.tgz#a60c6c7adfd1254ddb6381bb17b342a7d16011ed"
+  integrity sha512-LEe5blxjFsz/xc+kP4Y1SM3rywQs329i3IOJpSfeaW49ld7VP6ePF+BuO+cWDYzN2wbZ6R5tKC0OJTlcvnaksw==
   dependencies:
     "@types/jest" "30.0.0"
     "@types/node" "20.19.30"
@@ -12983,10 +12983,10 @@ validate-npm-package-name@^5.0.1:
   resolved "https://registry.yarnpkg.com/validate-npm-package-name/-/validate-npm-package-name-5.0.1.tgz#a316573e9b49f3ccd90dbb6eb52b3f06c6d604e8"
   integrity sha512-OljLrQ9SQdOUqTaQxqL5dEfZWrXExyyWsozYlAWFawPVNuD83igl7uJD2RTkNMbniIYgt8l81eCJGIdQF7avLQ==
 
-vanilla-framework@4.46.0:
-  version "4.46.0"
-  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.46.0.tgz#0d255c1f57c621ceea1d3a9309832ade383c98ff"
-  integrity sha512-CaDd8QOeCmz6KhawYe3mPpNDP7KS/BxaYUq5/DwPmBU/pLQAvAkvUwizsW4b0+ua0eCgiVx0ILamfcd/V3/dyw==
+vanilla-framework@4.59.0:
+  version "4.59.0"
+  resolved "https://registry.yarnpkg.com/vanilla-framework/-/vanilla-framework-4.59.0.tgz#c31a136577bfc09eae69cd0dd010e82f1130ac5b"
+  integrity sha512-Bpl8fD3M+fkvziXvuZCFpXr6xkPsO1Ulkhcvpe5juIKmpJcKVqmPBs6m5R1nP64tI+dUgOe2u625Fvgm4C3kug==
 
 vary@~1.1.2:
   version "1.1.2"
