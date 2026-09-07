@@ -74,14 +74,16 @@ function CharmCard({ data, platformIcons }: Props) {
             width={44}
           />
           <div className="p-media-object__details">
-            <h6 className="p-heading--5 u-no-margin--bottom">
+            <h6 className="sc-charm-card__title p-heading--5 u-no-margin--bottom">
               <a className="p-link--soft" href={href}>
                 {displayName}
               </a>
             </h6>
             {data.publisher && (
-              <p className="sc-charm-card__publisher u-text--muted u-text--small u-no-margin--bottom u-no-padding--top">
-                {data.publisher.display_name || data.publisher.name}
+              <p className="sc-charm-card__publisher u-text--muted">
+                <span className="sc-charm-card__publisher-name">
+                  {data.publisher.display_name || data.publisher.name}
+                </span>
                 {data.publisher.validation === "verified" && (
                   <img
                     alt="Verified account"
@@ -108,7 +110,7 @@ function CharmCard({ data, platformIcons }: Props) {
           </div>
         </div>
 
-        <p className="sc-charm-card__summary u-text--small u-no-margin--bottom u-no-padding--top">
+        <p className="sc-charm-card__summary">
           {charm.summary || charm.description}
         </p>
 
@@ -166,7 +168,7 @@ function CharmCard({ data, platformIcons }: Props) {
                     width={24}
                   />
                 ) : (
-                  <span className="u-text--small" key={platform}>
+                  <span className="sc-charm-card__platform-name" key={platform}>
                     {platform}
                   </span>
                 );
