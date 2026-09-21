@@ -28,8 +28,9 @@
 
 .sc-solution-loading-card__icon {
   border-radius: 50%;
-  height: 2.5rem;
-  width: 2.5rem;
+  flex: 0 0 2.75rem;
+  height: 2.75rem;
+  width: 2.75rem;
 }
 
 .sc-solution-loading-card__identity {
@@ -38,13 +39,17 @@
   gap: $spv--x-small;
 }
 
-.sc-solution-loading-card__title {
+.sc-solution-loading-card__title,
+.sc-solution-loading-card__publisher {
   height: 1.25rem;
+  max-width: 100%;
+}
+
+.sc-solution-loading-card__title {
   width: 10.625rem;
 }
 
 .sc-solution-loading-card__publisher {
-  height: 1.25rem;
   width: 4.375rem;
 }
 
@@ -56,6 +61,14 @@
 
 .sc-solution-loading-card__summary > span {
   height: 1rem;
+  max-width: 100%;
+}
+
+.sc-solution-loading-card__summary > span:first-child {
+  width: 100%;
+}
+
+.sc-solution-loading-card__summary > span:nth-child(2) {
   width: 100%;
 }
 
@@ -65,15 +78,88 @@
 
 .sc-solution-loading-card__footer-placeholder {
   height: 1.125rem;
+  max-width: 100%;
   width: 9.8125rem;
 }
 
 @media (max-width: $breakpoint-small) {
+  .sc-solution-loading-card__title {
+    width: 10.3125rem;
+  }
+
+  .sc-solution-loading-card__publisher {
+    width: 7.9375rem;
+  }
+
+  .sc-solution-loading-card__summary {
+    gap: $spv--small;
+  }
+
+  .sc-solution-loading-card__summary > span {
+    height: 1.25rem;
+  }
+
+  .sc-solution-loading-card__summary > span:first-child {
+    width: 20.6875rem;
+  }
+
+  .sc-solution-loading-card__summary > span:nth-child(2) {
+    width: 4.625rem;
+  }
+
   .sc-solution-loading-card__summary > span:nth-child(3) {
     display: none;
   }
 
   .sc-solution-loading-card .sc-solution-card__qualities {
     min-height: 2.5rem;
+  }
+
+  .sc-solution-loading-card .sc-solution-card__qualities > span {
+    display: none;
+  }
+
+  .sc-solution-loading-card__footer-placeholder {
+    height: 1.25rem;
+    width: 13.3125rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .sc-solution-loading-card .sc-solution-card__body {
+    gap: $spv--x-large;
+  }
+
+  .sc-solution-loading-card__icon {
+    flex-basis: 2.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .sc-solution-loading-card__title,
+  .sc-solution-loading-card__publisher,
+  .sc-solution-loading-card__summary > span {
+    height: 1.125rem;
+  }
+
+  .sc-solution-loading-card__title {
+    width: 7.4375rem;
+  }
+
+  .sc-solution-loading-card__publisher {
+    width: 5rem;
+  }
+
+  .sc-solution-loading-card__summary > span:first-child {
+    width: 13.125rem;
+  }
+
+  .sc-solution-loading-card__summary > span:nth-child(2) {
+    width: 3.125rem;
+  }
+
+  .sc-solution-loading-card__footer-placeholder {
+    height: 1.125rem;
+    width: 9.8125rem;
   }
 }

@@ -49,6 +49,7 @@ describe("SolutionCard", () => {
     expect(screen.getByText(data.summary)).toBeInTheDocument();
     expect(screen.getByText("Databases")).toBeInTheDocument();
     expect(screen.getByText("Data Storage")).toBeInTheDocument();
+    expect(screen.getByLabelText("1 more categories")).toHaveTextContent("+1");
     expect(screen.getByAltText("Kubernetes")).toBeInTheDocument();
     expect(screen.getByTestId("solution-platform")).toHaveClass(
       "sc-solution-card__platform--divided"
@@ -56,9 +57,10 @@ describe("SolutionCard", () => {
     expect(screen.getByText("1.25+")).toBeInTheDocument();
     expect(screen.getByText("11 days ago")).toBeInTheDocument();
     expect(screen.getByLabelText("6 included charms")).toBeInTheDocument();
+    expect(screen.getByText("6 Charms")).toBeInTheDocument();
     expect(screen.getByTitle("grafana-k8s")).toBeInTheDocument();
     expect(screen.queryByTitle("prometheus-k8s")).not.toBeInTheDocument();
-    expect(screen.getByText("+1")).toBeInTheDocument();
+    expect(screen.getAllByText("+1")).toHaveLength(2);
   });
 
   it("accepts publisher and category objects from the solutions service", () => {

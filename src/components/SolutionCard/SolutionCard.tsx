@@ -149,12 +149,22 @@ function SolutionCard({ charmIcons, data, publisherVerified }: Props) {
               <div className="sc-solution-card__categories">
                 {categories.map((category) => (
                   <span
-                    className="p-chip is-readonly u-no-margin--bottom u-no-margin--right"
+                    className="sc-solution-card__category p-chip is-readonly u-no-margin--bottom u-no-margin--right"
                     key={category}
                   >
                     <span className="p-chip__value">{category}</span>
                   </span>
                 ))}
+                {categories.length > 1 && (
+                  <span
+                    aria-label={`${categories.length - 1} more categories`}
+                    className="sc-solution-card__category-count p-chip is-readonly u-no-margin--bottom u-no-margin--right"
+                  >
+                    <span className="p-chip__value">
+                      +{categories.length - 1}
+                    </span>
+                  </span>
+                )}
               </div>
             )}
             {platform && (
@@ -197,21 +207,33 @@ function SolutionCard({ charmIcons, data, publisherVerified }: Props) {
                   data.last_updated ? "sc-solution-card__charms--divided" : ""
                 }`}
               >
-                {visibleCharms.map((charm) => (
-                  <img
-                    alt=""
-                    height={24}
-                    key={charm}
-                    src={charmIcons?.[charm] || FALLBACK_ICON}
-                    title={charm}
-                    width={24}
-                  />
-                ))}
-                {(data.charms?.length || 0) > visibleCharms.length && (
+                <span className="sc-solution-card__charm-icons">
+                  {visibleCharms.map((charm) => (
+                    <img
+                      alt=""
+                      height={24}
+                      key={charm}
+                      src={charmIcons?.[charm] || FALLBACK_ICON}
+                      title={charm}
+                      width={24}
+                    />
+                  ))}
+                  {(data.charms?.length || 0) > visibleCharms.length && (
+                    <span>
+                      +{(data.charms?.length || 0) - visibleCharms.length}
+                    </span>
+                  )}
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="sc-solution-card__charm-count"
+                >
+                  <i aria-hidden="true" className="p-icon--bundle" />
                   <span>
-                    +{(data.charms?.length || 0) - visibleCharms.length}
+                    {data.charms?.length || 0}{" "}
+                    {data.charms?.length === 1 ? "Charm" : "Charms"}
                   </span>
-                )}
+                </span>
               </div>
             )}
           </div>

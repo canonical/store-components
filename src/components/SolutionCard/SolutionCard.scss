@@ -1,6 +1,7 @@
 @import "vanilla-framework";
 @include vf-base;
 @include vf-p-chip;
+@include vf-p-icon-bundle;
 @include vf-p-icon-revisions;
 @include vf-p-media-object;
 
@@ -69,7 +70,9 @@
 .sc-solution-card__categories,
 .sc-solution-card__platform,
 .sc-solution-card__updated,
-.sc-solution-card__charms {
+.sc-solution-card__charms,
+.sc-solution-card__charm-icons,
+.sc-solution-card__charm-count {
   align-items: center;
   display: flex;
 }
@@ -101,8 +104,13 @@
 }
 
 .sc-solution-card__categories .p-chip,
-.sc-solution-card__categories .p-chip__value {
+.sc-solution-card__categories .p-chip .p-chip__value {
   color: #4d4d4d;
+}
+
+.sc-solution-card__category-count,
+.sc-solution-card__charm-count {
+  display: none;
 }
 
 .sc-solution-card__platform,
@@ -122,13 +130,21 @@
   padding-left: $sph--small;
 }
 
-.sc-solution-card__charms img {
+.sc-solution-card__charm-icons {
+  gap: $sph--x-small;
+}
+
+.sc-solution-card__charm-icons img {
   background-color: $color-light;
   border-radius: 50%;
 }
 
-.sc-solution-card__charms span {
+.sc-solution-card__charm-icons > span {
   color: #636363;
+}
+
+.sc-solution-card__charm-count {
+  gap: $sph--x-small;
 }
 
 @media (max-width: $breakpoint-small) {
@@ -158,6 +174,7 @@
   }
 
   .sc-solution-card__qualities {
+    flex-wrap: wrap;
     min-height: 2rem;
     padding: 0 $sph--large $spv--large;
   }
@@ -168,8 +185,19 @@
     min-height: 2.75rem;
     padding: $spv--small $sph--large;
   }
+}
 
-  .sc-solution-card__qualities {
-    flex-wrap: wrap;
+@media (max-width: 460px) {
+  .sc-solution-card__category:not(:first-child) {
+    display: none;
+  }
+
+  .sc-solution-card__charm-icons {
+    display: none;
+  }
+
+  .sc-solution-card__category-count,
+  .sc-solution-card__charm-count {
+    display: flex;
   }
 }
