@@ -9,6 +9,7 @@ export { default as TopicCard } from "./components/TopicCard";
 export { default as IntegrationCard } from "./components/IntegrationCard";
 export { default as RockCard } from "./components/RockCard";
 export { default as SolutionCard } from "./components/SolutionCard";
+export { default as SolutionLoadingCard } from "./components/SolutionLoadingCard";
 
 export type {
   ClassName,
