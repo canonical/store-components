@@ -1,0 +1,114 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import SolutionCard from "./SolutionCard";
+
+<Meta title="SolutionCard" component={SolutionCard} />
+
+export const Template = (args) => <SolutionCard {...args} />;
+
+# SolutionCard
+
+This card presents a Charmhub solution and its permanent qualities. Charm icon URLs are optional; charms without one use the standard fallback icon.
+
+## Props
+
+<ArgsTable of={SolutionCard} />
+
+<Canvas>
+  <Story
+    name="Data mesh solution"
+    args={{
+      charmIcons: {
+        "data-integrator":
+          "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg",
+        "grafana-k8s":
+          "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg",
+        "postgresql-k8s":
+          "https://api.charmhub.io/api/v1/media/download/charm_Jfd56ZWJ9IaNHuPjXVLP9d9Xa2XMTSKp_icon_ad1a94cf9bb9f68614cb6c17e54e2fbd9dcc7fecc514dc6012b7f58fb5b87f8f.png",
+        "s3-integrator":
+          "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg",
+        "traefik-k8s":
+          "https://api.charmhub.io/api/v1/media/download/charm_9jjrT5C28rJhnK4yaGUEM51nQvWR26YG_icon_72c619c767b59b9147040735ad204012f1f37e79a190054bb64ca8c83c42e0c4.png",
+      },
+      data: {
+        categories: ["databases", "storage"],
+        charms: [
+          "postgresql-k8s",
+          "traefik-k8s",
+          "data-integrator",
+          "s3-integrator",
+          "grafana-k8s",
+          "prometheus-k8s",
+        ],
+        icon: "https://assets.ubuntu.com/v1/0ed605c0-ubuntu-cof-120.svg",
+        last_updated: new Date(
+          Date.now() - 11 * 24 * 60 * 60 * 1000
+        ).toISOString(),
+        name: "data-mesh",
+        platform: "kubernetes",
+        platform_version: [">= 1.25"],
+        publisher: "Commercial Systems",
+        summary:
+          "The Canonical Data Mesh is a composable data platform solution built on trusted open source projects to deploy a governed, self-service data platform for charmed workloads, combining data ingestion, federated query, metadata management, access governance, transformation, workflow orchestration, and analytics.",
+        title: "Data Mesh Solution",
+      },
+      publisherVerified: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Charmed Kubeflow"
+    args={{
+      charmIcons: {
+        "argo-controller":
+          "https://api.charmhub.io/api/v1/media/download/charm_hCPXTWPFU49T7T8YMnDgmwWJlYOwGa14_icon_4e1ad2e84ccf39268011d6cf4a121c7d99929e346598052ba0037c3c289fb820.png",
+        "dex-auth":
+          "https://api.charmhub.io/api/v1/media/download/charm_rThdEHLwsooU8OX1au3ocrXPMdTztkTh_icon_5774b79de89714ea4d09f7db7737d5ad3d39d9186e1990cb8fb2e66098176e5d.png",
+        "istio-ingressgateway":
+          "https://api.charmhub.io/api/v1/media/download/charm_8BCKglBeifZH3vM71Hx3YH1UEt8Gbkjn_icon__2fbece4f3bb258cf4bb84d514b25752c59f158139922e107a246f22d66a5e76e.png",
+        "jupyter-controller":
+          "https://api.charmhub.io/api/v1/media/download/charm_wuVM6bSMaCcCTWaqTfvyBRS5SqLVCVy1_icon_fde574967418afe93bb032808563e40e63606adb805113065acfa35010332164.png",
+        "katib-controller":
+          "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg",
+        "kfp-api":
+          "https://api.charmhub.io/api/v1/media/download/charm_IVnZcjP34f6uvawiOZqIbdbQf1iNvIpD_icon_49aeb12ef5df4ff17a792650e1fc4d3bc619432a59cb6ab0947ad382eccf2360.png",
+        "kubeflow-dashboard":
+          "https://api.charmhub.io/api/v1/media/download/charm_ScuThnuIqjZRpljgOzuhZxluTu9aDspc_icon_49aeb12ef5df4ff17a792650e1fc4d3bc619432a59cb6ab0947ad382eccf2360.png",
+        "training-operator":
+          "https://assets.ubuntu.com/v1/be6eb412-snapcraft-missing-icon.svg",
+      },
+      data: {
+        categories: [{ display_name: "AI/ML", name: "ai-ml" }],
+        charms: [
+          "argo-controller",
+          "dex-auth",
+          "istio-ingressgateway",
+          "jupyter-controller",
+          "katib-controller",
+          "kfp-api",
+          "kubeflow-dashboard",
+          "training-operator",
+        ],
+        icon: "https://assets.ubuntu.com/v1/54e7c11f-updated_kubeflow.png",
+        last_updated: new Date(
+          Date.now() - 45 * 24 * 60 * 60 * 1000
+        ).toISOString(),
+        name: "canonical-charmed-kubeflow",
+        platform: "kubernetes",
+        platform_version: [">= 1.29"],
+        publisher: {
+          display_name: "Kubeflow Charmers",
+          username: "kubeflow-charmers",
+        },
+        summary:
+          "Canonical Charmed Kubeflow is a production-ready MLOps platform that helps data scientists collaborate on AI innovation on any cloud, from concept to production.",
+        title: "Charmed Kubeflow",
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
